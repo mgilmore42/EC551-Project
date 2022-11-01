@@ -1,0 +1,2 @@
+partial_buffer.v,verilog,xil_defaultlib,../../../../../Sources/IP/partial_buffer/sim/partial_buffer.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

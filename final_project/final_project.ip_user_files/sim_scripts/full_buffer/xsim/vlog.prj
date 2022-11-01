@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../../Sources/IP/full_buffer/sim/full_buffer.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
