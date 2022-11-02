@@ -31,10 +31,7 @@ module vga_controller_640_60 (pixel_clk,HS,VS,hcounter,vcounter,blank);
 	end
 
 	always@(posedge pixel_clk)begin
-	   if(rst==1) begin
-        hcounter<=11'b0;
-        end
-		else if (hcounter == HMAX) hcounter <= 0;
+		if (hcounter == HMAX) hcounter <= 0;
 		else hcounter <= hcounter + 1;
 	end
 
@@ -65,12 +62,13 @@ endmodule
 // vga module that instantiate the VGA controller and generate images
 module vga(
     input wire CLK100MHZ,
-	//input wire [18:0] waddr_cam,
     output reg [3:0] VGA_R,
     output reg [3:0] VGA_G,
     output reg [3:0] VGA_B,
     output wire VGA_HS,
-    output wire VGA_VS
+    output wire VGA_VS,
+	input wire [11:0] rdata_vga,
+	input wire [18:0] raddr_vga
     );
 
 reg pclk_div_cnt;
@@ -84,7 +82,10 @@ always @(posedge CLK100MHZ) begin
     if (pclk_div_cnt == 1'b1) pixel_clk <= !pixel_clk;
 end
 
-
+always @ (posedge pixel_clk) begin
+    vga_hcnt = raddr_vga % 640;
+    vga_vcnt = raddr_vga / 640;
+end
 
 // Instantiate VGA controller
 vga_controller_640_60 vga_controller(
@@ -98,7 +99,6 @@ vga_controller_640_60 vga_controller(
 
 // Generate figure to be displayed
 // Decide the color for the current pixel at index (hcnt, vcnt).
-// This example displays an white square at the center of the screen with a colored checkerboard background.
 always @(*) begin
     // Set pixels to black during Sync. Failure to do so will result in dimmed colors or black screens.
     if (vga_blank) begin 
@@ -107,9 +107,9 @@ always @(*) begin
         VGA_B = 0;
     end
     else begin  // Image to be displayed
-        VGA_R = vga_vcnt[10:0];
-        VGA_G = vga_hcnt[10:0];
-        VGA_B = vga_vcnt[10:0] + vga_hcnt[10:0];
+        VGA_R = rdata_vga[11:8];
+        VGA_G = rdata_vga[7:4];
+        VGA_B = rdata_vga[3:0];
     end
 end
 
