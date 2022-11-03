@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_controller_640_60
+INFO: [VRFC 10-2263] Analyzing Verilog file "X:/Documents/EC551/EC551_Project/Sources/Simulation/test_VGA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_VGA

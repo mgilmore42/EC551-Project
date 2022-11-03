@@ -1,22 +1,25 @@
 `timescale 1ns / 1ps
 
   module camera_interface(
-	input wire clk,clk_100,rst_n,
-
-	// key[0] increase brightness
-	// key[1] decrease brightness
-	// key[2] increase contrast
-	// key[3] decrease contrast
-	input wire[3:0] key,
+	input wire clk_100,
+	input wire rst_n,
+	input wire[3:0] key, // key[0] increase brightness, key[1] decrease brightness, key[2] increase contrast,  key[3] decrease contrast
+	
 	//asyn_fifo IO
 	input wire rd_en,
 	output wire[9:0] data_count_r,
 	output wire[15:0] dout,
+	
 	//camera pinouts
-	input wire cmos_pclk,cmos_href,cmos_vsync,
+	input wire cmos_pclk,
+	input wire cmos_href,
+	input wire cmos_vsync,
 	input wire[7:0] cmos_db,
 	inout cmos_sda,cmos_scl, //i2c comm wires
-	output wire cmos_rst_n, cmos_pwdn, cmos_xclk,
+	output wire cmos_rst_n, 
+	output wire cmos_pwdn, 
+	output wire cmos_xclk,
+	
 	//Debugging
 	output wire[3:0] led
     );
@@ -337,12 +340,12 @@
 		.state   ( state    )
     ); 
 	 
-	 
+	wire RESET;
+	assign RESET = ~rst_n;
 	dcm_24MHz m1 (// Clock in ports
-    	.clk       ( clk       ),
+    	.clk       ( clk_100   ),
     	.cmos_xclk ( cmos_xclk ),
-    	.RESET     ( RESET     ),
-    	.LOCKED    ( LOCKED    )
+    	.RESET     ( RESET     )
     );
 
 	//1024x16 FIFO mem

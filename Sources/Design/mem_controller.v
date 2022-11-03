@@ -116,13 +116,13 @@ module mem_controller(
                 wen_n = 'b0;
             end
             2'b10 : begin // active, captured first half of data
-                st_n = 2'b11;
+                st_n = (href_cam) ? 2'b11 : 2'b01;
                 ccnt_n = ccnt_c;
                 rcnt_n = rcnt_c;
                 wen_n = 'b1;
             end
             2'b11 : begin // active, captured second half of data and write
-                st_n = (ccnt_c<(10'd640-1)) ? 2'b10 : 2'b01;
+                st_n = ((ccnt_c<(10'd640-1)) && href_cam) ? 2'b10 : 2'b01;
                 ccnt_n = ccnt_c + 1;
                 rcnt_n = (ccnt_c<(10'd640-1)) ? rcnt_c : rcnt_c+1;
                 wen_n = 1'b0;
