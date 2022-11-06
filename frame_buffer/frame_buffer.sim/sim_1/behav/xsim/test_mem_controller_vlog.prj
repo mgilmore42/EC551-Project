@@ -1,8 +1,8 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  \
+verilog xil_defaultlib  --include "../../../../../Sources/Design" \
 "../../../../frame_buffer.srcs/sources_1/ip/full_buffer/sim/full_buffer.v" \
-"../../../../frame_buffer.srcs/sources_1/ip/partial_buffer_1/sim/partial_buffer.v" \
 "../../../../frame_buffer.srcs/sources_1/new/mem_controller.v" \
+"../../../../../Sources/Design/partial_buffer.v" \
 "../../../../frame_buffer.srcs/sim_1/new/test_mem_controller.v" \
 
 # compile glbl module

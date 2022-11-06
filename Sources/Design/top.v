@@ -34,8 +34,8 @@ module top(
     input wire href_cam,
     input wire pclk_cam,
     output wire mclk_cam,
-    inout  i2c_sda,
-    output i2c_scl,
+    inout i2c_sda,
+    inout i2c_scl,
 
     input wire [3:0] BTNS,
     
