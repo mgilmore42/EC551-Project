@@ -2,27 +2,6 @@
 
 `include "my_header.vh"
 
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/06/2022 03:43:07 PM
-// Design Name: 
-// Module Name: partial_buffer
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 module partial_buffer(
     input wire clk,
     input wire rst,
