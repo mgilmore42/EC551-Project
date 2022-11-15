@@ -1,4 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module buffer_slice
-INFO: [VRFC 10-2263] Analyzing Verilog file "/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Simulation/test_buffer_slice.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module test_buffer_slice

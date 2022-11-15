@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
-	<Run Id="partial_buffer_synth_1" LaunchDir="X:/Documents/EC551/EC551_Project/final_project/final_project.runs/partial_buffer_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="impl_1" LaunchDir="/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design"/>
 	<Parameters>
 		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
 	</Parameters>

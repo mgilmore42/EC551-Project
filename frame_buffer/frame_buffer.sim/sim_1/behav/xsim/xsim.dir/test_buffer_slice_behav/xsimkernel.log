@@ -1,7 +1,0 @@
-Running: xsim.dir/test_buffer_slice_behav/xsimk -simmode gui -wdb test_buffer_slice_behav.wdb -simrunnum 0 -socket 39200
-Design successfully loaded
-Design Loading Memory Usage: 43060 KB (Peak: 43060 KB)
-Design Loading CPU Usage: 30 ms
-Simulation completed
-Simulation Memory Usage: 118916 KB (Peak: 176188 KB)
-Simulation CPU Usage: 40 ms

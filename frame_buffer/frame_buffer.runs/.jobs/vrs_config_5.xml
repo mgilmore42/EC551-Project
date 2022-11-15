@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="partial_buffer_synth_1" LaunchDir="/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/frame_buffer/frame_buffer.runs/partial_buffer_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Parameters>
-		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
-	</Parameters>
-</Runs>
-

@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Tue Nov 15 02:45:45 2022
-| Host         : eng-grid2 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Date         : Tue Nov 15 14:35:42 2022
+| Host         : eng-grid3 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
 | Device       : 7a100tcsg324-1

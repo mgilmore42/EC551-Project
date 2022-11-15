@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Nov 15 02:44:14 2022
-# Process ID: 22301
+# Start of session at: Tue Nov 15 14:33:29 2022
+# Process ID: 6470
 # Current directory: /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1
 # Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/top.vds
