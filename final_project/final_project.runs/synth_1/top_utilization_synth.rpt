@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Nov  2 23:20:15 2022
-| Host         : ECE-PHO115-07 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Tue Nov 15 02:45:45 2022
+| Host         : eng-grid2 running 64-bit CentOS Linux release 7.9.2009 (Core)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
 | Device       : 7a100tcsg324-1
@@ -36,8 +36,8 @@ Table of Contents
 | Slice Registers         |  281 |     0 |    126800 |  0.22 |
 |   Register as Flip Flop |  281 |     0 |    126800 |  0.22 |
 |   Register as Latch     |    0 |     0 |    126800 |  0.00 |
-| F7 Muxes                |    9 |     0 |     31700 |  0.03 |
-| F8 Muxes                |    1 |     0 |     15850 | <0.01 |
+| F7 Muxes                |    8 |     0 |     31700 |  0.03 |
+| F8 Muxes                |    2 |     0 |     15850 |  0.01 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -147,21 +147,21 @@ Table of Contents
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
 | FDCE       |  196 |        Flop & Latch |
-| LUT4       |  165 |                 LUT |
-| LUT6       |  134 |                 LUT |
+| LUT4       |  162 |                 LUT |
+| LUT6       |  135 |                 LUT |
 | FDRE       |   83 |        Flop & Latch |
-| LUT2       |   81 |                 LUT |
+| LUT2       |   80 |                 LUT |
 | LUT5       |   73 |                 LUT |
 | LUT3       |   54 |                 LUT |
 | CARRY4     |   42 |          CarryLogic |
 | IBUF       |   18 |                  IO |
 | OBUF       |   16 |                  IO |
 | LUT1       |   13 |                 LUT |
-| MUXF7      |    9 |               MuxFx |
+| MUXF7      |    8 |               MuxFx |
 | BUFG       |    5 |               Clock |
+| MUXF8      |    2 |               MuxFx |
 | FDPE       |    2 |        Flop & Latch |
 | OBUFT      |    1 |                  IO |
-| MUXF8      |    1 |               MuxFx |
 | MMCME2_ADV |    1 |               Clock |
 +------------+------+---------------------+
 
@@ -169,12 +169,11 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+----------------+------+
-|    Ref Name    | Used |
-+----------------+------+
-| partial_buffer |    1 |
-| full_buffer    |    1 |
-+----------------+------+
++-------------+------+
+|   Ref Name  | Used |
++-------------+------+
+| full_buffer |    1 |
++-------------+------+
 
 
 9. Instantiated Netlists

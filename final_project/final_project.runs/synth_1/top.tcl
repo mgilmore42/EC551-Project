@@ -17,37 +17,39 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 3
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir X:/Documents/EC551/EC551_Project/final_project/final_project.cache/wt [current_project]
-set_property parent.project_path X:/Documents/EC551/EC551_Project/final_project/final_project.xpr [current_project]
+set_property webtalk.parent_dir /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.cache/wt [current_project]
+set_property parent.project_path /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo x:/Documents/EC551/EC551_Project/final_project/final_project.cache/ip [current_project]
+set_property ip_output_repo /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_mem X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.mem
+add_files /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/test_image.coe
+read_verilog /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/my_header.vh
+read_mem /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.mem
 read_verilog -library xil_defaultlib {
-  X:/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/vga.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/top.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/partial_buffer.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v
 }
-read_ip -quiet X:/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer.xci
-set_property used_in_implementation false [get_files -all x:/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer_ooc.xdc]
-
-read_ip -quiet X:/Documents/EC551/EC551_Project/Sources/IP/partial_buffer/partial_buffer.xci
-set_property used_in_implementation false [get_files -all x:/Documents/EC551/EC551_Project/Sources/IP/partial_buffer/partial_buffer_ooc.xdc]
+read_ip -quiet /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer.xci
+set_property used_in_implementation false [get_files -all /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -57,11 +59,9 @@ set_property used_in_implementation false [get_files -all x:/Documents/EC551/EC5
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc X:/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc
-set_property used_in_implementation false [get_files X:/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]
+read_xdc /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc
+set_property used_in_implementation false [get_files /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

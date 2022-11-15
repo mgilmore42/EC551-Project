@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Nov  2 23:19:11 2022
-# Process ID: 13580
-# Current directory: X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1
-# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/top.vds
-# Journal file: X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1\vivado.jou
+# Start of session at: Tue Nov 15 02:44:14 2022
+# Process ID: 22301
+# Current directory: /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1
+# Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/top.vds
+# Journal file: /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace
 Command: synth_design -top top -part xc7a100tcsg324-1
@@ -16,20 +16,136 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5604 
+INFO: Helper process launched with PID 22346 
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:5]
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:6]
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:5]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 819.879 ; gain = 177.473
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1894.711 ; gain = 160.527 ; free physical = 545 ; free virtual = 4391
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [X:/Documents/EC551/EC551_Project/Sources/Design/top.v:23]
-INFO: [Synth 8-6157] synthesizing module 'mem_controller' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:23]
-INFO: [Synth 8-6157] synthesizing module 'partial_buffer' [X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-13580-ECE-PHO115-07/realtime/partial_buffer_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'partial_buffer' (1#1) [X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-13580-ECE-PHO115-07/realtime/partial_buffer_stub.v:6]
-WARNING: [Synth 8-689] width (19) of port connection 'addra' does not match port width (13) of module 'partial_buffer' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:63]
-INFO: [Synth 8-6157] synthesizing module 'full_buffer' [X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-13580-ECE-PHO115-07/realtime/full_buffer_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'full_buffer' (2#1) [X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-13580-ECE-PHO115-07/realtime/full_buffer_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mem_controller' (3#1) [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:23]
-INFO: [Synth 8-6157] synthesizing module 'vga' [X:/Documents/EC551/EC551_Project/Sources/Design/vga.v:6]
-INFO: [Synth 8-6157] synthesizing module 'vga_controller_640_60' [X:/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v:8]
+INFO: [Synth 8-6157] synthesizing module 'top' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mem_controller' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:5]
+INFO: [Synth 8-6157] synthesizing module 'partial_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/partial_buffer.v:5]
+INFO: [Synth 8-6157] synthesizing module 'buffer_slice' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'buffer_slice' (1#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'partial_buffer' (2#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/partial_buffer.v:5]
+WARNING: [Synth 8-689] width (19) of port connection 'waddr' does not match port width (10) of module 'partial_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:46]
+WARNING: [Synth 8-689] width (300) of port connection 'rdata' does not match port width (60) of module 'partial_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:49]
+WARNING: [Synth 8-7023] instance 'pbuff' of module 'partial_buffer' has 8 connections declared, but only 7 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:42]
+INFO: [Synth 8-6157] synthesizing module 'full_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-22301-eng-grid2/realtime/full_buffer_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'full_buffer' (3#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-22301-eng-grid2/realtime/full_buffer_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mem_controller' (4#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:5]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:8]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
+WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
+INFO: [Common 17-14] Message 'Synth 8-324' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-226] default block is never used [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:48]
+WARNING: [Synth 8-3848] Net sums[23][0] in module/entity ALU does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:16]
+WARNING: [Synth 8-3848] Net sums[23][1] in module/entity ALU does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:16]
+WARNING: [Synth 8-3848] Net sums[23][2] in module/entity ALU does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (5#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:8]
+INFO: [Synth 8-6157] synthesizing module 'kernel_ROM' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'kernel_ROM' (6#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:8]
+INFO: [Synth 8-6157] synthesizing module 'vga' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller_640_60' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v:8]
 	Parameter HMAX bound to: 800 - type: integer 
 	Parameter VMAX bound to: 525 - type: integer 
 	Parameter HLINES bound to: 640 - type: integer 
@@ -39,9 +155,9 @@ INFO: [Synth 8-6157] synthesizing module 'vga_controller_640_60' [X:/Documents/E
 	Parameter VFP bound to: 482 - type: integer 
 	Parameter VSP bound to: 484 - type: integer 
 	Parameter SPP bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller_640_60' (4#1) [X:/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'vga' (5#1) [X:/Documents/EC551/EC551_Project/Sources/Design/vga.v:6]
-INFO: [Synth 8-6157] synthesizing module 'camera_interface' [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller_640_60' (7#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'vga' (8#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga.v:6]
+INFO: [Synth 8-6157] synthesizing module 'camera_interface' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:3]
 	Parameter idle bound to: 0 - type: integer 
 	Parameter start_sccb bound to: 1 - type: integer 
 	Parameter write_address bound to: 2 - type: integer 
@@ -59,8 +175,8 @@ INFO: [Synth 8-6157] synthesizing module 'camera_interface' [X:/Documents/EC551/
 	Parameter sccb_data bound to: 3 - type: integer 
 	Parameter sccb_stop bound to: 4 - type: integer 
 	Parameter MSG_INDEX bound to: 77 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'camera_interface.mem' is read successfully [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:80]
-INFO: [Synth 8-6157] synthesizing module 'i2c_top' [X:/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v:3]
+INFO: [Synth 8-3876] $readmem data file 'camera_interface.mem' is read successfully [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:80]
+INFO: [Synth 8-6157] synthesizing module 'i2c_top' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v:3]
 	Parameter freq bound to: 100000 - type: integer 
 	Parameter full bound to: 500 - type: integer 
 	Parameter half bound to: 250 - type: integer 
@@ -74,9 +190,9 @@ INFO: [Synth 8-6157] synthesizing module 'i2c_top' [X:/Documents/EC551/EC551_Pro
 	Parameter ack_master bound to: 4'b0110 
 	Parameter stop_1 bound to: 4'b0111 
 	Parameter stop_2 bound to: 4'b1000 
-INFO: [Synth 8-6155] done synthesizing module 'i2c_top' (6#1) [X:/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v:3]
-INFO: [Synth 8-6157] synthesizing module 'dcm_24MHz' [X:/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v:68]
-INFO: [Synth 8-6157] synthesizing module 'DCM_SP' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:10805]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_top' (9#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'dcm_24MHz' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v:68]
+INFO: [Synth 8-6157] synthesizing module 'DCM_SP' [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:10805]
 	Parameter CLKDV_DIVIDE bound to: 2.000000 - type: float 
 	Parameter CLKFX_DIVIDE bound to: 25 - type: integer 
 	Parameter CLKFX_MULTIPLY bound to: 12 - type: integer 
@@ -92,96 +208,148 @@ INFO: [Synth 8-6157] synthesizing module 'DCM_SP' [C:/Xilinx/Vivado/2019.1/scrip
 	Parameter FACTORY_JF bound to: 16'b1100000010000000 
 	Parameter PHASE_SHIFT bound to: 0 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'DCM_SP' (7#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:10805]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (8#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
-INFO: [Synth 8-6155] done synthesizing module 'dcm_24MHz' (9#1) [X:/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v:68]
-WARNING: [Synth 8-7023] instance 'm1' of module 'dcm_24MHz' has 4 connections declared, but only 3 given [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:345]
-INFO: [Synth 8-6157] synthesizing module 'asyn_fifo' [X:/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'DCM_SP' (10#1) [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:10805]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (11#1) [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'dcm_24MHz' (12#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v:68]
+WARNING: [Synth 8-7023] instance 'm1' of module 'dcm_24MHz' has 4 connections declared, but only 3 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:345]
+INFO: [Synth 8-6157] synthesizing module 'asyn_fifo' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:3]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
 	Parameter FIFO_DEPTH_WIDTH bound to: 10 - type: integer 
 	Parameter FIFO_DEPTH bound to: 1024 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'dual_port_sync' [X:/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:142]
+INFO: [Synth 8-6157] synthesizing module 'dual_port_sync' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:142]
 	Parameter ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'dual_port_sync' (10#1) [X:/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:142]
-WARNING: [Synth 8-6014] Unused sequential element w_ptr_sync_reg was removed.  [X:/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:102]
-WARNING: [Synth 8-5788] Register r_ptr_sync_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [X:/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:71]
-WARNING: [Synth 8-5788] Register data_count_w_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [X:/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:72]
-WARNING: [Synth 8-5788] Register data_count_r_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [X:/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:103]
-INFO: [Synth 8-6155] done synthesizing module 'asyn_fifo' (11#1) [X:/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:3]
-WARNING: [Synth 8-7023] instance 'm2' of module 'asyn_fifo' has 11 connections declared, but only 10 given [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:352]
-INFO: [Synth 8-6157] synthesizing module 'debounce_explicit' [X:/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'dual_port_sync' (13#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:142]
+WARNING: [Synth 8-6014] Unused sequential element w_ptr_sync_reg was removed.  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:102]
+WARNING: [Synth 8-5788] Register r_ptr_sync_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:71]
+WARNING: [Synth 8-5788] Register data_count_w_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:72]
+WARNING: [Synth 8-5788] Register data_count_r_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'asyn_fifo' (14#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:3]
+WARNING: [Synth 8-7023] instance 'm2' of module 'asyn_fifo' has 11 connections declared, but only 10 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:352]
+INFO: [Synth 8-6157] synthesizing module 'debounce_explicit' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:3]
 	Parameter idle bound to: 2'b00 
 	Parameter delay0 bound to: 2'b01 
 	Parameter one bound to: 2'b10 
 	Parameter delay1 bound to: 2'b11 
 	Parameter N bound to: 21 - type: integer 
-INFO: [Synth 8-226] default block is never used [X:/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:51]
-INFO: [Synth 8-6155] done synthesizing module 'debounce_explicit' (12#1) [X:/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:3]
-WARNING: [Synth 8-5788] Register pclk_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:104]
-WARNING: [Synth 8-5788] Register pclk_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:105]
-WARNING: [Synth 8-5788] Register href_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:106]
-WARNING: [Synth 8-5788] Register href_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:107]
-WARNING: [Synth 8-5788] Register vsync_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:108]
-WARNING: [Synth 8-5788] Register vsync_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:109]
-INFO: [Synth 8-6155] done synthesizing module 'camera_interface' (13#1) [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:3]
-WARNING: [Synth 8-7023] instance 'nolabel_line89' of module 'camera_interface' has 16 connections declared, but only 11 given [X:/Documents/EC551/EC551_Project/Sources/Design/top.v:89]
-WARNING: [Synth 8-3848] Net raddr_alu in module/entity top does not have driver. [X:/Documents/EC551/EC551_Project/Sources/Design/top.v:55]
-WARNING: [Synth 8-3848] Net waddr_alu in module/entity top does not have driver. [X:/Documents/EC551/EC551_Project/Sources/Design/top.v:56]
-WARNING: [Synth 8-3848] Net wdata_alu in module/entity top does not have driver. [X:/Documents/EC551/EC551_Project/Sources/Design/top.v:57]
-WARNING: [Synth 8-3848] Net wen_alu in module/entity top does not have driver. [X:/Documents/EC551/EC551_Project/Sources/Design/top.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'top' (14#1) [X:/Documents/EC551/EC551_Project/Sources/Design/top.v:23]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[18]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[17]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[16]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[15]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[14]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[13]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[12]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[11]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[10]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[9]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[8]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[7]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[6]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[5]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[4]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[3]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[2]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[1]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[0]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[11]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[10]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[9]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[8]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[7]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[6]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[5]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[4]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[3]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[2]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[1]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[0]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wen_alu
-WARNING: [Synth 8-3331] design top has unconnected port SW[15]
-WARNING: [Synth 8-3331] design top has unconnected port SW[14]
-WARNING: [Synth 8-3331] design top has unconnected port SW[13]
-WARNING: [Synth 8-3331] design top has unconnected port SW[12]
-WARNING: [Synth 8-3331] design top has unconnected port SW[11]
-WARNING: [Synth 8-3331] design top has unconnected port SW[10]
-WARNING: [Synth 8-3331] design top has unconnected port SW[9]
-WARNING: [Synth 8-3331] design top has unconnected port SW[8]
-WARNING: [Synth 8-3331] design top has unconnected port SW[7]
-WARNING: [Synth 8-3331] design top has unconnected port SW[6]
-WARNING: [Synth 8-3331] design top has unconnected port SW[5]
-WARNING: [Synth 8-3331] design top has unconnected port SW[4]
-WARNING: [Synth 8-3331] design top has unconnected port SW[3]
-WARNING: [Synth 8-3331] design top has unconnected port SW[2]
-WARNING: [Synth 8-3331] design top has unconnected port SW[1]
-WARNING: [Synth 8-3331] design top has unconnected port SW[0]
+INFO: [Synth 8-226] default block is never used [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'debounce_explicit' (15#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:3]
+WARNING: [Synth 8-5788] Register pclk_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:104]
+WARNING: [Synth 8-5788] Register pclk_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:105]
+WARNING: [Synth 8-5788] Register href_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:106]
+WARNING: [Synth 8-5788] Register href_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:107]
+WARNING: [Synth 8-5788] Register vsync_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:108]
+WARNING: [Synth 8-5788] Register vsync_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:109]
+INFO: [Synth 8-6155] done synthesizing module 'camera_interface' (16#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:3]
+WARNING: [Synth 8-7023] instance 'nolabel_line86' of module 'camera_interface' has 16 connections declared, but only 11 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:86]
+WARNING: [Synth 8-3848] Net raddr_alu in module/entity top does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:37]
+WARNING: [Synth 8-3848] Net waddr_alu in module/entity top does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:38]
+WARNING: [Synth 8-3848] Net wen_alu in module/entity top does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'top' (17#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:5]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[299]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[298]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[297]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[296]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[295]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[294]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[293]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[292]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[291]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[290]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[289]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[288]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[287]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[286]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[285]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[284]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[283]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[282]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[281]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[280]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[279]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[278]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[277]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[276]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[275]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[274]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[273]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[272]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[271]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[270]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[269]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[268]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[267]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[266]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[265]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[264]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[263]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[262]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[261]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[260]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[259]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[258]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[257]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[256]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[255]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[254]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[253]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[252]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[251]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[250]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[249]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[248]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[247]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[246]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[245]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[244]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[243]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[242]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[241]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[240]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[239]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[238]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[237]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[236]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[235]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[234]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[233]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[232]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[231]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[230]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[229]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[228]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[227]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[226]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[225]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[224]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[223]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[222]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[221]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[220]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[219]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[218]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[217]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[216]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[215]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[214]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[213]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[212]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[211]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[210]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[209]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[208]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[207]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[206]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[205]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[204]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[203]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[202]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[201]
+WARNING: [Synth 8-3331] design ALU has unconnected port din[200]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 886.676 ; gain = 244.270
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2001.879 ; gain = 267.695 ; free physical = 517 ; free virtual = 4364
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -194,62 +362,56 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 886.676 ; gain = 244.270
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2019.684 ; gain = 285.500 ; free physical = 522 ; free virtual = 4370
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 886.676 ; gain = 244.270
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 2019.684 ; gain = 285.500 ; free physical = 522 ; free virtual = 4370
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line89/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line89/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line86/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line86/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [x:/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer/full_buffer_in_context.xdc] for cell 'mc/fbuff'
-Finished Parsing XDC File [x:/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer/full_buffer_in_context.xdc] for cell 'mc/fbuff'
-Parsing XDC File [x:/Documents/EC551/EC551_Project/Sources/IP/partial_buffer/partial_buffer/partial_buffer_in_context.xdc] for cell 'mc/pbuff'
-Finished Parsing XDC File [x:/Documents/EC551/EC551_Project/Sources/IP/partial_buffer/partial_buffer/partial_buffer_in_context.xdc] for cell 'mc/pbuff'
-Parsing XDC File [X:/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]
-Finished Parsing XDC File [X:/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer/full_buffer_in_context.xdc] for cell 'mc/fbuff'
+Finished Parsing XDC File [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer/full_buffer_in_context.xdc] for cell 'mc/fbuff'
+Parsing XDC File [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/dont_touch.xdc]
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1019.867 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2666.922 ; gain = 0.000 ; free physical = 150 ; free virtual = 3698
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   DCM_SP => MMCME2_ADV (inverted pins: PSINCDEC): 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1019.867 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2666.926 ; gain = 0.004 ; free physical = 151 ; free virtual = 3698
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mc/fbuff' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mc/pbuff' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1019.867 ; gain = 377.461
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 2666.926 ; gain = 932.742 ; free physical = 767 ; free virtual = 4315
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1019.867 ; gain = 377.461
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 2666.926 ; gain = 932.742 ; free physical = 766 ; free virtual = 4315
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for mc/fbuff. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for mc/pbuff. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1019.867 ; gain = 377.461
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 2666.926 ; gain = 932.742 ; free physical = 766 ; free virtual = 4315
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'st_c_reg' in module 'mem_controller'
 INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'i2c_top'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'debounce_explicit'
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:276]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:276]
 INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'camera_interface'
 INFO: [Synth 8-802] inferred FSM for state register 'sccb_state_q_reg' in module 'camera_interface'
 ---------------------------------------------------------------------------------------------------
@@ -311,14 +473,22 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_q_reg' using encodin
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'sccb_state_q_reg' using encoding 'sequential' in module 'camera_interface'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1019.867 ; gain = 377.461
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:43 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 782 ; free virtual = 4332
 ---------------------------------------------------------------------------------
+RAM Pipeline Warning: Read Address Register Found For RAM ram_reg. We will not be able to pipeline it. This may degrade performance. 
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |muxpart_partial_buffer |           1|     38341|
+|2     |partial_buffer__GB1    |           1|      5846|
+|3     |partial_buffer__GB2    |           1|     11248|
+|4     |partial_buffer__GB3    |           1|     14647|
+|5     |partial_buffer__GB4    |           1|     17538|
+|6     |mem_controller__GC0    |           1|       233|
+|7     |top__GC0               |           1|      3955|
++------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -340,7 +510,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               28 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
-	               12 Bit    Registers := 2     
+	               12 Bit    Registers := 3842  
 	               11 Bit    Registers := 9     
 	               10 Bit    Registers := 4     
 	                9 Bit    Registers := 3     
@@ -350,6 +520,7 @@ Detailed RTL Component Info :
 +---RAMs : 
 	              16K Bit         RAMs := 1     
 +---Muxes : 
+	   2 Input     93 Bit        Muxes := 2     
 	   2 Input     28 Bit        Muxes := 2     
 	  10 Input     16 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 4     
@@ -365,6 +536,7 @@ Detailed RTL Component Info :
 	   9 Input      4 Bit        Muxes := 3     
 	  10 Input      4 Bit        Muxes := 2     
 	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
 	   5 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 5     
 	   2 Input      2 Bit        Muxes := 15    
@@ -382,6 +554,2566 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module buffer_slice__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__8 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__9 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__10 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__11 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__12 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__13 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__14 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__15 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__16 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__17 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__18 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__19 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__20 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__21 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__22 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__23 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__24 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__25 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__26 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__27 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__28 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__29 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__30 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__31 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__32 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__33 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__34 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__35 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__36 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__37 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__38 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__39 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__40 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__41 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__42 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__43 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__44 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__45 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__46 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__47 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__48 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__49 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__50 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__51 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__52 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__53 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__54 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__55 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__56 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__57 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__58 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__59 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__60 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__61 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__62 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__63 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__64 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__65 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__66 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__67 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__68 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__69 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__70 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__71 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__72 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__73 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__74 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__75 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__76 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__77 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__78 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__79 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__80 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__81 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__82 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__83 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__84 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__85 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__86 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__87 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__88 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__89 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__90 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__91 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__92 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__93 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__94 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__95 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__96 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__97 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__98 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__99 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__100 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__101 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__102 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__103 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__104 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__105 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__106 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__107 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__108 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__109 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__110 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__111 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__112 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__113 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__114 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__115 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__116 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__117 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__118 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__119 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__120 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__121 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__122 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__123 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__124 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__125 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__126 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__127 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__128 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__129 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__130 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__131 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__132 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__133 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__134 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__135 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__136 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__137 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__138 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__139 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__140 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__141 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__142 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__143 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__144 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__145 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__146 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__147 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__148 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__149 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__150 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__151 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__152 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__153 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__154 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__155 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__156 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__157 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__158 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__159 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__160 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__161 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__162 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__163 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__164 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__165 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__166 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__167 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__168 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__169 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__170 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__171 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__172 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__173 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__174 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__175 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__176 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__177 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__178 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__179 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__180 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__181 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__182 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__183 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__184 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__185 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__186 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__187 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__188 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__189 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__190 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__191 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__192 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__193 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__194 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__195 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__196 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__197 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__198 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__199 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__200 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__201 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__202 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__203 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__204 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__205 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__206 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__207 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__208 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__209 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__210 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__211 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__212 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__213 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__214 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__215 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__216 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__217 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__218 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__219 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__220 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__221 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__222 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__223 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__224 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__225 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__226 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__227 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__228 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__229 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__230 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__231 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__232 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__233 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__234 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__235 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__236 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__237 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__238 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__239 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__240 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__241 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__242 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__243 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__244 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__245 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__246 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__247 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__248 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__249 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__250 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__251 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__252 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__253 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__254 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__255 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__256 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__257 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__258 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__259 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__260 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__261 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__262 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__263 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__264 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__265 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__266 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__267 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__268 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__269 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__270 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__271 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__272 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__273 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__274 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__275 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__276 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__277 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__278 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__279 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__280 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__281 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__282 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__283 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__284 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__285 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__286 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__287 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__288 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__289 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__290 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__291 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__292 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__293 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__294 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__295 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__296 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__297 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__298 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__299 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__300 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__301 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__302 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__303 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__304 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__305 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__306 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__307 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__308 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__309 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__310 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__311 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__312 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__313 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__314 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__315 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__316 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__317 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__318 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__319 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__320 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__321 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__322 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__323 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__324 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__325 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__326 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__327 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__328 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__329 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__330 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__331 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__332 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__333 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__334 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__335 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__336 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__337 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__338 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__339 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__340 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__341 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__342 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__343 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__344 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__345 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__346 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__347 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__348 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__349 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__350 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__351 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__352 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__353 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__354 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__355 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__356 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__357 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__358 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__359 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__360 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__361 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__362 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__363 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__364 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__365 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__366 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__367 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__368 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__369 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__370 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__371 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__372 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__373 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__374 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__375 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__376 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__377 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__378 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__379 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__380 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__381 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__382 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__383 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__384 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__385 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__386 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__387 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__388 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__389 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__390 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__391 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__392 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__393 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__394 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__395 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__396 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__397 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__398 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__399 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__400 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__401 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__402 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__403 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__404 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__405 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__406 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__407 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__408 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__409 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__410 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__411 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__412 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__413 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__414 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__415 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__416 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__417 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__418 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__419 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__420 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__421 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__422 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__423 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__424 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__425 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__426 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__427 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__428 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__429 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__430 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__431 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__432 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__433 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__434 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__435 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__436 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__437 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__438 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__439 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__440 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__441 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__442 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__443 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__444 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__445 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__446 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__447 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__448 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__449 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__450 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__451 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__452 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__453 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__454 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__455 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__456 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__457 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__458 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__459 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__460 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__461 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__462 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__463 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__464 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__465 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__466 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__467 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__468 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__469 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__470 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__471 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__472 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__473 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__474 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__475 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__476 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__477 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__478 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__479 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__480 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__481 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__482 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__483 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__484 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__485 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__486 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__487 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__488 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__489 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__490 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__491 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__492 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__493 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__494 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__495 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__496 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__497 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__498 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__499 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__500 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__501 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__502 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__503 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__504 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__505 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__506 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__507 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__508 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__509 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__510 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__511 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__512 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__513 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__514 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__515 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__516 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__517 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__518 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__519 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__520 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__521 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__522 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__523 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__524 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__525 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__526 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__527 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__528 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__529 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__530 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__531 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__532 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__533 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__534 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__535 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__536 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__537 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__538 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__539 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__540 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__541 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__542 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__543 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__544 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__545 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__546 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__547 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__548 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__549 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__550 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__551 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__552 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__553 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__554 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__555 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__556 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__557 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__558 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__559 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__560 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__561 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__562 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__563 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__564 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__565 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__566 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__567 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__568 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__569 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__570 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__571 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__572 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__573 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__574 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__575 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__576 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__577 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__578 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__579 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__580 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__581 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__582 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__583 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__584 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__585 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__586 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__587 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__588 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__589 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__590 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__591 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__592 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__593 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__594 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__595 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__596 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__597 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__598 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__599 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__600 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__601 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__602 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__603 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__604 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__605 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__606 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__607 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__608 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__609 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__610 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__611 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__612 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__613 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__614 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__615 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__616 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__617 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__618 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__619 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__620 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__621 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__622 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__623 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__624 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__625 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__626 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__627 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__628 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__629 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__630 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__631 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__632 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__633 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__634 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__635 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__636 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__637 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__638 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__639 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
 Module mem_controller 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -400,6 +3132,11 @@ Detailed RTL Component Info :
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 5     
 	   4 Input      1 Bit        Muxes := 3     
+Module kernel_ROM 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     93 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 2     
 Module vga_controller_640_60 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -461,6 +3198,27 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     11 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 2     
+Module debounce_explicit__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 4     
+Module debounce_explicit__2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 4     
+Module debounce_explicit__3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 4     
 Module debounce_explicit 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -510,63 +3268,15 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[18]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[17]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[16]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[15]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[14]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[13]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[12]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[11]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[10]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[9]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[8]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[7]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[6]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[5]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[4]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[3]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[2]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[1]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port waddr_alu[0]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[11]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[10]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[9]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[8]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[7]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[6]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[5]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[4]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[3]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[2]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[1]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wdata_alu[0]
-WARNING: [Synth 8-3331] design mem_controller has unconnected port wen_alu
-WARNING: [Synth 8-3331] design top has unconnected port SW[15]
-WARNING: [Synth 8-3331] design top has unconnected port SW[14]
-WARNING: [Synth 8-3331] design top has unconnected port SW[13]
-WARNING: [Synth 8-3331] design top has unconnected port SW[12]
-WARNING: [Synth 8-3331] design top has unconnected port SW[11]
-WARNING: [Synth 8-3331] design top has unconnected port SW[10]
-WARNING: [Synth 8-3331] design top has unconnected port SW[9]
-WARNING: [Synth 8-3331] design top has unconnected port SW[8]
-WARNING: [Synth 8-3331] design top has unconnected port SW[7]
-WARNING: [Synth 8-3331] design top has unconnected port SW[6]
-WARNING: [Synth 8-3331] design top has unconnected port SW[5]
-WARNING: [Synth 8-3331] design top has unconnected port SW[4]
-WARNING: [Synth 8-3331] design top has unconnected port SW[3]
-WARNING: [Synth 8-3331] design top has unconnected port SW[2]
-WARNING: [Synth 8-3331] design top has unconnected port SW[1]
-WARNING: [Synth 8-3331] design top has unconnected port SW[0]
-RAM Pipeline Warning: Read Address Register Found For RAM nolabel_line89/m2/m0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line89/m2/m0/ram_reg was removed. 
-INFO: [Synth 8-3886] merging instance 'nolabel_line89/addr_q_reg[7]' (FDCE) to 'nolabel_line89/addr_q_reg[3]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line89/addr_q_reg[6]' (FDCE) to 'nolabel_line89/addr_q_reg[2]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line89/addr_q_reg[5]' (FDCE) to 'nolabel_line89/addr_q_reg[3]'
-INFO: [Synth 8-3886] merging instance 'nolabel_line89/addr_q_reg[4]' (FDCE) to 'nolabel_line89/addr_q_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\nolabel_line89/addr_q_reg[3] )
+RAM Pipeline Warning: Read Address Register Found For RAM nolabel_line86/m2/m0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line86/m2/m0/ram_reg was removed. 
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line86/addr_q_reg[7]' (FDCE) to 'i_0/nolabel_line86/addr_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line86/addr_q_reg[6]' (FDCE) to 'i_0/nolabel_line86/addr_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line86/addr_q_reg[5]' (FDCE) to 'i_0/nolabel_line86/addr_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line86/addr_q_reg[4]' (FDCE) to 'i_0/nolabel_line86/addr_q_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\nolabel_line86/addr_q_reg[3] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1019.867 ; gain = 377.461
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:01:00 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 697 ; free virtual = 4283
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -585,33 +3295,37 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |mem_controller__GC0 |           1|       229|
+|2     |top__GC0            |           1|      1462|
++------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:38 . Memory (MB): peak = 1019.867 ; gain = 377.461
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:01:06 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 577 ; free virtual = 4180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1021.320 ; gain = 378.914
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:07 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 566 ; free virtual = 4169
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |mem_controller__GC0 |           1|       229|
+|2     |top__GC0            |           1|      1462|
++------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:40 . Memory (MB): peak = 1030.406 ; gain = 388.000
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:01:08 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 571 ; free virtual = 4175
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -635,7 +3349,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1036.168 ; gain = 393.762
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 571 ; free virtual = 4175
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -648,7 +3362,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1036.168 ; gain = 393.762
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 571 ; free virtual = 4175
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -660,105 +3374,103 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1036.168 ; gain = 393.762
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 571 ; free virtual = 4175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1036.168 ; gain = 393.762
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 571 ; free virtual = 4175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1036.168 ; gain = 393.762
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 571 ; free virtual = 4175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1036.168 ; gain = 393.762
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 571 ; free virtual = 4175
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+---------------+----------+
-|      |BlackBox name  |Instances |
-+------+---------------+----------+
-|1     |partial_buffer |         1|
-|2     |full_buffer    |         1|
-+------+---------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |full_buffer   |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+---------------+------+
-|      |Cell           |Count |
-+------+---------------+------+
-|1     |full_buffer    |     1|
-|2     |partial_buffer |     1|
-|3     |BUFG           |     5|
-|4     |CARRY4         |    42|
-|5     |DCM_SP         |     1|
-|6     |LUT1           |    13|
-|7     |LUT2           |    81|
-|8     |LUT3           |    54|
-|9     |LUT4           |   165|
-|10    |LUT5           |    73|
-|11    |LUT6           |   134|
-|12    |MUXF7          |     9|
-|13    |MUXF8          |     1|
-|14    |FDCE           |   196|
-|15    |FDPE           |     2|
-|16    |FDRE           |    83|
-|17    |IBUF           |    17|
-|18    |IOBUF          |     1|
-|19    |OBUF           |    16|
-+------+---------------+------+
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |full_buffer |     1|
+|2     |BUFG        |     5|
+|3     |CARRY4      |    42|
+|4     |DCM_SP      |     1|
+|5     |LUT1        |    13|
+|6     |LUT2        |    80|
+|7     |LUT3        |    54|
+|8     |LUT4        |   162|
+|9     |LUT5        |    73|
+|10    |LUT6        |   135|
+|11    |MUXF7       |     8|
+|12    |MUXF8       |     2|
+|13    |FDCE        |   196|
+|14    |FDPE        |     2|
+|15    |FDRE        |    83|
+|16    |IBUF        |    17|
+|17    |IOBUF       |     1|
+|18    |OBUF        |    16|
++------+------------+------+
 
 Report Instance Areas: 
 +------+-------------------+----------------------+------+
 |      |Instance           |Module                |Cells |
 +------+-------------------+----------------------+------+
-|1     |top                |                      |   929|
-|2     |  mc               |mem_controller        |   127|
-|3     |  nolabel_line89   |camera_interface      |   633|
-|4     |    m0             |i2c_top               |   159|
+|1     |top                |                      |   914|
+|2     |  mc               |mem_controller        |   115|
+|3     |  nolabel_line86   |camera_interface      |   630|
+|4     |    m0             |i2c_top               |   154|
 |5     |    m1             |dcm_24MHz             |     3|
-|6     |    m3             |debounce_explicit     |    84|
-|7     |    m4             |debounce_explicit_0   |    77|
+|6     |    m3             |debounce_explicit     |    87|
+|7     |    m4             |debounce_explicit_0   |    79|
 |8     |    m5             |debounce_explicit_1   |    63|
-|9     |    m6             |debounce_explicit_2   |    67|
+|9     |    m6             |debounce_explicit_2   |    63|
 |10    |  vga0             |vga                   |   132|
 |11    |    vga_controller |vga_controller_640_60 |   111|
 +------+-------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:43 . Memory (MB): peak = 1036.168 ; gain = 393.762
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 571 ; free virtual = 4175
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 49 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:40 . Memory (MB): peak = 1036.168 ; gain = 260.570
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:44 . Memory (MB): peak = 1036.168 ; gain = 393.762
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 2666.934 ; gain = 285.508 ; free physical = 622 ; free virtual = 4225
+Synthesis Optimization Complete : Time (s): cpu = 00:00:49 ; elapsed = 00:01:09 . Memory (MB): peak = 2666.934 ; gain = 932.750 ; free physical = 637 ; free virtual = 4240
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line89/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line89/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line86/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line86/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1050.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2666.934 ; gain = 0.000 ; free physical = 572 ; free virtual = 4179
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   DCM_SP => MMCME2_ADV (inverted pins: PSINCDEC): 1 instances
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-62 Infos, 121 Warnings, 0 Critical Warnings and 0 Errors encountered.
+71 Infos, 231 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:54 . Memory (MB): peak = 1050.434 ; gain = 664.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1050.434 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:16 . Memory (MB): peak = 2666.934 ; gain = 1150.047 ; free physical = 670 ; free virtual = 4277
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2666.934 ; gain = 0.000 ; free physical = 670 ; free virtual = 4277
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Nov  2 23:20:15 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 15 02:45:45 2022...

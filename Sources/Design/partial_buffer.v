@@ -5,16 +5,16 @@
 module partial_buffer(
     input wire clk,
     input wire rst,
-    input wire wea, // wen for incoming values, staged for output
+    input wire wen, // wen for incoming values, staged for output
     input wire pop, // commit input values to output value
     input wire [`awidth_pbuff-1:0] waddr, // column address (0-639)
-    input wire [`dwidth_dat-1:0] din, // RGB444 in
+    input wire [`dwidth_dat-1:0] wdata, // RGB444 in
     input wire [`awidth_pbuff-1:0] raddr, // column address (0-639)
-    output wire [(`dwidth_dat*`dwidth_slice)-1:0] col_out // containts the entire col as {RGB_N, RGB_N-1, ... RGB_1}
+    output wire [(`dwidth_dat*`dwidth_slice)-1:0] rdata // containts the entire col as {RGB_N, RGB_N-1, ... RGB_1}
     );
     
     wire [(`dwidth_dat*`dwidth_slice)-1:0] dout [`hwidth-1:0]; // very large mux
-    assign col_out = dout[raddr];
+    assign rdata = dout[raddr];
     
     genvar i;
     generate
@@ -22,10 +22,10 @@ module partial_buffer(
             buffer_slice bf(
                 .clk(clk),
                 .rst(rst),
-                .wea((wea && (waddr==i))),
+                .wen((wen && (waddr==i))),
                 .pop(pop),
-                .din(din),
-                .dout(dout[i])
+                .wdata(wdata),
+                .rdata(dout[i])
             );
         end
     endgenerate

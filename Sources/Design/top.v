@@ -1,24 +1,6 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/01/2022 02:00:07 PM
-// Design Name: 
-// Module Name: top
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
+`include "my_header.vh"
 
 module top(
 
@@ -48,15 +30,17 @@ module top(
     );
     
     // VGA Memory access
-    wire [18:0] raddr_vga;
-    wire [11:0] rdata_vga;
+    wire [`awidth_fbuff-1:0]            raddr_vga;
+    wire [`dwidth_dat-1:0]              rdata_vga;
     
     // Processing access
-    reg [12:0] raddr_alu;
-    reg [18:0] waddr_alu;
-    reg [11:0] wdata_alu;
-    reg        wen_alu;
-    wire [11:0] rdata_alu;
+    reg [`awidth_pbuff-1:0]             raddr_alu;
+    reg [`awidth_fbuff-1:0]             waddr_alu;
+    wire [`dwidth_dat-1:0]              wdata_alu;
+    reg                                 wen_alu;
+    wire [(`dwss*`dwidth_dat)-1:0]       rdata_alu;
+    wire [(`dwss*`dwidth_kernel)-1:0]    kernel_alu;
+    wire [`dwidth_div-1:0]              div_alu;
     
     mem_controller mc(
         .sys_clk  (CLK100MHZ),
@@ -72,6 +56,19 @@ module top(
         .wdata_alu(wdata_alu),
         .wen_alu  (wen_alu  ),
         .rdata_alu(rdata_alu)
+    );
+
+    ALU alu(
+        .din(rdata_alu),
+        .kernel(kernel_alu),
+        .div(div_alu),
+        .dout(wdata_alu)
+    );
+
+    kernel_ROM kr(
+        .kernel_select(SW[1:0]),
+        .kernel(kernel_alu),
+        .div(div_alu)
     );
     
     vga vga0(

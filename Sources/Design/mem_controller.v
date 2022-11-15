@@ -1,54 +1,36 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 10/30/2022 09:15:55 PM
-// Design Name: 
-// Module Name: mem_controller
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
+`include "my_header.vh"
 
 module mem_controller(
     // General signal
-    input wire          sys_clk,
-    input wire          rst,
-    
+    input wire                     sys_clk,
+    input wire                     rst,
+
     // Camera Data
-    input wire          pclk,
-    input wire          vsync_cam,
-    input wire          href_cam,
-    input wire [7:0]    wdata_cam,
+    input wire                     pclk,
+    input wire                     vsync_cam,
+    input wire                     href_cam,
+    input wire [7:0]               wdata_cam,
     
-    // VGA Memory access
-    input wire [18:0]   raddr_vga,
-    output wire [11:0]  rdata_vga,
+    // VGA Memory access           
+    input wire [18:0]              raddr_vga,
+    output wire [11:0]             rdata_vga,
     
     // Processing access
-    input wire [12:0]   raddr_alu,
-    input wire [18:0]   waddr_alu,
-    input wire [11:0]   wdata_alu,
-    input wire          wen_alu,
-    output wire [11:0]  rdata_alu
+    input wire [`awidth_pbuff-1:0] raddr_alu,
+    input wire [`awidth_fbuff-1:0] waddr_alu,
+    input wire [`dwidth_dat-1:0]   wdata_alu,
+    input wire                     wen_alu,
+    output wire [(`dwss*`dwidth_dat)-1:0]  rdata_alu
     
     );
     
     // mux between passthrough mode and process mode
     reg passthrough_mode = 1;
     
-    wire [18:0] waddr_cam;
-    reg [11:0] wdata_cam_full;
+    wire [`awidth_fbuff-1:0] waddr_cam;
+    reg  [`dwidth_dat-1:0] wdata_cam_full;
     reg         wen_cam;
     reg  [9:0]  ccnt_c, ccnt_n; // pix in row
     reg  [8:0]  rcnt_c, rcnt_n; // row of pix
@@ -58,13 +40,13 @@ module mem_controller(
     
     // Will remain dormant for now
     partial_buffer pbuff (
-        .clka(sys_clk),    // input wire clka
-        .wea(wen_cam),      // input wire [0 : 0] wea
-        .addra(waddr_cam),  // input wire [12 : 0] addra
-        .dina(wdata_cam_full),    // input wire [11 : 0] dina
-        .clkb(sys_clk),    // input wire clkb
-        .addrb(raddr_alu),  // input wire [12 : 0] addrb
-        .doutb(rdata_alu)  // output wire [11 : 0] doutb
+        .clk(sys_clk),
+        .rst(rst),
+        .wen(wen_cam),
+        .waddr(waddr_cam),
+        .wdata(wdata_cam_full),
+        .raddr(raddr_alu),
+        .rdata(rdata_alu)
     );
 
     wire [11:0] douta;

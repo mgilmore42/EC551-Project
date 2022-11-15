@@ -7,12 +7,12 @@ module buffer_slice(
     input  wire                   rst,
     input  wire                   wen, // allows writing to the first element
     input  wire                   pop, // pushes everything down one element (synchronous updates)
-    input  wire [`dwidth_dat-1:0] din,
-    output wire [(`dwidth_dat*`dwidth_slice)-1:0] dout
+    input  wire [`dwidth_dat-1:0] wdata,
+    output wire [(`dwidth_dat*`dwidth_slice)-1:0] rdata
     );
     
     reg [(`dwidth_dat*(`dwidth_slice+1))-1:0] dat = 'b0;
-    assign dout = dat[(`dwidth_dat*(`dwidth_slice+1))-1:`dwidth_dat];
+    assign rdata = dat[(`dwidth_dat*(`dwidth_slice+1))-1:`dwidth_dat];
     
     genvar i;
     generate
@@ -20,7 +20,7 @@ module buffer_slice(
             if (i==0) begin
                 always @(posedge clk) begin
                     if (wen)
-                        dat[`dwidth_dat-1:0] <= (rst) ? 'b0 : din;
+                        dat[`dwidth_dat-1:0] <= (rst) ? 'b0 : wdata;
                 end 
             end else begin
                 always @(posedge clk) begin
