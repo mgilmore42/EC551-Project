@@ -51,10 +51,10 @@ module top(
         .wdata_cam(wdata_cam),     
         .raddr_vga(raddr_vga),
         .rdata_vga(rdata_vga),
-        .raddr_alu(raddr_alu),
         .waddr_alu(waddr_alu),
         .wdata_alu(wdata_alu),
         .wen_alu  (wen_alu  ),
+        .raddr_alu(raddr_alu),
         .rdata_alu(rdata_alu)
     );
 

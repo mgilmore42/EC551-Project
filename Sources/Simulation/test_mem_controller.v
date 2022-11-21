@@ -39,11 +39,11 @@ module test_mem_controller(
     wire [11:0] rdata_vga;
     
     // Processing access
-    reg [12:0] raddr_alu;
-    reg [18:0] waddr_alu;
-    reg [11:0] wdata_alu;
+    reg [`awidth_fbuff-1:0] waddr_alu;
+    reg [`dwidth_dat-1:0] wdata_alu;
     reg        wen_alu;
-    wire [11:0] rdata_alu;
+    wire [`awidth_fbuff-1:0] raddr_alu;
+    wire [(`dwss*`dwidth_dat)-1:0] rdata_alu;
     
     mem_controller mc0 (
         .sys_clk  (sys_clk  ),
@@ -77,7 +77,6 @@ module test_mem_controller(
         href_cam ='b0;
         wdata_cam='b0;
         raddr_vga='b0;
-        raddr_alu='b0;
         waddr_alu='b0;
         wdata_alu='b0;
         wen_alu  ='b0;
@@ -89,7 +88,8 @@ module test_mem_controller(
         #10; vsync_cam = 1; #40; vsync_cam = 0;
          
         // loop
-        for (i = 0; i <=(481*640); i=i+1) begin
+        for (i = 0; i <=(481*40); i=i+1) begin
+//        for (i = 0; i <=(481*640); i=i+1) begin
             if (i%640==0) begin
                 // set href low then high
                 href_cam = 0; #40; href_cam = 1;
@@ -108,7 +108,6 @@ module test_mem_controller(
         // loop through rows
         for (k = 0; k<(481*640); k=k+1) begin
             raddr_vga = k;
-            raddr_alu = k+1;
             #16;
         end
         

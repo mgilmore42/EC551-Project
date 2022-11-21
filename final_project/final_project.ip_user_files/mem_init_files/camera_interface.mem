@@ -1,0 +1,70 @@
+12_80 //reset all register to default values
+12_04 //set output format to RGB
+15_00 //Free running PCLK
+8C_02 //RGB444 in xRGB format
+11_80 //CLKRC Use external clock directly (no clock pre-scale available)
+3a_04 //TSLB       set correct output data sequence (magic)
+4F_B3 //MTX1       all of these are magical matrix coefficients
+50_B3 //MTX2
+51_00 //MTX3
+52_3d //MTX4
+53_A7 //MTX5
+54_E4 //MTX6
+58_9E //MTXS
+3D_C0 //COM13      sets gamma enable, does not preserve reserved bits, may be wrong?
+17_14 //HSTART     start high 8 bits
+18_02 //HSTOP      stop high 8 bits //these kill the odd colored line
+32_80 //HREF       edge offset
+19_03 //VSTART     start high 8 bits
+1A_7B //VSTOP      stop high 8 bits
+03_0A //VREF       vsync edge offset
+0F_41 //COM6       reset timings
+1E_00 //MVFP       disable mirror / flip //might have magic value of 03
+33_0B //CHLF       //magic value from the internet
+3C_78 //COM12      no HREF when VSYNC low
+69_00 //GFIX       fix gain control
+74_00 //REG74      Digital gain control
+B0_84 //RSVD       magic value from the internet *required* for good color
+B1_0c //ABLC1
+B2_0e //RSVD       more magic internet values
+B3_80 //THL_ST
+70_3a //begin mystery scaling numbers
+71_35
+72_11
+73_f0
+a2_02
+7a_20 //gamma curve values
+7b_10
+7c_1e
+7d_35
+7e_5a
+7f_69
+80_76
+81_80
+82_88
+83_8f
+84_96
+85_a3
+86_af
+87_c4
+88_d7
+89_e8
+00_00 //AGC and AEC //set gain reg to 0 for AGC
+10_00 //set ARCJ reg to 0
+0d_40 //magic reserved bit for COM4
+14_18 //COM9, 4x gain + magic bit
+a5_05 // BD50MAX
+ab_07 //DB60MAX
+24_95 //AGC upper limit
+25_33 //AGC lower limit
+26_e3 //AGC/AEC fast mode op region
+9f_78 //HAECC1
+a0_68 //HAECC2
+a1_03 //magic
+a6_d8 //HAECC3
+a7_d8 //HAECC4
+a8_f0 //HAECC5
+a9_90 //HAECC6
+aa_94 //HAECC7
+13_e5 //COM8, enable AGC / AEC
+1E_23 //Mirror Image

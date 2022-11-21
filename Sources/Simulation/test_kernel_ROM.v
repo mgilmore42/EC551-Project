@@ -1,26 +1,29 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 11/06/2022 04:03:38 PM
-// Design Name: 
-// Module Name: test_kernel_ROM
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
+`include "my_header.vh"
 
 module test_kernel_ROM(
 
     );
+    reg [1:0] kernel_select;
+    wire [(`dwss*`dwidth_kernel)-1:0] kernel;
+    wire [`dwidth_div-1:0]              div;
+
+    kernel_ROM kr(
+        .kernel_select(kernel),
+        .kernel(kernel),
+        .div(div)
+    );
+
+    initial begin
+        kernel_select = 0;
+        #10;
+        kernel_select = 1;
+        #10;
+        kernel_select = 2;
+        #10;
+        $finish;
+    end
+        
+
 endmodule
