@@ -3,10 +3,13 @@
 `include "my_header.vh"
 
 module ALU(
+    input wire clk,
     input wire [(`dwss*`dwidth_dat)-1:0] din,
     input wire [(`dwss*`dwidth_kernel)-1:0] kernel, // `dwidth_kernel bit signed value
     input wire [`dwidth_div-1:0] div,
-    output wire [`dwidth_dat-1:0] dout
+    input wire [`awidth_fbuff-1:0] raddr_alu,
+    output reg [`dwidth_dat-1:0] dout,
+    output reg [`awidth_fbuff-1:0] waddr_alu
     );
 
     localparam prod_bw = `dwidth_dat/3*2;
@@ -46,25 +49,25 @@ module ALU(
         end
     endgenerate
 
-    wire [prod_bw+bw_ext:0] sum_floor [2:0];
-    //                      if MSB is 1, round to 0, else passthrough
-    assign sum_floor[0] = (sums[`dwss-2][0][prod_bw+bw_ext-1])?'b0:sums[`dwss-2][0];
-    assign sum_floor[1] = (sums[`dwss-2][1][prod_bw+bw_ext-1])?'b0:sums[`dwss-2][1];
-    assign sum_floor[2] = (sums[`dwss-2][2][prod_bw+bw_ext-1])?'b0:sums[`dwss-2][2];
 
-    reg [`dwidth_dat-1:0] dout_t;
-    always @(*) begin
-        case(div)
-            `dwidth_div'd0: dout_t <= {sum_floor[2][3+0:0],sum_floor[1][3+0:0],sum_floor[0][3+0:0]};
-            `dwidth_div'd1: dout_t <= {sum_floor[2][3+1:1],sum_floor[1][3+1:1],sum_floor[0][3+1:1]};
-            `dwidth_div'd2: dout_t <= {sum_floor[2][3+2:2],sum_floor[1][3+2:2],sum_floor[0][3+2:2]};
-            `dwidth_div'd3: dout_t <= {sum_floor[2][3+3:3],sum_floor[1][3+3:3],sum_floor[0][3+3:3]};
-            `dwidth_div'd4: dout_t <= {sum_floor[2][3+4:4],sum_floor[1][3+4:4],sum_floor[0][3+4:4]};
-            `dwidth_div'd5: dout_t <= {sum_floor[2][3+5:5],sum_floor[1][3+5:5],sum_floor[0][3+5:5]};
-            `dwidth_div'd6: dout_t <= {sum_floor[2][3+6:6],sum_floor[1][3+6:6],sum_floor[0][3+6:6]};
-            `dwidth_div'd7: dout_t <= {sum_floor[2][3+7:7],sum_floor[1][3+7:7],sum_floor[0][3+7:7]};
-            default:        dout_t <= {sum_floor[2][3+0:0],sum_floor[1][3+0:0],sum_floor[0][3+0:0]};
-        endcase
+    wire [prod_bw+bw_ext:0] sum_abs [2:0];
+    //                      if MSB is 1, invert and add1, else passthrough
+    assign sum_abs[0] = (sums[`dwss-2][0][prod_bw+bw_ext-1]) ? (~sums[`dwss-2][0]+'b1) : sums[`dwss-2][0];
+    assign sum_abs[1] = (sums[`dwss-2][1][prod_bw+bw_ext-1]) ? (~sums[`dwss-2][1]+'b1) : sums[`dwss-2][1];
+    assign sum_abs[2] = (sums[`dwss-2][2][prod_bw+bw_ext-1]) ? (~sums[`dwss-2][2]+'b1) : sums[`dwss-2][2];
+
+    wire [`dwidth_dat-1:0] dout_t;
+
+    //   if bits between MSB and just above the valid range are 1's, then there was overflow and we ceil at 0Xf
+    assign dout_t = {
+        (|sum_abs[2][prod_bw+bw_ext-2:4+div]) ? 4'hf : sum_abs[2][3+div -: 4],
+        (|sum_abs[1][prod_bw+bw_ext-2:4+div]) ? 4'hf : sum_abs[1][3+div -: 4],
+        (|sum_abs[0][prod_bw+bw_ext-2:4+div]) ? 4'hf : sum_abs[0][3+div -: 4]
+    };
+
+
+    always @(posedge clk) begin
+        dout <= dout_t;
+        waddr_alu <= raddr_alu;
     end
-    assign dout = dout_t;
 endmodule

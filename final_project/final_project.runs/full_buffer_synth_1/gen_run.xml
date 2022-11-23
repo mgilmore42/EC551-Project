@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="full_buffer_synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1668540304">
-  <File Type="RDS-UTIL-PB" Name="full_buffer_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="full_buffer_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="full_buffer_utilization_synth.pb"/>
   <File Type="RDS-RDS" Name="full_buffer.vds"/>
   <File Type="RDS-DCP" Name="full_buffer.dcp"/>
   <File Type="PA-TCL" Name="full_buffer.tcl"/>

@@ -34,13 +34,13 @@ module top(
     wire [`dwidth_dat-1:0]              rdata_vga;
     
     // Processing access
-    reg [`awidth_pbuff-1:0]             raddr_alu;
-    reg [`awidth_fbuff-1:0]             waddr_alu;
-    wire [`dwidth_dat-1:0]              wdata_alu;
-    reg                                 wen_alu;
+    wire [`awidth_pbuff-1:0]             raddr_alu;
+    reg  [`awidth_fbuff-1:0]             waddr_alu;
+    wire [`dwidth_dat-1:0]               wdata_alu;
+    reg                                  wen_alu;
     wire [(`dwss*`dwidth_dat)-1:0]       rdata_alu;
     wire [(`dwss*`dwidth_kernel)-1:0]    kernel_alu;
-    wire [`dwidth_div-1:0]              div_alu;
+    wire [`dwidth_div-1:0]               div_alu;
     
     mem_controller mc(
         .sys_clk  (CLK100MHZ),
@@ -48,7 +48,8 @@ module top(
         .pclk     (pclk_cam ),
         .vsync_cam(vsync_cam),
         .href_cam (href_cam ),
-        .wdata_cam(wdata_cam),     
+        .wdata_cam(wdata_cam),
+        .pass_thru(SW[0]    ),
         .raddr_vga(raddr_vga),
         .rdata_vga(rdata_vga),
         .waddr_alu(waddr_alu),
@@ -66,7 +67,7 @@ module top(
     );
 
     kernel_ROM kr(
-        .kernel_select(SW[1:0]),
+        .kernel_select(SW[2:1]),
         .kernel(kernel_alu),
         .div(div_alu)
     );
@@ -83,7 +84,7 @@ module top(
         .raddr_vga(raddr_vga)
     );
     
-    camera_interface(
+    camera_interface ca(
         .clk_100(CLK100MHZ),
         .rst_n(rst_n),
         .key(BTNS),

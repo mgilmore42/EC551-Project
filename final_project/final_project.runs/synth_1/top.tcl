@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 1
 set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -39,12 +40,14 @@ read_verilog -library xil_defaultlib {
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/conv_buffer.v
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/partial_buffer.v
+  /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga.v
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v
   /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v

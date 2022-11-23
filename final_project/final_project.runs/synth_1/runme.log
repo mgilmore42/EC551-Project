@@ -9,140 +9,52 @@
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1495.457 ; gain = 2.023 ; free physical = 712 ; free virtual = 8230
 Command: synth_design -top top -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6565 
-WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:5]
-WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:6]
-WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:5]
+INFO: Helper process launched with PID 108956 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1894.078 ; gain = 158.559 ; free physical = 2180 ; free virtual = 7994
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1888.246 ; gain = 154.621 ; free physical = 309 ; free virtual = 7831
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:5]
 INFO: [Synth 8-6157] synthesizing module 'mem_controller' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:5]
+	Parameter pad bound to: 2 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter HREF bound to: 3'b001 
+	Parameter B0 bound to: 3'b010 
+	Parameter B1 bound to: 3'b011 
+	Parameter POP bound to: 3'b100 
+	Parameter VPAD bound to: 3'b001 
+	Parameter HPAD bound to: 3'b010 
+	Parameter READ bound to: 3'b011 
 INFO: [Synth 8-6157] synthesizing module 'partial_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/partial_buffer.v:5]
 INFO: [Synth 8-6157] synthesizing module 'buffer_slice' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'buffer_slice' (1#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'partial_buffer' (2#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/partial_buffer.v:5]
-WARNING: [Synth 8-689] width (19) of port connection 'waddr' does not match port width (10) of module 'partial_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:46]
-WARNING: [Synth 8-689] width (300) of port connection 'rdata' does not match port width (60) of module 'partial_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:49]
-WARNING: [Synth 8-7023] instance 'pbuff' of module 'partial_buffer' has 8 connections declared, but only 7 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:42]
-INFO: [Synth 8-6157] synthesizing module 'full_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-6470-eng-grid3/realtime/full_buffer_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'full_buffer' (3#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-6470-eng-grid3/realtime/full_buffer_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'mem_controller' (4#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:5]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:8]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:41]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 25 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:39]
-WARNING: [Synth 8-324] index 24 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 26 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-WARNING: [Synth 8-324] index 7 out of range [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:40]
-INFO: [Common 17-14] Message 'Synth 8-324' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-226] default block is never used [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:48]
-WARNING: [Synth 8-3848] Net sums[23][0] in module/entity ALU does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:16]
-WARNING: [Synth 8-3848] Net sums[23][1] in module/entity ALU does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:16]
-WARNING: [Synth 8-3848] Net sums[23][2] in module/entity ALU does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:16]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (5#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:8]
-INFO: [Synth 8-6157] synthesizing module 'kernel_ROM' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'kernel_ROM' (6#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:8]
+INFO: [Synth 8-6157] synthesizing module 'full_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-108860-eng-grid4/realtime/full_buffer_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'full_buffer' (3#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-108860-eng-grid4/realtime/full_buffer_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'conv_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/conv_buffer.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'conv_buffer' (4#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/conv_buffer.v:5]
+WARNING: [Synth 8-689] width (60) of port connection 'rdata' does not match port width (300) of module 'conv_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:87]
+INFO: [Synth 8-155] case statement is not full and has no default [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:112]
+INFO: [Synth 8-155] case statement is not full and has no default [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:163]
+INFO: [Synth 8-6157] synthesizing module 'pulse_gen' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'pulse_gen' (5#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mem_controller' (6#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:5]
+WARNING: [Synth 8-689] width (10) of port connection 'raddr_alu' does not match port width (19) of module 'mem_controller' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:5]
+	Parameter prod_bw bound to: 8 - type: integer 
+	Parameter bw_ext bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (7#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:5]
+WARNING: [Synth 8-7023] instance 'alu' of module 'ALU' has 7 connections declared, but only 4 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:62]
+INFO: [Synth 8-6157] synthesizing module 'kernel_ROM' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:5]
+INFO: [Synth 8-226] default block is never used [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'kernel_ROM' (8#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:5]
 INFO: [Synth 8-6157] synthesizing module 'vga' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga.v:6]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller_640_60' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v:8]
 	Parameter HMAX bound to: 800 - type: integer 
@@ -154,8 +66,8 @@ INFO: [Synth 8-6157] synthesizing module 'vga_controller_640_60' [/ad/eng/users/
 	Parameter VFP bound to: 482 - type: integer 
 	Parameter VSP bound to: 484 - type: integer 
 	Parameter SPP bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller_640_60' (7#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'vga' (8#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller_640_60' (9#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'vga' (10#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga.v:6]
 INFO: [Synth 8-6157] synthesizing module 'camera_interface' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:3]
 	Parameter idle bound to: 0 - type: integer 
 	Parameter start_sccb bound to: 1 - type: integer 
@@ -189,7 +101,7 @@ INFO: [Synth 8-6157] synthesizing module 'i2c_top' [/ad/eng/users/w/k/wkrska/Doc
 	Parameter ack_master bound to: 4'b0110 
 	Parameter stop_1 bound to: 4'b0111 
 	Parameter stop_2 bound to: 4'b1000 
-INFO: [Synth 8-6155] done synthesizing module 'i2c_top' (9#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_top' (11#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v:3]
 INFO: [Synth 8-6157] synthesizing module 'dcm_24MHz' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v:68]
 INFO: [Synth 8-6157] synthesizing module 'DCM_SP' [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:10805]
 	Parameter CLKDV_DIVIDE bound to: 2.000000 - type: float 
@@ -207,10 +119,10 @@ INFO: [Synth 8-6157] synthesizing module 'DCM_SP' [/ad/eng/opt/xilinx/Vivado/201
 	Parameter FACTORY_JF bound to: 16'b1100000010000000 
 	Parameter PHASE_SHIFT bound to: 0 - type: integer 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'DCM_SP' (10#1) [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:10805]
+INFO: [Synth 8-6155] done synthesizing module 'DCM_SP' (12#1) [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:10805]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (11#1) [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
-INFO: [Synth 8-6155] done synthesizing module 'dcm_24MHz' (12#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (13#1) [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'dcm_24MHz' (14#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v:68]
 WARNING: [Synth 8-7023] instance 'm1' of module 'dcm_24MHz' has 4 connections declared, but only 3 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:345]
 INFO: [Synth 8-6157] synthesizing module 'asyn_fifo' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:3]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
@@ -219,12 +131,12 @@ INFO: [Synth 8-6157] synthesizing module 'asyn_fifo' [/ad/eng/users/w/k/wkrska/D
 INFO: [Synth 8-6157] synthesizing module 'dual_port_sync' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:142]
 	Parameter ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'dual_port_sync' (13#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:142]
+INFO: [Synth 8-6155] done synthesizing module 'dual_port_sync' (15#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:142]
 WARNING: [Synth 8-6014] Unused sequential element w_ptr_sync_reg was removed.  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:102]
 WARNING: [Synth 8-5788] Register r_ptr_sync_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:71]
 WARNING: [Synth 8-5788] Register data_count_w_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:72]
 WARNING: [Synth 8-5788] Register data_count_r_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:103]
-INFO: [Synth 8-6155] done synthesizing module 'asyn_fifo' (14#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'asyn_fifo' (16#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:3]
 WARNING: [Synth 8-7023] instance 'm2' of module 'asyn_fifo' has 11 connections declared, but only 10 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:352]
 INFO: [Synth 8-6157] synthesizing module 'debounce_explicit' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:3]
 	Parameter idle bound to: 2'b00 
@@ -233,122 +145,33 @@ INFO: [Synth 8-6157] synthesizing module 'debounce_explicit' [/ad/eng/users/w/k/
 	Parameter delay1 bound to: 2'b11 
 	Parameter N bound to: 21 - type: integer 
 INFO: [Synth 8-226] default block is never used [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:51]
-INFO: [Synth 8-6155] done synthesizing module 'debounce_explicit' (15#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'debounce_explicit' (17#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:3]
 WARNING: [Synth 8-5788] Register pclk_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:104]
 WARNING: [Synth 8-5788] Register pclk_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:105]
 WARNING: [Synth 8-5788] Register href_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:106]
 WARNING: [Synth 8-5788] Register href_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:107]
 WARNING: [Synth 8-5788] Register vsync_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:108]
 WARNING: [Synth 8-5788] Register vsync_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:109]
-INFO: [Synth 8-6155] done synthesizing module 'camera_interface' (16#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:3]
-WARNING: [Synth 8-7023] instance 'nolabel_line86' of module 'camera_interface' has 16 connections declared, but only 11 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:86]
-WARNING: [Synth 8-3848] Net raddr_alu in module/entity top does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:37]
+INFO: [Synth 8-6155] done synthesizing module 'camera_interface' (18#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:3]
+WARNING: [Synth 8-7023] instance 'nolabel_line87' of module 'camera_interface' has 16 connections declared, but only 11 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:87]
 WARNING: [Synth 8-3848] Net waddr_alu in module/entity top does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:38]
 WARNING: [Synth 8-3848] Net wen_alu in module/entity top does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:40]
-INFO: [Synth 8-6155] done synthesizing module 'top' (17#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:5]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[299]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[298]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[297]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[296]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[295]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[294]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[293]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[292]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[291]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[290]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[289]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[288]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[287]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[286]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[285]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[284]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[283]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[282]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[281]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[280]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[279]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[278]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[277]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[276]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[275]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[274]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[273]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[272]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[271]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[270]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[269]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[268]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[267]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[266]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[265]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[264]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[263]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[262]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[261]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[260]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[259]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[258]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[257]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[256]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[255]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[254]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[253]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[252]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[251]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[250]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[249]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[248]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[247]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[246]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[245]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[244]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[243]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[242]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[241]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[240]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[239]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[238]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[237]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[236]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[235]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[234]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[233]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[232]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[231]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[230]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[229]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[228]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[227]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[226]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[225]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[224]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[223]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[222]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[221]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[220]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[219]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[218]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[217]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[216]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[215]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[214]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[213]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[212]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[211]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[210]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[209]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[208]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[207]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[206]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[205]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[204]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[203]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[202]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[201]
-WARNING: [Synth 8-3331] design ALU has unconnected port din[200]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'top' (19#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:5]
+WARNING: [Synth 8-3331] design top has unconnected port SW[15]
+WARNING: [Synth 8-3331] design top has unconnected port SW[14]
+WARNING: [Synth 8-3331] design top has unconnected port SW[13]
+WARNING: [Synth 8-3331] design top has unconnected port SW[12]
+WARNING: [Synth 8-3331] design top has unconnected port SW[11]
+WARNING: [Synth 8-3331] design top has unconnected port SW[10]
+WARNING: [Synth 8-3331] design top has unconnected port SW[9]
+WARNING: [Synth 8-3331] design top has unconnected port SW[8]
+WARNING: [Synth 8-3331] design top has unconnected port SW[7]
+WARNING: [Synth 8-3331] design top has unconnected port SW[6]
+WARNING: [Synth 8-3331] design top has unconnected port SW[5]
+WARNING: [Synth 8-3331] design top has unconnected port SW[4]
+WARNING: [Synth 8-3331] design top has unconnected port SW[3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 2002.246 ; gain = 266.727 ; free physical = 2153 ; free virtual = 7969
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 2002.289 ; gain = 268.664 ; free physical = 274 ; free virtual = 7798
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -361,14 +184,14 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2020.051 ; gain = 284.531 ; free physical = 2157 ; free virtual = 7973
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2020.094 ; gain = 286.469 ; free physical = 278 ; free virtual = 7802
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2020.051 ; gain = 284.531 ; free physical = 2157 ; free virtual = 7973
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2020.094 ; gain = 286.469 ; free physical = 278 ; free virtual = 7802
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line86/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line86/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line87/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line87/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -383,45 +206,78 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2666.742 ; gain = 0.000 ; free physical = 1483 ; free virtual = 7299
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2675.723 ; gain = 0.000 ; free physical = 140 ; free virtual = 7136
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 1 instances were transformed.
   DCM_SP => MMCME2_ADV (inverted pins: PSINCDEC): 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.27 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2666.746 ; gain = 0.004 ; free physical = 1483 ; free virtual = 7299
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.35 . Memory (MB): peak = 2675.727 ; gain = 0.004 ; free physical = 140 ; free virtual = 7136
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mc/fbuff' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 2666.746 ; gain = 931.227 ; free physical = 2100 ; free virtual = 7917
+Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 2675.727 ; gain = 942.102 ; free physical = 759 ; free virtual = 7755
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 2666.746 ; gain = 931.227 ; free physical = 2100 ; free virtual = 7917
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 2675.727 ; gain = 942.102 ; free physical = 759 ; free virtual = 7755
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for mc/fbuff. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:55 . Memory (MB): peak = 2666.746 ; gain = 931.227 ; free physical = 2100 ; free virtual = 7917
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2675.727 ; gain = 942.102 ; free physical = 759 ; free virtual = 7755
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'st_c_reg' in module 'mem_controller'
+INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'pulse_gen'
+INFO: [Synth 8-802] inferred FSM for state register 'ws_c_reg' in module 'mem_controller'
+INFO: [Synth 8-802] inferred FSM for state register 'rs_c_reg' in module 'mem_controller'
 INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'i2c_top'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'debounce_explicit'
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:276]
 INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'camera_interface'
 INFO: [Synth 8-802] inferred FSM for state register 'sccb_state_q_reg' in module 'camera_interface'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_ns_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:19]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ns_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:19]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                  iSTATE |                               00 |                               00
-                 iSTATE1 |                               01 |                               01
-                 iSTATE2 |                               10 |                               10
-                 iSTATE0 |                               11 |                               11
+                 iSTATE0 |                              001 |                               00
+                  iSTATE |                              010 |                               01
+                 iSTATE1 |                              100 |                               10
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'st_c_reg' using encoding 'sequential' in module 'mem_controller'
+INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'pulse_gen'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ns_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:19]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_rs_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:165]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_rs_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:165]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                              000
+                    VPAD |                               01 |                              001
+                    HPAD |                               10 |                              010
+                    READ |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rs_c_reg' using encoding 'sequential' in module 'mem_controller'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_rs_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:165]
+WARNING: [Synth 8-327] inferring latch for variable 'vcnt_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:116]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_ws_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:114]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ws_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:114]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                    HREF |                              001 |                              001
+                      B0 |                              010 |                              010
+                      B1 |                              011 |                              011
+                     POP |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'ws_c_reg' using encoding 'sequential' in module 'mem_controller'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_ws_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:114]
+WARNING: [Synth 8-327] inferring latch for variable 'hcnt_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:115]
+WARNING: [Synth 8-327] inferring latch for variable 'wen_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:117]
+WARNING: [Synth 8-327] inferring latch for variable 'pop_pbuff_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:118]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -472,7 +328,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_q_reg' using encodin
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'sccb_state_q_reg' using encoding 'sequential' in module 'camera_interface'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:59 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 2116 ; free virtual = 7933
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:01:07 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 771 ; free virtual = 7767
 ---------------------------------------------------------------------------------
 RAM Pipeline Warning: Read Address Register Found For RAM ram_reg. We will not be able to pipeline it. This may degrade performance. 
 
@@ -485,21 +341,23 @@ Report RTL Partitions:
 |3     |partial_buffer__GB2    |           1|     11248|
 |4     |partial_buffer__GB3    |           1|     14647|
 |5     |partial_buffer__GB4    |           1|     17538|
-|6     |mem_controller__GC0    |           1|       233|
-|7     |top__GC0               |           1|      3955|
+|6     |mem_controller__GC0    |           1|      1143|
+|7     |top__GC0               |           1|      6942|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     32 Bit       Adders := 1     
 	   2 Input     28 Bit       Adders := 1     
-	   3 Input     19 Bit       Adders := 1     
+	   3 Input     19 Bit       Adders := 2     
 	   4 Input     19 Bit       Adders := 1     
+	  25 Input     11 Bit       Adders := 3     
 	   2 Input     11 Bit       Adders := 6     
 	   2 Input     10 Bit       Adders := 1     
 	   3 Input     10 Bit       Adders := 2     
-	   2 Input      9 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 4     
 	   2 Input      8 Bit       Adders := 5     
 	   2 Input      4 Bit       Adders := 1     
 +---XORs : 
@@ -508,23 +366,27 @@ Detailed RTL Component Info :
 	               11 Bit    Wide XORs := 10    
 +---Registers : 
 	               28 Bit    Registers := 1     
+	               19 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
-	               12 Bit    Registers := 3842  
+	               12 Bit    Registers := 3873  
 	               11 Bit    Registers := 9     
 	               10 Bit    Registers := 4     
 	                9 Bit    Registers := 3     
 	                8 Bit    Registers := 7     
 	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 18    
+	                1 Bit    Registers := 19    
 +---RAMs : 
 	              16K Bit         RAMs := 1     
 +---Muxes : 
-	   2 Input     93 Bit        Muxes := 2     
+	   4 Input     93 Bit        Muxes := 1     
+	   2 Input     60 Bit        Muxes := 1     
 	   2 Input     28 Bit        Muxes := 2     
+	   2 Input     19 Bit        Muxes := 1     
 	  10 Input     16 Bit        Muxes := 2     
-	   2 Input     11 Bit        Muxes := 4     
-	   4 Input     10 Bit        Muxes := 1     
-	   4 Input      9 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 7     
+	   5 Input     10 Bit        Muxes := 1     
+	   5 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 17    
 	   9 Input      8 Bit        Muxes := 1     
@@ -535,17 +397,19 @@ Detailed RTL Component Info :
 	   9 Input      4 Bit        Muxes := 3     
 	  10 Input      4 Bit        Muxes := 2     
 	   5 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 2     
-	   5 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 9     
+	   5 Input      3 Bit        Muxes := 3     
+	   4 Input      3 Bit        Muxes := 1     
 	   4 Input      2 Bit        Muxes := 5     
-	   2 Input      2 Bit        Muxes := 15    
+	   2 Input      2 Bit        Muxes := 16    
 	   9 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 19    
-	   3 Input      1 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 47    
+	   3 Input      1 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 48    
+	   5 Input      1 Bit        Muxes := 15    
 	   9 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 16    
 	  10 Input      1 Bit        Muxes := 8     
-	   5 Input      1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -3109,33 +2973,81 @@ Module buffer_slice__639
 Detailed RTL Component Info : 
 +---Registers : 
 	               12 Bit    Registers := 6     
+Module buffer_slice__640 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__641 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__642 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__643 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
+Module buffer_slice__644 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 6     
 Module buffer_slice 
 Detailed RTL Component Info : 
 +---Registers : 
 	               12 Bit    Registers := 6     
+Module pulse_gen__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
+Module pulse_gen 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 2     
 Module mem_controller 
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input     19 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     19 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 1     
-	   2 Input      9 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 2     
 +---Registers : 
 	               12 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   4 Input     10 Bit        Muxes := 1     
-	   4 Input      9 Bit        Muxes := 1     
+	   2 Input     60 Bit        Muxes := 1     
+	   2 Input     19 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   5 Input     10 Bit        Muxes := 1     
+	   5 Input      9 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 5     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 5     
-	   4 Input      1 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 8     
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	  25 Input     11 Bit       Adders := 3     
++---Registers : 
+	               19 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 3     
 Module kernel_ROM 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     93 Bit        Muxes := 2     
-	   2 Input      3 Bit        Muxes := 2     
+	   4 Input     93 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
 Module vga_controller_640_60 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -3267,15 +3179,28 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-RAM Pipeline Warning: Read Address Register Found For RAM nolabel_line86/m2/m0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line86/m2/m0/ram_reg was removed. 
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line86/addr_q_reg[7]' (FDCE) to 'i_0/nolabel_line86/addr_q_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line86/addr_q_reg[6]' (FDCE) to 'i_0/nolabel_line86/addr_q_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line86/addr_q_reg[5]' (FDCE) to 'i_0/nolabel_line86/addr_q_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line86/addr_q_reg[4]' (FDCE) to 'i_0/nolabel_line86/addr_q_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\nolabel_line86/addr_q_reg[3] )
+WARNING: [Synth 8-3331] design top has unconnected port SW[15]
+WARNING: [Synth 8-3331] design top has unconnected port SW[14]
+WARNING: [Synth 8-3331] design top has unconnected port SW[13]
+WARNING: [Synth 8-3331] design top has unconnected port SW[12]
+WARNING: [Synth 8-3331] design top has unconnected port SW[11]
+WARNING: [Synth 8-3331] design top has unconnected port SW[10]
+WARNING: [Synth 8-3331] design top has unconnected port SW[9]
+WARNING: [Synth 8-3331] design top has unconnected port SW[8]
+WARNING: [Synth 8-3331] design top has unconnected port SW[7]
+WARNING: [Synth 8-3331] design top has unconnected port SW[6]
+WARNING: [Synth 8-3331] design top has unconnected port SW[5]
+WARNING: [Synth 8-3331] design top has unconnected port SW[4]
+WARNING: [Synth 8-3331] design top has unconnected port SW[3]
+RAM Pipeline Warning: Read Address Register Found For RAM nolabel_line87/m2/m0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6014] Unused sequential element nolabel_line87/m2/m0/ram_reg was removed. 
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/addr_q_reg[7]' (FDCE) to 'i_0/nolabel_line87/addr_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/addr_q_reg[6]' (FDCE) to 'i_0/nolabel_line87/addr_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/addr_q_reg[5]' (FDCE) to 'i_0/nolabel_line87/addr_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/addr_q_reg[4]' (FDCE) to 'i_0/nolabel_line87/addr_q_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\nolabel_line87/addr_q_reg[3] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:05 ; elapsed = 00:01:26 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 2037 ; free virtual = 7887
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:34 ; elapsed = 00:02:01 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 638 ; free virtual = 7671
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -3294,37 +3219,59 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+--------------------+------------+----------+
-|      |RTL Partition       |Replication |Instances |
-+------+--------------------+------------+----------+
-|1     |mem_controller__GC0 |           1|       229|
-|2     |top__GC0            |           1|      1462|
-+------+--------------------+------------+----------+
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |muxpart_partial_buffer |           1|      7669|
+|2     |partial_buffer__GB1    |           1|      1976|
+|3     |partial_buffer__GB2    |           1|      3801|
+|4     |partial_buffer__GB3    |           1|      5382|
+|5     |partial_buffer__GB4    |           1|      5926|
+|6     |mem_controller__GC0    |           1|       517|
+|7     |top__GC0               |           1|      1870|
++------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:35 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 1937 ; free virtual = 7786
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:43 ; elapsed = 00:02:11 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 514 ; free virtual = 7554
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:16 ; elapsed = 00:01:37 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 1926 ; free virtual = 7776
+Finished Timing Optimization : Time (s): cpu = 00:02:11 ; elapsed = 00:02:40 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 489 ; free virtual = 7529
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+--------------------+------------+----------+
 |      |RTL Partition       |Replication |Instances |
 +------+--------------------+------------+----------+
-|1     |mem_controller__GC0 |           1|       229|
-|2     |top__GC0            |           1|      1462|
+|1     |partial_buffer__GB1 |           1|      1976|
+|2     |partial_buffer__GB2 |           1|      3801|
+|3     |top__GC0            |           1|      1870|
+|4     |top_GT0             |           1|     19186|
 +------+--------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (mc/pop_pbuff_n_reg) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_cs_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_cs_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_cs_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_cs_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_cs_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_cs_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_ns_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_ns_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_ns_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_ns_reg[2]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_ns_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_ns_reg[0]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/FSM_sequential_rs_c_reg[1]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (mc/FSM_sequential_rs_c_reg[0]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:17 ; elapsed = 00:01:38 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 1932 ; free virtual = 7781
+Finished Technology Mapping : Time (s): cpu = 00:02:19 ; elapsed = 00:02:47 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 522 ; free virtual = 7561
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3348,7 +3295,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:19 ; elapsed = 00:01:40 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 1931 ; free virtual = 7781
+Finished IO Insertion : Time (s): cpu = 00:02:21 ; elapsed = 00:02:49 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3361,7 +3308,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:19 ; elapsed = 00:01:40 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 1931 ; free virtual = 7781
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:21 ; elapsed = 00:02:49 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3373,25 +3320,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:01:40 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 1931 ; free virtual = 7781
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:21 ; elapsed = 00:02:49 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:40 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 1931 ; free virtual = 7781
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:21 ; elapsed = 00:02:49 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:40 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 1931 ; free virtual = 7781
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:40 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 1931 ; free virtual = 7781
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3413,28 +3360,29 @@ Report Cell Usage:
 |3     |CARRY4      |    42|
 |4     |DCM_SP      |     1|
 |5     |LUT1        |    13|
-|6     |LUT2        |    80|
-|7     |LUT3        |    54|
-|8     |LUT4        |   162|
-|9     |LUT5        |    73|
-|10    |LUT6        |   135|
+|6     |LUT2        |   115|
+|7     |LUT3        |    50|
+|8     |LUT4        |   164|
+|9     |LUT5        |    67|
+|10    |LUT6        |   151|
 |11    |MUXF7       |     8|
 |12    |MUXF8       |     2|
 |13    |FDCE        |   196|
 |14    |FDPE        |     2|
-|15    |FDRE        |    83|
-|16    |IBUF        |    17|
-|17    |IOBUF       |     1|
-|18    |OBUF        |    16|
+|15    |FDRE        |    84|
+|16    |LD          |    23|
+|17    |IBUF        |    18|
+|18    |IOBUF       |     1|
+|19    |OBUF        |    16|
 +------+------------+------+
 
 Report Instance Areas: 
 +------+-------------------+----------------------+------+
 |      |Instance           |Module                |Cells |
 +------+-------------------+----------------------+------+
-|1     |top                |                      |   914|
-|2     |  mc               |mem_controller        |   115|
-|3     |  nolabel_line86   |camera_interface      |   630|
+|1     |top                |                      |   982|
+|2     |  mc               |mem_controller        |   185|
+|3     |  nolabel_line87   |camera_interface      |   627|
 |4     |    m0             |i2c_top               |   154|
 |5     |    m1             |dcm_24MHz             |     3|
 |6     |    m3             |debounce_explicit     |    87|
@@ -3445,31 +3393,32 @@ Report Instance Areas:
 |11    |    vga_controller |vga_controller_640_60 |   111|
 +------+-------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:40 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 1931 ; free virtual = 7781
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:01:14 . Memory (MB): peak = 2666.754 ; gain = 284.539 ; free physical = 1982 ; free virtual = 7831
-Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:40 . Memory (MB): peak = 2666.754 ; gain = 931.234 ; free physical = 1995 ; free virtual = 7844
+Synthesis finished with 0 errors, 0 critical warnings and 42 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:56 ; elapsed = 00:02:18 . Memory (MB): peak = 2675.734 ; gain = 286.477 ; free physical = 570 ; free virtual = 7610
+Synthesis Optimization Complete : Time (s): cpu = 00:02:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 585 ; free virtual = 7624
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line86/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line86/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+INFO: [Netlist 29-17] Analyzing 77 Unisim elements for replacement
+WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line87/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
+WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line87/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2666.754 ; gain = 0.000 ; free physical = 1932 ; free virtual = 7782
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2675.734 ; gain = 0.000 ; free physical = 533 ; free virtual = 7573
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
+  A total of 25 instances were transformed.
   DCM_SP => MMCME2_ADV (inverted pins: PSINCDEC): 1 instances
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  LD => LDCE: 23 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-71 Infos, 231 Warnings, 0 Critical Warnings and 0 Errors encountered.
+80 Infos, 78 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:26 ; elapsed = 00:01:50 . Memory (MB): peak = 2666.754 ; gain = 1135.590 ; free physical = 2034 ; free virtual = 7880
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2666.754 ; gain = 0.000 ; free physical = 2034 ; free virtual = 7880
+synth_design: Time (s): cpu = 00:02:28 ; elapsed = 00:03:01 . Memory (MB): peak = 2675.734 ; gain = 1159.469 ; free physical = 634 ; free virtual = 7670
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2675.734 ; gain = 0.000 ; free physical = 634 ; free virtual = 7670
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Nov 15 14:35:42 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 23 10:53:17 2022...

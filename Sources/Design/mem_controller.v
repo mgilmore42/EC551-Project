@@ -13,6 +13,7 @@ module mem_controller(
     input wire                     vsync_cam,
     input wire                     href_cam,
     input wire [7:0]               wdata_cam,
+    input wire                     pass_thru,
     
     // VGA Memory access           
     input wire [18:0]              raddr_vga,
@@ -30,7 +31,6 @@ module mem_controller(
 //    localparam pad = ($floor(`dwidth_slice/2));
     localparam pad = 2;    
     // mux between passthrough mode and process mode
-    reg passthrough_mode = 1;
     
     wire [`awidth_fbuff-1:0] waddr_cam;
     reg  [`dwidth_dat-1:0] wdata_cam_full;
@@ -67,9 +67,9 @@ module mem_controller(
 
     full_buffer fbuff (
         .clka(sys_clk),    // input wire clka
-        .wea((passthrough_mode) ? wen_cam : wen_alu),      // input wire [0 : 0] wea
-        .addra((passthrough_mode) ? waddr_cam : waddr_alu),  // input wire [18 : 0] addra
-        .dina((passthrough_mode) ? wdata_cam_full : wdata_alu),    // input wire [11 : 0] dina
+        .wea((pass_thru) ? wen_cam : wen_alu),      // input wire [0 : 0] wea
+        .addra((pass_thru) ? waddr_cam : waddr_alu),  // input wire [18 : 0] addra
+        .dina((pass_thru) ? wdata_cam_full : wdata_alu),    // input wire [11 : 0] dina
         .douta(douta),  // output wire [11 : 0] douta
         .clkb(sys_clk),    // input wire clkb
         .web('b0),      // input wire [0 : 0] web
