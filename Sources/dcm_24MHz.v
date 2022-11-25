@@ -94,11 +94,11 @@ module dcm_24MHz
   wire clkfx;
 
   DCM_SP
-  #(.CLKDV_DIVIDE          (2.000),
+  #(.CLKDV_DIVIDE          (4.000), // changed from '2' since our design has a 2x faster clock
     .CLKFX_DIVIDE          (25),
     .CLKFX_MULTIPLY        (12),
     .CLKIN_DIVIDE_BY_2     ("FALSE"),
-    .CLKIN_PERIOD          (20.0),
+    .CLKIN_PERIOD          (10.0),
     .CLKOUT_PHASE_SHIFT    ("NONE"),
     .CLK_FEEDBACK          ("1X"),
     .DESKEW_ADJUST         ("SYSTEM_SYNCHRONOUS"),
