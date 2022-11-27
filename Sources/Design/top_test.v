@@ -15,18 +15,19 @@ module top_test (
 	    input wire vsync_cam,
 	    input wire href_cam,
 	    input wire pclk_cam,
-	    output wire mclk_cam,
+	    input wire mclk_cam,
 	    inout i2c_sda,
 	    inout i2c_scl,
 
-	    // input wire [3:0] BTNS,
+	    input wire [3:0] BTNS,
 	    
 	    // VGA I/O
 	    output wire [3:0] VGA_R,
 	    output wire [3:0] VGA_G,
 	    output wire [3:0] VGA_B,
 	    output wire VGA_HS,
-	    output wire VGA_VS
+	    output wire VGA_VS,
+		output wire [2:0] status
     );
     
     // VGA Memory access
@@ -49,7 +50,7 @@ module top_test (
         .vsync_cam ( vsync_cam ),
         .href_cam  ( href_cam  ),
         .wdata_cam ( wdata_cam ),
-        .pass_thru ( SW[0]     ),
+        .pass_thru ( 1         ),
         .raddr_vga ( raddr_vga ),
         .rdata_vga ( rdata_vga ),
         .waddr_alu ( waddr_alu ),
@@ -85,9 +86,10 @@ module top_test (
     );
     
     camera_interface ca(
-        .clk_100(CLK100MHZ),
+        .clk(CLK100MHZ),
         .rst_n(rst_n),
         // .key(BTNS), // not including for now
+		.status(status),
         
         //camera pinouts
         .cmos_sda(i2c_sda),         //inout!!

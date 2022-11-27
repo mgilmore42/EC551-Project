@@ -3,11 +3,11 @@
 module camera_interface (
 		input wire clk,
 		input wire rst_n,
+		input wire cmos_xclk,
 		//camera pinouts
-		inout       cmos_sda,
-		inout       cmos_scl,
-		output reg  finished,
-		output wire cmos_xclk
+		inout             cmos_sda,
+		inout             cmos_scl,
+		output wire [2:0] status // for debugging
 	);
 
 
@@ -21,7 +21,7 @@ module camera_interface (
 	localparam done          = 3'd6;
 
 	localparam MSG_INDEX = 3; //number of the last index to be digested by SCCB
-	 
+
 	reg        stop;
 	reg        start;
 	reg        start_delay_q;
@@ -48,7 +48,7 @@ module camera_interface (
 		message[0] <= 16'h12_80;  //reset all register to default values
 		message[1] <= 16'h12_04;  //set output format to RGB
 		message[2] <= 16'h15_20;  //pclk will not toggle during horizontal blank
-		message[3] <= 16'h8C_03;  //RGB444 in RG BX format
+		message[3] <= 16'h8C_02;  //RGB444 in RG BX format
 
 		// initializes stateful registers
 		state_q         <= idle;
@@ -56,6 +56,8 @@ module camera_interface (
 		start_delay_q   <= 0;
 		message_index_q <= 0;
 	end
+
+	assign status = message_index_q + 1; // for debugging
 
 	//register operations
 	always @(posedge clk, negedge rst_n) begin
@@ -73,13 +75,13 @@ module camera_interface (
 	end
 
 	// determines if the camera initialization is complete
-	always @(*) begin
+/* 	always @(*) begin
 		if (state == done) begin
 			finished = 1;
 		end else begin
 			finished = 0;
 		end
-	end
+	end */
 
 
 	//FSM next-state logics
@@ -170,20 +172,20 @@ module camera_interface (
 
 	//module instantiations
 	i2c_top #(.freq(100_000)) m0 (
-		.clk     ( clk      ),
-		.rst_n   ( rst_n    ),
-		.start   ( start    ),
-		.stop    ( stop     ),
-		.wr_data ( wr_data  ),
-		.rd_tick ( rd_tick  ), //ticks when read data from servant is ready,data will be taken from rd_data
-		.ack     ( ack      ), //ack[1] ticks at the ack bit[9th bit],ack[0] asserts when ack bit is ACK,else NACK
-		.rd_data ( rd_data  ), 
-		.scl     ( cmos_scl ),
-		.sda     ( cmos_sda ),
-		.state   ( state    )
+		.clk     ( cmos_xclk ),
+		.rst_n   ( rst_n     ),
+		.start   ( start     ),
+		.stop    ( stop      ),
+		.wr_data ( wr_data   ),
+		.rd_tick ( rd_tick   ), //ticks when read data from servant is ready,data will be taken from rd_data
+		.ack     ( ack       ), //ack[1] ticks at the ack bit[9th bit],ack[0] asserts when ack bit is ACK,else NACK
+		.rd_data ( rd_data   ), 
+		.scl     ( cmos_scl  ),
+		.sda     ( cmos_sda  ),
+		.state   ( state     )
 	); 
 
-	// TODO: need to verify clock frequency since its technology dependant
+/* 	// TODO: need to verify clock frequency since its technology dependant
 	dcm_24MHz m1 (
 		// Clock in ports
 		.clk       ( clk       ),     // IN
@@ -192,6 +194,6 @@ module camera_interface (
 		// Status and control signals
 		.RESET     ( ~rst_n    ),// IN
 		.LOCKED    (           )
-	);      // OUT
+	);  */     // OUT
 
 endmodule
