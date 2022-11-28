@@ -15,12 +15,13 @@ module mmcm_24MHz (// Clock in ports
 	
 	// FF
 	always @(posedge clk_100MHz) begin
-		count = count + 1;
+		count <= count + 1;
 	end
 	
 	// FF with enable
 	always @(posedge clk_100MHz) begin
-		clk_25MHz <= ~clk_25MHz;
+		if (count)
+			clk_25MHz <= ~clk_25MHz;
 	end
 
 endmodule

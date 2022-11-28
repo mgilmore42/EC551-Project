@@ -24,8 +24,8 @@ module mem_controller(
     input wire [`dwidth_dat-1:0]   wdata_alu,
     input wire                     wen_alu,
     output wire [`awidth_fbuff-1:0] raddr_alu,
-    output wire [(`dwss*`dwidth_dat)-1:0]  rdata_alu
-    
+    output wire [(`dwss*`dwidth_dat)-1:0]  rdata_alu,
+    output wire [2:0] state_debug
     );
 
 //    localparam pad = ($floor(`dwidth_slice/2));
@@ -50,7 +50,9 @@ module mem_controller(
 
     localparam [2:0] IDLE = 'd0, HREF = 'd1, B0   = 'd2, B1   = 'd3, POP = 'd4;
     localparam [2:0]              VPAD = 2'd1, HPAD = 2'd2, READ = 2'd3;
-    
+
+    // debugging
+    assign state_debug = ws_c;
 
     partial_buffer pbuff (
         .clk(sys_clk),

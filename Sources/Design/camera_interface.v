@@ -47,7 +47,7 @@ module camera_interface (
 		message[0] <= 16'h12_80;  //reset all register to default values
 		message[1] <= 16'h12_04;  //set output format to RGB
 		message[2] <= 16'h15_20;  //pclk will not toggle during horizontal blank
-		message[3] <= 16'h8C_02;  //RGB444 in RG BX format
+		message[3] <= 16'h8C_02;  //RGB444 in XR GB format
 
 		// initializes stateful registers
 		state_q         <= idle;
@@ -56,7 +56,7 @@ module camera_interface (
 		message_index_q <= 0;
 	end
 
-	assign status = message_index_q + 1; // for debugging
+	assign status = message_index_q; // for debugging
 
 	//register operations
 	always @(posedge clk_100MHz, negedge rst_n) begin

@@ -14,8 +14,8 @@ module top_test (
 	    input wire [7:0] wdata_cam,
 	    input wire vsync_cam,
 	    input wire href_cam,
-	    input wire pclk_cam,
-	    input wire mclk_cam,
+	    input  wire pclk_cam,
+	    output wire mclk_cam,
 	    inout i2c_sda,
 	    inout i2c_scl,
 
@@ -27,7 +27,8 @@ module top_test (
 	    output wire [3:0] VGA_B,
 	    output wire VGA_HS,
 	    output wire VGA_VS,
-		output wire [2:0] status
+		output wire [2:0] status,
+		output wire [2:0] state_debug
     );
     
     // VGA Memory access
@@ -57,7 +58,8 @@ module top_test (
         .wdata_alu ( wdata_alu ),
         .wen_alu   ( wen_alu   ),
         .raddr_alu ( raddr_alu ),
-        .rdata_alu ( rdata_alu )
+        .rdata_alu ( rdata_alu ),
+        .state_debug (state_debug)
     );
 
     // ALU alu(
