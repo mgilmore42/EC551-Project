@@ -1,9 +1,8 @@
 `timescale 1ns / 1ps
 
 module camera_interface (
-		input wire clk,
+		input wire clk_100MHz,
 		input wire rst_n,
-		input wire cmos_xclk,
 		//camera pinouts
 		inout             cmos_sda,
 		inout             cmos_scl,
@@ -60,7 +59,7 @@ module camera_interface (
 	assign status = message_index_q + 1; // for debugging
 
 	//register operations
-	always @(posedge clk, negedge rst_n) begin
+	always @(posedge clk_100MHz, negedge rst_n) begin
 		if(!rst_n) begin
 			state_q         <= idle;
 			delay_q         <= 0;
@@ -172,28 +171,17 @@ module camera_interface (
 
 	//module instantiations
 	i2c_top #(.freq(100_000)) m0 (
-		.clk     ( cmos_xclk ),
-		.rst_n   ( rst_n     ),
-		.start   ( start     ),
-		.stop    ( stop      ),
-		.wr_data ( wr_data   ),
-		.rd_tick ( rd_tick   ), //ticks when read data from servant is ready,data will be taken from rd_data
-		.ack     ( ack       ), //ack[1] ticks at the ack bit[9th bit],ack[0] asserts when ack bit is ACK,else NACK
-		.rd_data ( rd_data   ), 
-		.scl     ( cmos_scl  ),
-		.sda     ( cmos_sda  ),
-		.state   ( state     )
-	); 
-
-/* 	// TODO: need to verify clock frequency since its technology dependant
-	dcm_24MHz m1 (
-		// Clock in ports
-		.clk       ( clk       ),     // IN
-		// Clock out ports
-		.cmos_xclk ( cmos_xclk ),     // OUT
-		// Status and control signals
-		.RESET     ( ~rst_n    ),// IN
-		.LOCKED    (           )
-	);  */     // OUT
+		.clk     ( clk_100MHz ),
+		.rst_n   ( rst_n      ),
+		.start   ( start      ),
+		.stop    ( stop       ),
+		.wr_data ( wr_data    ),
+		.rd_tick ( rd_tick    ), //ticks when read data from servant is ready,data will be taken from rd_data
+		.ack     ( ack        ), //ack[1] ticks at the ack bit[9th bit],ack[0] asserts when ack bit is ACK,else NACK
+		.rd_data ( rd_data    ), 
+		.scl     ( cmos_scl   ),
+		.sda     ( cmos_sda   ),
+		.state   ( state      )
+	);
 
 endmodule

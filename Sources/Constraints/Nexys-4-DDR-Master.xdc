@@ -109,14 +109,12 @@ set_property -dict { PACKAGE_PIN D14   IOSTANDARD LVCMOS33 } [get_ports { i2c_sc
 set_property PULLUP TRUE [get_ports i2c_scl];
 set_property -dict { PACKAGE_PIN F16   IOSTANDARD LVCMOS33 } [get_ports { vsync_cam }]; #IO_L14N_T2_SRCC_15 Sch=jb[2]
 set_property -dict { PACKAGE_PIN G16   IOSTANDARD LVCMOS33 } [get_ports { pclk_cam }]; #IO_L13N_T2_MRCC_15 Sch=jb[3]
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {pclk_cam}];
 # set_property -dict { PACKAGE_PIN H14   IOSTANDARD LVCMOS33 } [get_ports { JB[4] }]; #IO_L15P_T2_DQS_15 Sch=jb[4]
 set_property -dict { PACKAGE_PIN E16   IOSTANDARD LVCMOS33 } [get_ports { i2c_sda }]; #IO_L11N_T1_SRCC_15 Sch=jb[7]
 set_property PULLUP TRUE [get_ports i2c_sda];
 set_property -dict { PACKAGE_PIN F13   IOSTANDARD LVCMOS33 } [get_ports { href_cam }]; #IO_L5P_T0_AD9P_15 Sch=jb[8]
-set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { mclk_cam }]; #IO_0_15 Sch=jb[9]
-create_clock -add -name sys_clk_pin -period 41.67 -waveform {0 20.83} [get_ports {CLK100MHZ}];
-#set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { JB[10] }]; #IO_L13P_T2_MRCC_15 Sch=jb[10]
+#set_property -dict { PACKAGE_PIN G13   IOSTANDARD LVCMOS33 } [get_ports { mclk_cam }]; #IO_0_15 Sch=jb[9]
+set_property -dict { PACKAGE_PIN H16   IOSTANDARD LVCMOS33 } [get_ports { mclk_cam }]; #IO_L13P_T2_MRCC_15 Sch=jb[10]
 
 
 ##Pmod Header JC

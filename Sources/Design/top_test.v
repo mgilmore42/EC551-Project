@@ -85,15 +85,19 @@ module top_test (
         .raddr_vga ( raddr_vga )
     );
     
+	mmcm_24MHz mmcm0 (
+		.clk_100MHz ( CLK100MHZ ),
+		.clk_25MHz  ( mclk_cam  )
+	);
+	
     camera_interface ca(
-        .clk(CLK100MHZ),
+        .clk_100MHz(CLK100MHZ),
         .rst_n(rst_n),
         // .key(BTNS), // not including for now
 		.status(status),
         
         //camera pinouts
-        .cmos_sda(i2c_sda),         //inout!!
-        .cmos_scl(i2c_scl),         //i2c comm wires
-        .cmos_xclk(mclk_cam)
+        .cmos_sda(i2c_sda), //inout!!
+        .cmos_scl(i2c_scl)  //i2c comm wires
     );
 endmodule
