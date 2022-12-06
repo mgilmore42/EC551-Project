@@ -8,12 +8,14 @@ module ALU(
     input wire [(`dwss*`dwidth_kernel)-1:0] kernel, // `dwidth_kernel bit signed value
     input wire [`dwidth_div-1:0] div,
     input wire [`awidth_fbuff-1:0] raddr_alu,
+    input wire ren_alu,
     output reg [`dwidth_dat-1:0] dout,
-    output reg [`awidth_fbuff-1:0] waddr_alu
+    output reg [`awidth_fbuff-1:0] waddr_alu,
+    output wire wen_alu
     );
 
-    localparam prod_bw = `dwidth_dat/3*2;
-    localparam bw_ext = $clog2(`dwidth_slice);
+    localparam prod_bw = `dwidth_dat/3 + `dwidth_kernel; // width of a single value and the kernel value
+    localparam bw_ext = $clog2(`dwss); // log2 of dwss, since entire kernel is summed
 
     wire [prod_bw-1:0] product [`dwss-1:0][2:0]; // 9bit product for all N**2 elements in R,G,B
     wire [prod_bw+bw_ext-1:0] sums [`dwss-2:0][2:0];
@@ -59,15 +61,40 @@ module ALU(
     wire [`dwidth_dat-1:0] dout_t;
 
     //   if bits between MSB and just above the valid range are 1's, then there was overflow and we ceil at 0Xf
+    
+    reg check_sign [2:0];
+    always @(*) begin   
+        case(div)
+            'd0 : begin check_sign[0] = |sum_abs[0][prod_bw+bw_ext-2:4+0];  check_sign[1] = |sum_abs[1][prod_bw+bw_ext-2:4+0];  check_sign[2] = |sum_abs[2][prod_bw+bw_ext-2:4+0]; end
+            'd1 : begin check_sign[0] = |sum_abs[0][prod_bw+bw_ext-2:4+1];  check_sign[1] = |sum_abs[1][prod_bw+bw_ext-2:4+1];  check_sign[2] = |sum_abs[2][prod_bw+bw_ext-2:4+1]; end
+            'd2 : begin check_sign[0] = |sum_abs[0][prod_bw+bw_ext-2:4+2];  check_sign[1] = |sum_abs[1][prod_bw+bw_ext-2:4+2];  check_sign[2] = |sum_abs[2][prod_bw+bw_ext-2:4+2]; end
+            'd3 : begin check_sign[0] = |sum_abs[0][prod_bw+bw_ext-2:4+3];  check_sign[1] = |sum_abs[1][prod_bw+bw_ext-2:4+3];  check_sign[2] = |sum_abs[2][prod_bw+bw_ext-2:4+3]; end
+            'd4 : begin check_sign[0] = |sum_abs[0][prod_bw+bw_ext-2:4+4];  check_sign[1] = |sum_abs[1][prod_bw+bw_ext-2:4+4];  check_sign[2] = |sum_abs[2][prod_bw+bw_ext-2:4+4]; end
+            'd5 : begin check_sign[0] = |sum_abs[0][prod_bw+bw_ext-2:4+5];  check_sign[1] = |sum_abs[1][prod_bw+bw_ext-2:4+5];  check_sign[2] = |sum_abs[2][prod_bw+bw_ext-2:4+5]; end
+            'd6 : begin check_sign[0] = |sum_abs[0][prod_bw+bw_ext-2:4+6];  check_sign[1] = |sum_abs[1][prod_bw+bw_ext-2:4+6];  check_sign[2] = |sum_abs[2][prod_bw+bw_ext-2:4+6]; end
+            'd7 : begin check_sign[0] = |sum_abs[0][prod_bw+bw_ext-2:4+7];  check_sign[1] = |sum_abs[1][prod_bw+bw_ext-2:4+7];  check_sign[2] = |sum_abs[2][prod_bw+bw_ext-2:4+7]; end
+            'd8 : begin check_sign[0] = |sum_abs[0][prod_bw+bw_ext-2:4+8];  check_sign[1] = |sum_abs[1][prod_bw+bw_ext-2:4+8];  check_sign[2] = |sum_abs[2][prod_bw+bw_ext-2:4+8]; end
+            default : begin check_sign[0] = |sum_abs[0][prod_bw+bw_ext-2:4+0];  check_sign[1] = |sum_abs[1][prod_bw+bw_ext-2:4+0];  check_sign[2] = |sum_abs[2][prod_bw+bw_ext-2:4+0]; end
+        endcase
+    end
+
+//    wire [3:0] temp0,temp1,temp2;
+//    assign temp2 = sum_abs[2][3+div -: 4] ;
+//    assign temp1 = sum_abs[1][3+div -: 4] ;
+//    assign temp0 = sum_abs[0][3+div -: 4] ;
+
     assign dout_t = {
-        (|sum_abs[2][prod_bw+bw_ext-2:4+div]) ? 4'hf : sum_abs[2][3+div -: 4],
-        (|sum_abs[1][prod_bw+bw_ext-2:4+div]) ? 4'hf : sum_abs[1][3+div -: 4],
-        (|sum_abs[0][prod_bw+bw_ext-2:4+div]) ? 4'hf : sum_abs[0][3+div -: 4]
+        (check_sign[2]) ? 4'hf : sum_abs[2][3+div -: 4],
+        (check_sign[1]) ? 4'hf : sum_abs[1][3+div -: 4],
+        (check_sign[0]) ? 4'hf : sum_abs[0][3+div -: 4]
     };
 
-
+    reg [`awidth_fbuff-1:0] waddr_d, waddr_dd;
+    assign wen_alu = ((waddr_dd == waddr_alu) && (waddr_dd == raddr_alu) && ren_alu) ? 1'b1 : 1'b0 ;
     always @(posedge clk) begin
         dout <= dout_t;
         waddr_alu <= raddr_alu;
+        waddr_d <= waddr_alu;
+        waddr_dd <= waddr_d;
     end
 endmodule

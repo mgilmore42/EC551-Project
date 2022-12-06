@@ -66,18 +66,19 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 1
+  set_param chipscope.maxJobs 3
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.cache/wt [current_project]
-  set_property parent.project_path /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.xpr [current_project]
-  set_property ip_output_repo /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.cache/ip [current_project]
+  set_property webtalk.parent_dir X:/Documents/EC551/EC551_Project/final_project/final_project.cache/wt [current_project]
+  set_property parent.project_path X:/Documents/EC551/EC551_Project/final_project/final_project.xpr [current_project]
+  set_property ip_output_repo X:/Documents/EC551/EC551_Project/final_project/final_project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
-  add_files -quiet /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/top.dcp
-  read_ip -quiet /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer.xci
-  read_xdc /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc
+  add_files -quiet X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/top.dcp
+  read_ip -quiet X:/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer.xci
+  read_xdc X:/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc
   link_design -top top -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

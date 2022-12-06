@@ -31,15 +31,25 @@ module kernel_ROM(
                 };
                 div <= `dwidth_div'd2;
             end
+            // 2'b10: begin // blur filter
+            //     kernel <= {
+            //         `dwidth_kernel'h00, `dwidth_kernel'h01, `dwidth_kernel'h01, `dwidth_kernel'h01, `dwidth_kernel'h00, 
+            //         `dwidth_kernel'h01, `dwidth_kernel'h02, `dwidth_kernel'h02, `dwidth_kernel'h02, `dwidth_kernel'h01, 
+            //         `dwidth_kernel'h01, `dwidth_kernel'h02, `dwidth_kernel'h04, `dwidth_kernel'h02, `dwidth_kernel'h01, 
+            //         `dwidth_kernel'h01, `dwidth_kernel'h02, `dwidth_kernel'h02, `dwidth_kernel'h02, `dwidth_kernel'h01, 
+            //         `dwidth_kernel'h00, `dwidth_kernel'h01, `dwidth_kernel'h01, `dwidth_kernel'h01, `dwidth_kernel'h00 
+            //     };
+            //     div <= `dwidth_div'd5;
+            // end
             2'b10: begin // blur filter
                 kernel <= {
-                    `dwidth_kernel'h00, `dwidth_kernel'h01, `dwidth_kernel'h01, `dwidth_kernel'h01, `dwidth_kernel'h00, 
-                    `dwidth_kernel'h01, `dwidth_kernel'h02, `dwidth_kernel'h02, `dwidth_kernel'h02, `dwidth_kernel'h01, 
-                    `dwidth_kernel'h01, `dwidth_kernel'h02, `dwidth_kernel'h04, `dwidth_kernel'h02, `dwidth_kernel'h01, 
-                    `dwidth_kernel'h01, `dwidth_kernel'h02, `dwidth_kernel'h02, `dwidth_kernel'h02, `dwidth_kernel'h01, 
-                    `dwidth_kernel'h00, `dwidth_kernel'h01, `dwidth_kernel'h01, `dwidth_kernel'h01, `dwidth_kernel'h00 
+                    `dwidth_kernel'h01, `dwidth_kernel'h04, `dwidth_kernel'h06, `dwidth_kernel'h04, `dwidth_kernel'h01, 
+                    `dwidth_kernel'h04, `dwidth_kernel'h10, `dwidth_kernel'h18, `dwidth_kernel'h10, `dwidth_kernel'h04, 
+                    `dwidth_kernel'h06, `dwidth_kernel'h18, `dwidth_kernel'h24, `dwidth_kernel'h18, `dwidth_kernel'h06, 
+                    `dwidth_kernel'h04, `dwidth_kernel'h10, `dwidth_kernel'h18, `dwidth_kernel'h10, `dwidth_kernel'h04, 
+                    `dwidth_kernel'h01, `dwidth_kernel'h04, `dwidth_kernel'h06, `dwidth_kernel'h04, `dwidth_kernel'h01 
                 };
-                div <= `dwidth_div'd5;
+                div <= `dwidth_div'd8;
             end
             2'b11: begin // Sharpening filter
                 kernel <= {

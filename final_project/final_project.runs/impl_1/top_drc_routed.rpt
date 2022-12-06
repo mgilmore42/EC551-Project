@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Wed Nov 23 10:56:22 2022
-| Host         : eng-grid4 running 64-bit CentOS Linux release 7.9.2009 (Core)
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Mon Dec  5 18:58:29 2022
+| Host         : ECE-PHO115-02 running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 | Design       : top
 | Device       : xc7a100tcsg324-1
@@ -24,13 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 4
+             Violations found: 5
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 1          |
-| PLCK-12  | Warning  | Clock Placer Checks                                 | 1          |
+| PDRC-153 | Warning  | Gated clock check                                   | 3          |
 | RPBF-3   | Warning  | IO port buffering is incomplete                     | 1          |
 +----------+----------+-----------------------------------------------------+------------+
 
@@ -51,18 +50,17 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net mc/ws_n is a gated clock net sourced by a combinational pin mc/wen_n_reg_i_2/O, cell mc/wen_n_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net mc/pg0/ns is a gated clock net sourced by a combinational pin mc/pg0//i_/O, cell mc/pg0//i_. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-PLCK-12#1 Warning
-Clock Placer Checks  
-Poor placement for routing between an IO pin and BUFG. 
-Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
- This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+PDRC-153#2 Warning
+Gated clock check  
+Net mc/pg1/ns is a gated clock net sourced by a combinational pin mc/pg1/FSM_onehot_ns_reg[2]_i_2/O, cell mc/pg1/FSM_onehot_ns_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
 
-	pclk_cam_IBUF_inst (IBUF.O) is locked to G16
-	pclk_cam_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y1
-
+PDRC-153#3 Warning
+Gated clock check  
+Net mc/ws_n is a gated clock net sourced by a combinational pin mc/wen_n_reg_i_2/O, cell mc/wen_n_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 RPBF-3#1 Warning

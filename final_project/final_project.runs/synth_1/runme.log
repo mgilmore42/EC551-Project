@@ -4,24 +4,23 @@
 
 
 ****** Vivado v2019.1 (64-bit)
-  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
   **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1495.457 ; gain = 2.023 ; free physical = 712 ; free virtual = 8230
 Command: synth_design -top top -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 108956 
+INFO: Helper process launched with PID 39292 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1888.246 ; gain = 154.621 ; free physical = 309 ; free virtual = 7831
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 819.941 ; gain = 177.773
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mem_controller' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:5]
+INFO: [Synth 8-6157] synthesizing module 'top' [X:/Documents/EC551/EC551_Project/Sources/Design/top.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mem_controller' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:5]
 	Parameter pad bound to: 2 - type: integer 
 	Parameter IDLE bound to: 3'b000 
 	Parameter HREF bound to: 3'b001 
@@ -31,63 +30,52 @@ INFO: [Synth 8-6157] synthesizing module 'mem_controller' [/ad/eng/users/w/k/wkr
 	Parameter VPAD bound to: 3'b001 
 	Parameter HPAD bound to: 3'b010 
 	Parameter READ bound to: 3'b011 
-INFO: [Synth 8-6157] synthesizing module 'partial_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/partial_buffer.v:5]
-INFO: [Synth 8-6157] synthesizing module 'buffer_slice' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'buffer_slice' (1#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'partial_buffer' (2#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/partial_buffer.v:5]
-INFO: [Synth 8-6157] synthesizing module 'full_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-108860-eng-grid4/realtime/full_buffer_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'full_buffer' (3#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-108860-eng-grid4/realtime/full_buffer_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'conv_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/conv_buffer.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'conv_buffer' (4#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/conv_buffer.v:5]
-WARNING: [Synth 8-689] width (60) of port connection 'rdata' does not match port width (300) of module 'conv_buffer' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:87]
-INFO: [Synth 8-155] case statement is not full and has no default [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:112]
-INFO: [Synth 8-155] case statement is not full and has no default [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:163]
-INFO: [Synth 8-6157] synthesizing module 'pulse_gen' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:18]
-INFO: [Synth 8-6155] done synthesizing module 'pulse_gen' (5#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'mem_controller' (6#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:5]
-WARNING: [Synth 8-689] width (10) of port connection 'raddr_alu' does not match port width (19) of module 'mem_controller' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:58]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:5]
-	Parameter prod_bw bound to: 8 - type: integer 
-	Parameter bw_ext bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (7#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/ALU.v:5]
-WARNING: [Synth 8-7023] instance 'alu' of module 'ALU' has 7 connections declared, but only 4 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:62]
-INFO: [Synth 8-6157] synthesizing module 'kernel_ROM' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:5]
-INFO: [Synth 8-226] default block is never used [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'kernel_ROM' (8#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:5]
-INFO: [Synth 8-6157] synthesizing module 'vga' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga.v:6]
-INFO: [Synth 8-6157] synthesizing module 'vga_controller_640_60' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v:8]
+INFO: [Synth 8-6157] synthesizing module 'partial_buffer' [X:/Documents/EC551/EC551_Project/Sources/Design/partial_buffer.v:5]
+INFO: [Synth 8-6157] synthesizing module 'buffer_slice' [X:/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'buffer_slice' (1#1) [X:/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'partial_buffer' (2#1) [X:/Documents/EC551/EC551_Project/Sources/Design/partial_buffer.v:5]
+INFO: [Synth 8-6157] synthesizing module 'full_buffer' [X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-38292-ECE-PHO115-02/realtime/full_buffer_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'full_buffer' (3#1) [X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/.Xil/Vivado-38292-ECE-PHO115-02/realtime/full_buffer_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'conv_buffer' [X:/Documents/EC551/EC551_Project/Sources/Design/conv_buffer.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'conv_buffer' (4#1) [X:/Documents/EC551/EC551_Project/Sources/Design/conv_buffer.v:5]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:114]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:168]
+INFO: [Synth 8-6157] synthesizing module 'pulse_gen' [X:/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [X:/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'pulse_gen' (5#1) [X:/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mem_controller' (6#1) [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:5]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [X:/Documents/EC551/EC551_Project/Sources/Design/ALU.v:5]
+	Parameter prod_bw bound to: 12 - type: integer 
+	Parameter bw_ext bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (7#1) [X:/Documents/EC551/EC551_Project/Sources/Design/ALU.v:5]
+INFO: [Synth 8-6157] synthesizing module 'kernel_ROM' [X:/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:5]
+INFO: [Synth 8-226] default block is never used [X:/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'kernel_ROM' (8#1) [X:/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v:5]
+INFO: [Synth 8-6157] synthesizing module 'vga' [X:/Documents/EC551/EC551_Project/Sources/Design/vga.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller_640_60' [X:/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v:8]
 	Parameter HMAX bound to: 800 - type: integer 
 	Parameter VMAX bound to: 525 - type: integer 
 	Parameter HLINES bound to: 640 - type: integer 
-	Parameter HFP bound to: 648 - type: integer 
-	Parameter HSP bound to: 744 - type: integer 
+	Parameter HFP bound to: 675 - type: integer 
+	Parameter HSP bound to: 770 - type: integer 
 	Parameter VLINES bound to: 480 - type: integer 
-	Parameter VFP bound to: 482 - type: integer 
-	Parameter VSP bound to: 484 - type: integer 
+	Parameter VFP bound to: 494 - type: integer 
+	Parameter VSP bound to: 496 - type: integer 
 	Parameter SPP bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller_640_60' (9#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'vga' (10#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/vga.v:6]
-INFO: [Synth 8-6157] synthesizing module 'camera_interface' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:3]
-	Parameter idle bound to: 0 - type: integer 
-	Parameter start_sccb bound to: 1 - type: integer 
-	Parameter write_address bound to: 2 - type: integer 
-	Parameter write_data bound to: 3 - type: integer 
-	Parameter digest_loop bound to: 4 - type: integer 
-	Parameter delay bound to: 5 - type: integer 
-	Parameter vsync_fedge bound to: 6 - type: integer 
-	Parameter byte1 bound to: 7 - type: integer 
-	Parameter byte2 bound to: 8 - type: integer 
-	Parameter fifo_write bound to: 9 - type: integer 
-	Parameter stopping bound to: 10 - type: integer 
-	Parameter wait_init bound to: 0 - type: integer 
-	Parameter sccb_idle bound to: 1 - type: integer 
-	Parameter sccb_address bound to: 2 - type: integer 
-	Parameter sccb_data bound to: 3 - type: integer 
-	Parameter sccb_stop bound to: 4 - type: integer 
-	Parameter MSG_INDEX bound to: 77 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'camera_interface.mem' is read successfully [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:80]
-INFO: [Synth 8-6157] synthesizing module 'i2c_top' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller_640_60' (9#1) [X:/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'vga' (10#1) [X:/Documents/EC551/EC551_Project/Sources/Design/vga.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mmcm_24MHz' [X:/Documents/EC551/EC551_Project/Sources/Design/mmcm_24MHz.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mmcm_24MHz' (11#1) [X:/Documents/EC551/EC551_Project/Sources/Design/mmcm_24MHz.v:3]
+INFO: [Synth 8-6157] synthesizing module 'camera_interface' [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:3]
+	Parameter idle bound to: 3'b000 
+	Parameter start_sccb bound to: 3'b001 
+	Parameter write_address bound to: 3'b010 
+	Parameter write_data bound to: 3'b011 
+	Parameter digest_loop bound to: 3'b100 
+	Parameter delay bound to: 3'b101 
+	Parameter done bound to: 3'b110 
+	Parameter MSG_INDEX bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'i2c_top' [X:/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v:3]
 	Parameter freq bound to: 100000 - type: integer 
 	Parameter full bound to: 500 - type: integer 
 	Parameter half bound to: 250 - type: integer 
@@ -101,62 +89,18 @@ INFO: [Synth 8-6157] synthesizing module 'i2c_top' [/ad/eng/users/w/k/wkrska/Doc
 	Parameter ack_master bound to: 4'b0110 
 	Parameter stop_1 bound to: 4'b0111 
 	Parameter stop_2 bound to: 4'b1000 
-INFO: [Synth 8-6155] done synthesizing module 'i2c_top' (11#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v:3]
-INFO: [Synth 8-6157] synthesizing module 'dcm_24MHz' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v:68]
-INFO: [Synth 8-6157] synthesizing module 'DCM_SP' [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:10805]
-	Parameter CLKDV_DIVIDE bound to: 2.000000 - type: float 
-	Parameter CLKFX_DIVIDE bound to: 25 - type: integer 
-	Parameter CLKFX_MULTIPLY bound to: 12 - type: integer 
-	Parameter CLKIN_DIVIDE_BY_2 bound to: FALSE - type: string 
-	Parameter CLKIN_PERIOD bound to: 20.000000 - type: float 
-	Parameter CLKOUT_PHASE_SHIFT bound to: NONE - type: string 
-	Parameter CLK_FEEDBACK bound to: 1X - type: string 
-	Parameter DESKEW_ADJUST bound to: SYSTEM_SYNCHRONOUS - type: string 
-	Parameter DFS_FREQUENCY_MODE bound to: LOW - type: string 
-	Parameter DLL_FREQUENCY_MODE bound to: LOW - type: string 
-	Parameter DSS_MODE bound to: NONE - type: string 
-	Parameter DUTY_CYCLE_CORRECTION bound to: TRUE - type: string 
-	Parameter FACTORY_JF bound to: 16'b1100000010000000 
-	Parameter PHASE_SHIFT bound to: 0 - type: integer 
-	Parameter STARTUP_WAIT bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'DCM_SP' (12#1) [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:10805]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (13#1) [/ad/eng/opt/xilinx/Vivado/2019.1/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
-INFO: [Synth 8-6155] done synthesizing module 'dcm_24MHz' (14#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/dcm_24MHz.v:68]
-WARNING: [Synth 8-7023] instance 'm1' of module 'dcm_24MHz' has 4 connections declared, but only 3 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:345]
-INFO: [Synth 8-6157] synthesizing module 'asyn_fifo' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:3]
-	Parameter DATA_WIDTH bound to: 16 - type: integer 
-	Parameter FIFO_DEPTH_WIDTH bound to: 10 - type: integer 
-	Parameter FIFO_DEPTH bound to: 1024 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'dual_port_sync' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:142]
-	Parameter ADDR_WIDTH bound to: 10 - type: integer 
-	Parameter DATA_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'dual_port_sync' (15#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:142]
-WARNING: [Synth 8-6014] Unused sequential element w_ptr_sync_reg was removed.  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:102]
-WARNING: [Synth 8-5788] Register r_ptr_sync_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:71]
-WARNING: [Synth 8-5788] Register data_count_w_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:72]
-WARNING: [Synth 8-5788] Register data_count_r_reg in module asyn_fifo is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:103]
-INFO: [Synth 8-6155] done synthesizing module 'asyn_fifo' (16#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/asyn_fifo.v:3]
-WARNING: [Synth 8-7023] instance 'm2' of module 'asyn_fifo' has 11 connections declared, but only 10 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:352]
-INFO: [Synth 8-6157] synthesizing module 'debounce_explicit' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:3]
-	Parameter idle bound to: 2'b00 
-	Parameter delay0 bound to: 2'b01 
-	Parameter one bound to: 2'b10 
-	Parameter delay1 bound to: 2'b11 
-	Parameter N bound to: 21 - type: integer 
-INFO: [Synth 8-226] default block is never used [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:51]
-INFO: [Synth 8-6155] done synthesizing module 'debounce_explicit' (17#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/debounce_explicit.v:3]
-WARNING: [Synth 8-5788] Register pclk_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:104]
-WARNING: [Synth 8-5788] Register pclk_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:105]
-WARNING: [Synth 8-5788] Register href_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:106]
-WARNING: [Synth 8-5788] Register href_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:107]
-WARNING: [Synth 8-5788] Register vsync_1_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:108]
-WARNING: [Synth 8-5788] Register vsync_2_reg in module camera_interface is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:109]
-INFO: [Synth 8-6155] done synthesizing module 'camera_interface' (18#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:3]
-WARNING: [Synth 8-7023] instance 'nolabel_line87' of module 'camera_interface' has 16 connections declared, but only 11 given [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:87]
-WARNING: [Synth 8-3848] Net waddr_alu in module/entity top does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:38]
-WARNING: [Synth 8-3848] Net wen_alu in module/entity top does not have driver. [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:40]
-INFO: [Synth 8-6155] done synthesizing module 'top' (19#1) [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/top.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'i2c_top' (12#1) [X:/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'camera_interface' (13#1) [X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:3]
+WARNING: [Synth 8-689] width (2) of port connection 'status' does not match port width (3) of module 'camera_interface' [X:/Documents/EC551/EC551_Project/Sources/Design/top.v:106]
+INFO: [Synth 8-6155] done synthesizing module 'top' (14#1) [X:/Documents/EC551/EC551_Project/Sources/Design/top.v:5]
+WARNING: [Synth 8-3331] design top has unconnected port LED[15]
+WARNING: [Synth 8-3331] design top has unconnected port LED[14]
+WARNING: [Synth 8-3331] design top has unconnected port LED[13]
+WARNING: [Synth 8-3331] design top has unconnected port LED[12]
+WARNING: [Synth 8-3331] design top has unconnected port LED[11]
+WARNING: [Synth 8-3331] design top has unconnected port LED[10]
+WARNING: [Synth 8-3331] design top has unconnected port LED[9]
+WARNING: [Synth 8-3331] design top has unconnected port LED[8]
 WARNING: [Synth 8-3331] design top has unconnected port SW[15]
 WARNING: [Synth 8-3331] design top has unconnected port SW[14]
 WARNING: [Synth 8-3331] design top has unconnected port SW[13]
@@ -170,8 +114,12 @@ WARNING: [Synth 8-3331] design top has unconnected port SW[6]
 WARNING: [Synth 8-3331] design top has unconnected port SW[5]
 WARNING: [Synth 8-3331] design top has unconnected port SW[4]
 WARNING: [Synth 8-3331] design top has unconnected port SW[3]
+WARNING: [Synth 8-3331] design top has unconnected port BTNS[3]
+WARNING: [Synth 8-3331] design top has unconnected port BTNS[2]
+WARNING: [Synth 8-3331] design top has unconnected port BTNS[1]
+WARNING: [Synth 8-3331] design top has unconnected port BTNS[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 2002.289 ; gain = 268.664 ; free physical = 274 ; free virtual = 7798
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 948.602 ; gain = 306.434
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -184,62 +132,53 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2020.094 ; gain = 286.469 ; free physical = 278 ; free virtual = 7802
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 948.602 ; gain = 306.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2020.094 ; gain = 286.469 ; free physical = 278 ; free virtual = 7802
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 948.602 ; gain = 306.434
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line87/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line87/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer/full_buffer_in_context.xdc] for cell 'mc/fbuff'
-Finished Parsing XDC File [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer/full_buffer_in_context.xdc] for cell 'mc/fbuff'
-Parsing XDC File [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]
-Finished Parsing XDC File [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [x:/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer/full_buffer_in_context.xdc] for cell 'mc/fbuff'
+Finished Parsing XDC File [x:/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer/full_buffer_in_context.xdc] for cell 'mc/fbuff'
+Parsing XDC File [X:/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [X:/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [X:/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2675.723 ; gain = 0.000 ; free physical = 140 ; free virtual = 7136
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1736.168 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 1 instances were transformed.
-  DCM_SP => MMCME2_ADV (inverted pins: PSINCDEC): 1 instances
+No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.35 ; elapsed = 00:00:00.35 . Memory (MB): peak = 2675.727 ; gain = 0.004 ; free physical = 140 ; free virtual = 7136
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.541 . Memory (MB): peak = 1736.168 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mc/fbuff' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 2675.727 ; gain = 942.102 ; free physical = 759 ; free virtual = 7755
+Finished Constraint Validation : Time (s): cpu = 00:00:47 ; elapsed = 00:01:18 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:40 ; elapsed = 00:01:01 . Memory (MB): peak = 2675.727 ; gain = 942.102 ; free physical = 759 ; free virtual = 7755
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:47 ; elapsed = 00:01:18 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for mc/fbuff. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 2675.727 ; gain = 942.102 ; free physical = 759 ; free virtual = 7755
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:01:18 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'pulse_gen'
 INFO: [Synth 8-802] inferred FSM for state register 'ws_c_reg' in module 'mem_controller'
 INFO: [Synth 8-802] inferred FSM for state register 'rs_c_reg' in module 'mem_controller'
 INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'i2c_top'
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'debounce_explicit'
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v:276]
-INFO: [Synth 8-802] inferred FSM for state register 'state_q_reg' in module 'camera_interface'
-INFO: [Synth 8-802] inferred FSM for state register 'sccb_state_q_reg' in module 'camera_interface'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_ns_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:19]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ns_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:19]
+INFO: [Synth 8-5544] ROM "message" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_ns_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:19]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ns_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:19]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -248,9 +187,9 @@ WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ns_reg' [/ad/eng
                  iSTATE1 |                              100 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'pulse_gen'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ns_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:19]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_rs_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:165]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_rs_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:165]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ns_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v:19]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_rs_n_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:170]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_rs_n_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:170]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -260,10 +199,9 @@ WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_rs_n_reg' [/ad/e
                     READ |                               11 |                              011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rs_c_reg' using encoding 'sequential' in module 'mem_controller'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_rs_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:165]
-WARNING: [Synth 8-327] inferring latch for variable 'vcnt_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:116]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_ws_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:114]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ws_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:114]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_rs_n_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:170]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_ws_n_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:116]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ws_n_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:116]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -274,10 +212,11 @@ WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_ws_n_reg' [/ad/e
                      POP |                              100 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'ws_c_reg' using encoding 'sequential' in module 'mem_controller'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_ws_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:114]
-WARNING: [Synth 8-327] inferring latch for variable 'hcnt_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:115]
-WARNING: [Synth 8-327] inferring latch for variable 'wen_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:117]
-WARNING: [Synth 8-327] inferring latch for variable 'pop_pbuff_n_reg' [/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_ws_n_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:116]
+WARNING: [Synth 8-327] inferring latch for variable 'vcnt_n_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:118]
+WARNING: [Synth 8-327] inferring latch for variable 'hcnt_n_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:117]
+WARNING: [Synth 8-327] inferring latch for variable 'wen_n_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:119]
+WARNING: [Synth 8-327] inferring latch for variable 'pop_pbuff_n_reg' [X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v:120]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -292,45 +231,9 @@ WARNING: [Synth 8-327] inferring latch for variable 'pop_pbuff_n_reg' [/ad/eng/u
               renew_data |                             0011 |                             0100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_q_reg' using encoding 'sequential' in module 'i2c_top'
-INFO: [Synth 8-6430] The Block RAM "dual_port_sync:/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                    idle |                               00 |                               00
-                  delay0 |                               01 |                               01
-                     one |                               10 |                               10
-                  delay1 |                               11 |                               11
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'debounce_explicit'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                    idle |                             0000 |                             0000
-              start_sccb |                             0001 |                             0001
-           write_address |                             0010 |                             0010
-              write_data |                             0011 |                             0011
-             digest_loop |                             0100 |                             0100
-                   delay |                             0101 |                             0101
-             vsync_fedge |                             0110 |                             0110
-                   byte1 |                             0111 |                             0111
-                   byte2 |                             1000 |                             1000
-              fifo_write |                             1001 |                             1001
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_q_reg' using encoding 'sequential' in module 'camera_interface'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-               wait_init |                              000 |                              000
-               sccb_idle |                              001 |                              001
-            sccb_address |                              010 |                              010
-               sccb_data |                              011 |                              011
-               sccb_stop |                              100 |                              100
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'sccb_state_q_reg' using encoding 'sequential' in module 'camera_interface'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:01:07 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 771 ; free virtual = 7767
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:53 ; elapsed = 00:01:40 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
-RAM Pipeline Warning: Read Address Register Found For RAM ram_reg. We will not be able to pipeline it. This may degrade performance. 
 
 Report RTL Partitions: 
 +------+-----------------------+------------+----------+
@@ -341,8 +244,8 @@ Report RTL Partitions:
 |3     |partial_buffer__GB2    |           1|     11248|
 |4     |partial_buffer__GB3    |           1|     14647|
 |5     |partial_buffer__GB4    |           1|     17538|
-|6     |mem_controller__GC0    |           1|      1143|
-|7     |top__GC0               |           1|      6942|
+|6     |mem_controller__GC0    |           1|      1643|
+|7     |top__GC0               |           1|      6760|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -351,65 +254,55 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input     28 Bit       Adders := 1     
-	   3 Input     19 Bit       Adders := 2     
-	   4 Input     19 Bit       Adders := 1     
-	  25 Input     11 Bit       Adders := 3     
-	   2 Input     11 Bit       Adders := 6     
+	   3 Input     19 Bit       Adders := 3     
+	   2 Input     18 Bit       Adders := 3     
+	  25 Input     17 Bit       Adders := 3     
+	   2 Input     11 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 1     
-	   3 Input     10 Bit       Adders := 2     
 	   2 Input      9 Bit       Adders := 4     
-	   2 Input      8 Bit       Adders := 5     
+	   2 Input      8 Bit       Adders := 1     
 	   2 Input      4 Bit       Adders := 1     
-+---XORs : 
-	   2 Input     11 Bit         XORs := 4     
-+---XORs : 
-	               11 Bit    Wide XORs := 10    
+	   2 Input      1 Bit       Adders := 1     
 +---Registers : 
 	               28 Bit    Registers := 1     
-	               19 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
+	               19 Bit    Registers := 4     
 	               12 Bit    Registers := 3873  
-	               11 Bit    Registers := 9     
-	               10 Bit    Registers := 4     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 3     
-	                8 Bit    Registers := 7     
+	                8 Bit    Registers := 2     
 	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 19    
-+---RAMs : 
-	              16K Bit         RAMs := 1     
+	                1 Bit    Registers := 13    
 +---Muxes : 
-	   4 Input     93 Bit        Muxes := 1     
-	   2 Input     60 Bit        Muxes := 1     
+	   2 Input    300 Bit        Muxes := 1     
+	   4 Input    193 Bit        Muxes := 1     
 	   2 Input     28 Bit        Muxes := 2     
 	   2 Input     19 Bit        Muxes := 1     
-	  10 Input     16 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 3     
+	   5 Input     16 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 1     
-	   2 Input     11 Bit        Muxes := 7     
+	   2 Input     11 Bit        Muxes := 2     
 	   5 Input     10 Bit        Muxes := 1     
 	   5 Input      9 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 17    
+	   2 Input      8 Bit        Muxes := 4     
 	   9 Input      8 Bit        Muxes := 1     
-	  10 Input      8 Bit        Muxes := 1     
-	   5 Input      8 Bit        Muxes := 5     
-	   3 Input      7 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 18    
+	   8 Input      8 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 10    
 	   9 Input      4 Bit        Muxes := 3     
-	  10 Input      4 Bit        Muxes := 2     
-	   5 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
 	   3 Input      3 Bit        Muxes := 2     
-	   2 Input      3 Bit        Muxes := 9     
-	   5 Input      3 Bit        Muxes := 3     
-	   4 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 5     
-	   2 Input      2 Bit        Muxes := 16    
+	   2 Input      3 Bit        Muxes := 10    
+	   5 Input      3 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 7     
 	   9 Input      2 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 48    
-	   5 Input      1 Bit        Muxes := 15    
+	   2 Input      1 Bit        Muxes := 17    
+	   5 Input      1 Bit        Muxes := 8     
 	   9 Input      1 Bit        Muxes := 8     
-	   4 Input      1 Bit        Muxes := 16    
-	  10 Input      1 Bit        Muxes := 8     
+	   8 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -3017,13 +2910,14 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit       Adders := 1     
 	   2 Input      9 Bit       Adders := 2     
 +---Registers : 
+	               19 Bit    Registers := 1     
 	               12 Bit    Registers := 1     
 	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     60 Bit        Muxes := 1     
+	   2 Input    300 Bit        Muxes := 1     
 	   2 Input     19 Bit        Muxes := 1     
 	   2 Input     12 Bit        Muxes := 1     
 	   5 Input     10 Bit        Muxes := 1     
@@ -3032,22 +2926,23 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 5     
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 	   5 Input      1 Bit        Muxes := 8     
 Module ALU 
 Detailed RTL Component Info : 
 +---Adders : 
-	  25 Input     11 Bit       Adders := 3     
+	   2 Input     18 Bit       Adders := 3     
+	  25 Input     17 Bit       Adders := 3     
 +---Registers : 
-	               19 Bit    Registers := 1     
+	               19 Bit    Registers := 3     
 	               12 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     11 Bit        Muxes := 3     
+	   2 Input     18 Bit        Muxes := 3     
 Module kernel_ROM 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   4 Input     93 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 1     
+	   4 Input    193 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
 Module vga_controller_640_60 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -3060,12 +2955,18 @@ Detailed RTL Component Info :
 Module vga 
 Detailed RTL Component Info : 
 +---Adders : 
-	   4 Input     19 Bit       Adders := 1     
+	   3 Input     19 Bit       Adders := 1     
 +---Registers : 
 	               12 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 3     
+Module mmcm_24MHz 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 2     
 Module i2c_top 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -3087,82 +2988,26 @@ Detailed RTL Component Info :
 	   3 Input      1 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
 	   9 Input      1 Bit        Muxes := 8     
-Module dual_port_sync 
-Detailed RTL Component Info : 
-+---Registers : 
-	               10 Bit    Registers := 1     
-+---RAMs : 
-	              16K Bit         RAMs := 1     
-Module asyn_fifo 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 4     
-	   3 Input     10 Bit       Adders := 2     
-+---XORs : 
-	   2 Input     11 Bit         XORs := 4     
-+---XORs : 
-	               11 Bit    Wide XORs := 10    
-+---Registers : 
-	               11 Bit    Registers := 7     
-	               10 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
-+---Muxes : 
-	   2 Input     11 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 2     
-Module debounce_explicit__1 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 4     
-Module debounce_explicit__2 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 4     
-Module debounce_explicit__3 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 4     
-Module debounce_explicit 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 3     
-	   4 Input      1 Bit        Muxes := 4     
 Module camera_interface 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     28 Bit       Adders := 1     
-	   2 Input      8 Bit       Adders := 5     
+	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	               28 Bit    Registers := 1     
-	               16 Bit    Registers := 1     
-	                8 Bit    Registers := 6     
+	                8 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input     28 Bit        Muxes := 2     
-	  10 Input     16 Bit        Muxes := 2     
-	   2 Input      8 Bit        Muxes := 16    
-	  10 Input      8 Bit        Muxes := 1     
-	   5 Input      8 Bit        Muxes := 5     
-	   3 Input      7 Bit        Muxes := 1     
-	  10 Input      4 Bit        Muxes := 2     
-	   2 Input      4 Bit        Muxes := 9     
-	   5 Input      4 Bit        Muxes := 1     
-	   5 Input      3 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 30    
-	  10 Input      1 Bit        Muxes := 8     
-	   5 Input      1 Bit        Muxes := 7     
+	   5 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   8 Input      1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -3179,6 +3024,15 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design top has port LED[5] driven by constant 0
+WARNING: [Synth 8-3331] design top has unconnected port LED[15]
+WARNING: [Synth 8-3331] design top has unconnected port LED[14]
+WARNING: [Synth 8-3331] design top has unconnected port LED[13]
+WARNING: [Synth 8-3331] design top has unconnected port LED[12]
+WARNING: [Synth 8-3331] design top has unconnected port LED[11]
+WARNING: [Synth 8-3331] design top has unconnected port LED[10]
+WARNING: [Synth 8-3331] design top has unconnected port LED[9]
+WARNING: [Synth 8-3331] design top has unconnected port LED[8]
 WARNING: [Synth 8-3331] design top has unconnected port SW[15]
 WARNING: [Synth 8-3331] design top has unconnected port SW[14]
 WARNING: [Synth 8-3331] design top has unconnected port SW[13]
@@ -3192,86 +3046,56 @@ WARNING: [Synth 8-3331] design top has unconnected port SW[6]
 WARNING: [Synth 8-3331] design top has unconnected port SW[5]
 WARNING: [Synth 8-3331] design top has unconnected port SW[4]
 WARNING: [Synth 8-3331] design top has unconnected port SW[3]
-RAM Pipeline Warning: Read Address Register Found For RAM nolabel_line87/m2/m0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
-WARNING: [Synth 8-6014] Unused sequential element nolabel_line87/m2/m0/ram_reg was removed. 
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/addr_q_reg[7]' (FDCE) to 'i_0/nolabel_line87/addr_q_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/addr_q_reg[6]' (FDCE) to 'i_0/nolabel_line87/addr_q_reg[2]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/addr_q_reg[5]' (FDCE) to 'i_0/nolabel_line87/addr_q_reg[3]'
-INFO: [Synth 8-3886] merging instance 'i_0/nolabel_line87/addr_q_reg[4]' (FDCE) to 'i_0/nolabel_line87/addr_q_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\nolabel_line87/addr_q_reg[3] )
+WARNING: [Synth 8-3331] design top has unconnected port BTNS[3]
+WARNING: [Synth 8-3331] design top has unconnected port BTNS[2]
+WARNING: [Synth 8-3331] design top has unconnected port BTNS[1]
+WARNING: [Synth 8-3331] design top has unconnected port BTNS[0]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\ca/state_q_reg[3] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:34 ; elapsed = 00:02:01 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 638 ; free virtual = 7671
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-ROM:
-+-----------------+------------+---------------+----------------+
-|Module Name      | RTL Object | Depth x Width | Implemented As | 
-+-----------------+------------+---------------+----------------+
-|camera_interface | p_0_out    | 128x16        | LUT            | 
-|camera_interface | p_0_out    | 128x16        | LUT            | 
-+-----------------+------------+---------------+----------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:12 ; elapsed = 00:03:31 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+-----------------------+------------+----------+
 |      |RTL Partition          |Replication |Instances |
 +------+-----------------------+------------+----------+
-|1     |muxpart_partial_buffer |           1|      7669|
-|2     |partial_buffer__GB1    |           1|      1976|
-|3     |partial_buffer__GB2    |           1|      3801|
-|4     |partial_buffer__GB3    |           1|      5382|
-|5     |partial_buffer__GB4    |           1|      5926|
-|6     |mem_controller__GC0    |           1|       517|
-|7     |top__GC0               |           1|      1870|
+|1     |muxpart_partial_buffer |           1|     38341|
+|2     |partial_buffer__GB1    |           1|      5768|
+|3     |partial_buffer__GB2    |           1|     11097|
+|4     |partial_buffer__GB3    |           1|     13638|
+|5     |partial_buffer__GB4    |           1|     17302|
+|6     |mem_controller__GC0    |           1|      1205|
+|7     |top__GC0               |           1|      7360|
 +------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:43 ; elapsed = 00:02:11 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 514 ; free virtual = 7554
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:24 ; elapsed = 00:03:44 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:11 ; elapsed = 00:02:40 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 489 ; free virtual = 7529
+Finished Timing Optimization : Time (s): cpu = 00:03:15 ; elapsed = 00:04:40 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
-+------+--------------------+------------+----------+
-|      |RTL Partition       |Replication |Instances |
-+------+--------------------+------------+----------+
-|1     |partial_buffer__GB1 |           1|      1976|
-|2     |partial_buffer__GB2 |           1|      3801|
-|3     |top__GC0            |           1|      1870|
-|4     |top_GT0             |           1|     19186|
-+------+--------------------+------------+----------+
++------+-----------------------+------------+----------+
+|      |RTL Partition          |Replication |Instances |
++------+-----------------------+------------+----------+
+|1     |muxpart_partial_buffer |           1|     38341|
+|2     |partial_buffer__GB1    |           1|      5768|
+|3     |partial_buffer__GB2    |           1|     11097|
+|4     |partial_buffer__GB3    |           1|     13638|
+|5     |partial_buffer__GB4    |           1|     17302|
+|6     |top_GT0                |           1|      8532|
++------+-----------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (mc/pop_pbuff_n_reg) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_cs_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_cs_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_cs_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_cs_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_cs_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_cs_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_ns_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_ns_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg0/FSM_onehot_ns_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_ns_reg[2]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_ns_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/pg1/FSM_onehot_ns_reg[0]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/FSM_sequential_rs_c_reg[1]) is unused and will be removed from module top.
-WARNING: [Synth 8-3332] Sequential element (mc/FSM_sequential_rs_c_reg[0]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:19 ; elapsed = 00:02:47 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 522 ; free virtual = 7561
+Finished Technology Mapping : Time (s): cpu = 00:04:02 ; elapsed = 00:05:31 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3295,7 +3119,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:21 ; elapsed = 00:02:49 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
+Finished IO Insertion : Time (s): cpu = 00:04:12 ; elapsed = 00:05:41 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -3308,7 +3132,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:21 ; elapsed = 00:02:49 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:13 ; elapsed = 00:05:42 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -3320,25 +3144,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:21 ; elapsed = 00:02:49 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:06 ; elapsed = 00:06:35 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:21 ; elapsed = 00:02:49 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:06 ; elapsed = 00:06:36 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:07 ; elapsed = 00:06:37 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:08 ; elapsed = 00:06:37 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3356,69 +3180,715 @@ Report Cell Usage:
 |      |Cell        |Count |
 +------+------------+------+
 |1     |full_buffer |     1|
-|2     |BUFG        |     5|
-|3     |CARRY4      |    42|
-|4     |DCM_SP      |     1|
-|5     |LUT1        |    13|
-|6     |LUT2        |   115|
-|7     |LUT3        |    50|
-|8     |LUT4        |   164|
-|9     |LUT5        |    67|
-|10    |LUT6        |   151|
-|11    |MUXF7       |     8|
-|12    |MUXF8       |     2|
-|13    |FDCE        |   196|
-|14    |FDPE        |     2|
-|15    |FDRE        |    84|
-|16    |LD          |    23|
-|17    |IBUF        |    18|
+|2     |BUFG        |     4|
+|3     |CARRY4      |   311|
+|4     |LUT1        |    81|
+|5     |LUT2        |   800|
+|6     |LUT3        |   426|
+|7     |LUT4        |   496|
+|8     |LUT5        |   348|
+|9     |LUT6        | 12120|
+|10    |MUXF7       |  5047|
+|11    |MUXF8       |  2520|
+|12    |FDCE        |    66|
+|13    |FDPE        |     2|
+|14    |FDRE        | 46785|
+|15    |FDSE        |    14|
+|16    |LD          |    30|
+|17    |IBUF        |    16|
 |18    |IOBUF       |     1|
-|19    |OBUF        |    16|
+|19    |OBUF        |    24|
+|20    |OBUFT       |     8|
 +------+------------+------+
 
 Report Instance Areas: 
-+------+-------------------+----------------------+------+
-|      |Instance           |Module                |Cells |
-+------+-------------------+----------------------+------+
-|1     |top                |                      |   982|
-|2     |  mc               |mem_controller        |   185|
-|3     |  nolabel_line87   |camera_interface      |   627|
-|4     |    m0             |i2c_top               |   154|
-|5     |    m1             |dcm_24MHz             |     3|
-|6     |    m3             |debounce_explicit     |    87|
-|7     |    m4             |debounce_explicit_0   |    79|
-|8     |    m5             |debounce_explicit_1   |    63|
-|9     |    m6             |debounce_explicit_2   |    63|
-|10    |  vga0             |vga                   |   132|
-|11    |    vga_controller |vga_controller_640_60 |   111|
-+------+-------------------+----------------------+------+
++------+------------------------+----------------------+------+
+|      |Instance                |Module                |Cells |
++------+------------------------+----------------------+------+
+|1     |top                     |                      | 69123|
+|2     |  alu                   |ALU                   |   166|
+|3     |  ca                    |camera_interface      |   189|
+|4     |    m0                  |i2c_top               |   101|
+|5     |  kr                    |kernel_ROM            |     1|
+|6     |  mc                    |mem_controller        | 67962|
+|7     |    cbuff               |conv_buffer           |  2285|
+|8     |      \genblk1[0].bf    |buffer_slice_640      |   330|
+|9     |      \genblk1[1].bf    |buffer_slice_641      |   504|
+|10    |      \genblk1[2].bf    |buffer_slice_642      |   645|
+|11    |      \genblk1[3].bf    |buffer_slice_643      |   506|
+|12    |      \genblk1[4].bf    |buffer_slice_644      |   300|
+|13    |    pbuff               |partial_buffer        | 63921|
+|14    |      \genblk1[100].bf  |buffer_slice_1        |    72|
+|15    |      \genblk1[101].bf  |buffer_slice_2        |    72|
+|16    |      \genblk1[102].bf  |buffer_slice_3        |    72|
+|17    |      \genblk1[103].bf  |buffer_slice_4        |    72|
+|18    |      \genblk1[104].bf  |buffer_slice_5        |    72|
+|19    |      \genblk1[105].bf  |buffer_slice_6        |    72|
+|20    |      \genblk1[106].bf  |buffer_slice_7        |    72|
+|21    |      \genblk1[107].bf  |buffer_slice_8        |    72|
+|22    |      \genblk1[108].bf  |buffer_slice_9        |    72|
+|23    |      \genblk1[109].bf  |buffer_slice_10       |    72|
+|24    |      \genblk1[110].bf  |buffer_slice_12       |    72|
+|25    |      \genblk1[111].bf  |buffer_slice_13       |    72|
+|26    |      \genblk1[112].bf  |buffer_slice_14       |    72|
+|27    |      \genblk1[113].bf  |buffer_slice_15       |    72|
+|28    |      \genblk1[114].bf  |buffer_slice_16       |    72|
+|29    |      \genblk1[115].bf  |buffer_slice_17       |    72|
+|30    |      \genblk1[116].bf  |buffer_slice_18       |    72|
+|31    |      \genblk1[117].bf  |buffer_slice_19       |    72|
+|32    |      \genblk1[118].bf  |buffer_slice_20       |    72|
+|33    |      \genblk1[119].bf  |buffer_slice_21       |    72|
+|34    |      \genblk1[120].bf  |buffer_slice_23       |    72|
+|35    |      \genblk1[121].bf  |buffer_slice_24       |    72|
+|36    |      \genblk1[122].bf  |buffer_slice_25       |    72|
+|37    |      \genblk1[123].bf  |buffer_slice_26       |    72|
+|38    |      \genblk1[124].bf  |buffer_slice_27       |    72|
+|39    |      \genblk1[125].bf  |buffer_slice_28       |    72|
+|40    |      \genblk1[126].bf  |buffer_slice_29       |    72|
+|41    |      \genblk1[127].bf  |buffer_slice_30       |    72|
+|42    |      \genblk1[128].bf  |buffer_slice_31       |    72|
+|43    |      \genblk1[129].bf  |buffer_slice_32       |    72|
+|44    |      \genblk1[130].bf  |buffer_slice_34       |    72|
+|45    |      \genblk1[131].bf  |buffer_slice_35       |    72|
+|46    |      \genblk1[132].bf  |buffer_slice_36       |    72|
+|47    |      \genblk1[133].bf  |buffer_slice_37       |    72|
+|48    |      \genblk1[134].bf  |buffer_slice_38       |    72|
+|49    |      \genblk1[135].bf  |buffer_slice_39       |    72|
+|50    |      \genblk1[136].bf  |buffer_slice_40       |    72|
+|51    |      \genblk1[137].bf  |buffer_slice_41       |    72|
+|52    |      \genblk1[138].bf  |buffer_slice_42       |    72|
+|53    |      \genblk1[139].bf  |buffer_slice_43       |    72|
+|54    |      \genblk1[140].bf  |buffer_slice_45       |    72|
+|55    |      \genblk1[141].bf  |buffer_slice_46       |    72|
+|56    |      \genblk1[142].bf  |buffer_slice_47       |    72|
+|57    |      \genblk1[143].bf  |buffer_slice_48       |    72|
+|58    |      \genblk1[144].bf  |buffer_slice_49       |    72|
+|59    |      \genblk1[145].bf  |buffer_slice_50       |    72|
+|60    |      \genblk1[146].bf  |buffer_slice_51       |    72|
+|61    |      \genblk1[147].bf  |buffer_slice_52       |    72|
+|62    |      \genblk1[148].bf  |buffer_slice_53       |    72|
+|63    |      \genblk1[149].bf  |buffer_slice_54       |    72|
+|64    |      \genblk1[150].bf  |buffer_slice_56       |    72|
+|65    |      \genblk1[151].bf  |buffer_slice_57       |    72|
+|66    |      \genblk1[73].bf   |buffer_slice_610      |    72|
+|67    |      \genblk1[74].bf   |buffer_slice_611      |    72|
+|68    |      \genblk1[75].bf   |buffer_slice_612      |    72|
+|69    |      \genblk1[76].bf   |buffer_slice_613      |    72|
+|70    |      \genblk1[77].bf   |buffer_slice_614      |    72|
+|71    |      \genblk1[78].bf   |buffer_slice_615      |    72|
+|72    |      \genblk1[79].bf   |buffer_slice_616      |    72|
+|73    |      \genblk1[80].bf   |buffer_slice_618      |    72|
+|74    |      \genblk1[81].bf   |buffer_slice_619      |    72|
+|75    |      \genblk1[82].bf   |buffer_slice_620      |    72|
+|76    |      \genblk1[83].bf   |buffer_slice_621      |    72|
+|77    |      \genblk1[84].bf   |buffer_slice_622      |    72|
+|78    |      \genblk1[85].bf   |buffer_slice_623      |    72|
+|79    |      \genblk1[86].bf   |buffer_slice_624      |    72|
+|80    |      \genblk1[87].bf   |buffer_slice_625      |    72|
+|81    |      \genblk1[88].bf   |buffer_slice_626      |    72|
+|82    |      \genblk1[89].bf   |buffer_slice_627      |    72|
+|83    |      \genblk1[90].bf   |buffer_slice_629      |    72|
+|84    |      \genblk1[91].bf   |buffer_slice_630      |    72|
+|85    |      \genblk1[92].bf   |buffer_slice_631      |    72|
+|86    |      \genblk1[93].bf   |buffer_slice_632      |    72|
+|87    |      \genblk1[94].bf   |buffer_slice_633      |    72|
+|88    |      \genblk1[95].bf   |buffer_slice_634      |    72|
+|89    |      \genblk1[96].bf   |buffer_slice_635      |    72|
+|90    |      \genblk1[97].bf   |buffer_slice_636      |    72|
+|91    |      \genblk1[98].bf   |buffer_slice_637      |    72|
+|92    |      \genblk1[99].bf   |buffer_slice_638      |    72|
+|93    |      \genblk1[0].bf    |buffer_slice          |    72|
+|94    |      \genblk1[10].bf   |buffer_slice_11       |    72|
+|95    |      \genblk1[11].bf   |buffer_slice_22       |    72|
+|96    |      \genblk1[12].bf   |buffer_slice_33       |    72|
+|97    |      \genblk1[13].bf   |buffer_slice_44       |    72|
+|98    |      \genblk1[14].bf   |buffer_slice_55       |    72|
+|99    |      \genblk1[152].bf  |buffer_slice_58       |    72|
+|100   |      \genblk1[153].bf  |buffer_slice_59       |    72|
+|101   |      \genblk1[154].bf  |buffer_slice_60       |    72|
+|102   |      \genblk1[155].bf  |buffer_slice_61       |    72|
+|103   |      \genblk1[156].bf  |buffer_slice_62       |    72|
+|104   |      \genblk1[157].bf  |buffer_slice_63       |    72|
+|105   |      \genblk1[158].bf  |buffer_slice_64       |    72|
+|106   |      \genblk1[159].bf  |buffer_slice_65       |    72|
+|107   |      \genblk1[15].bf   |buffer_slice_66       |    72|
+|108   |      \genblk1[160].bf  |buffer_slice_67       |    72|
+|109   |      \genblk1[161].bf  |buffer_slice_68       |    72|
+|110   |      \genblk1[162].bf  |buffer_slice_69       |    72|
+|111   |      \genblk1[163].bf  |buffer_slice_70       |    72|
+|112   |      \genblk1[164].bf  |buffer_slice_71       |    72|
+|113   |      \genblk1[165].bf  |buffer_slice_72       |    72|
+|114   |      \genblk1[166].bf  |buffer_slice_73       |    72|
+|115   |      \genblk1[167].bf  |buffer_slice_74       |    72|
+|116   |      \genblk1[168].bf  |buffer_slice_75       |    72|
+|117   |      \genblk1[169].bf  |buffer_slice_76       |    72|
+|118   |      \genblk1[16].bf   |buffer_slice_77       |    72|
+|119   |      \genblk1[170].bf  |buffer_slice_78       |    72|
+|120   |      \genblk1[171].bf  |buffer_slice_79       |    72|
+|121   |      \genblk1[172].bf  |buffer_slice_80       |    72|
+|122   |      \genblk1[173].bf  |buffer_slice_81       |    72|
+|123   |      \genblk1[174].bf  |buffer_slice_82       |    72|
+|124   |      \genblk1[175].bf  |buffer_slice_83       |    72|
+|125   |      \genblk1[176].bf  |buffer_slice_84       |    72|
+|126   |      \genblk1[177].bf  |buffer_slice_85       |    72|
+|127   |      \genblk1[178].bf  |buffer_slice_86       |    72|
+|128   |      \genblk1[179].bf  |buffer_slice_87       |    72|
+|129   |      \genblk1[17].bf   |buffer_slice_88       |    72|
+|130   |      \genblk1[180].bf  |buffer_slice_89       |    72|
+|131   |      \genblk1[181].bf  |buffer_slice_90       |    72|
+|132   |      \genblk1[182].bf  |buffer_slice_91       |    72|
+|133   |      \genblk1[183].bf  |buffer_slice_92       |    72|
+|134   |      \genblk1[184].bf  |buffer_slice_93       |    72|
+|135   |      \genblk1[185].bf  |buffer_slice_94       |    72|
+|136   |      \genblk1[186].bf  |buffer_slice_95       |    72|
+|137   |      \genblk1[187].bf  |buffer_slice_96       |    72|
+|138   |      \genblk1[188].bf  |buffer_slice_97       |    72|
+|139   |      \genblk1[189].bf  |buffer_slice_98       |    72|
+|140   |      \genblk1[18].bf   |buffer_slice_99       |    72|
+|141   |      \genblk1[190].bf  |buffer_slice_100      |    72|
+|142   |      \genblk1[191].bf  |buffer_slice_101      |    72|
+|143   |      \genblk1[192].bf  |buffer_slice_102      |    72|
+|144   |      \genblk1[193].bf  |buffer_slice_103      |    72|
+|145   |      \genblk1[194].bf  |buffer_slice_104      |    72|
+|146   |      \genblk1[195].bf  |buffer_slice_105      |    72|
+|147   |      \genblk1[196].bf  |buffer_slice_106      |    72|
+|148   |      \genblk1[197].bf  |buffer_slice_107      |    72|
+|149   |      \genblk1[198].bf  |buffer_slice_108      |    72|
+|150   |      \genblk1[199].bf  |buffer_slice_109      |    72|
+|151   |      \genblk1[19].bf   |buffer_slice_110      |    72|
+|152   |      \genblk1[1].bf    |buffer_slice_111      |    72|
+|153   |      \genblk1[200].bf  |buffer_slice_112      |    72|
+|154   |      \genblk1[201].bf  |buffer_slice_113      |    72|
+|155   |      \genblk1[202].bf  |buffer_slice_114      |    72|
+|156   |      \genblk1[203].bf  |buffer_slice_115      |    72|
+|157   |      \genblk1[204].bf  |buffer_slice_116      |    72|
+|158   |      \genblk1[205].bf  |buffer_slice_117      |    72|
+|159   |      \genblk1[206].bf  |buffer_slice_118      |    72|
+|160   |      \genblk1[207].bf  |buffer_slice_119      |    72|
+|161   |      \genblk1[208].bf  |buffer_slice_120      |    72|
+|162   |      \genblk1[209].bf  |buffer_slice_121      |    72|
+|163   |      \genblk1[20].bf   |buffer_slice_122      |    72|
+|164   |      \genblk1[210].bf  |buffer_slice_123      |    72|
+|165   |      \genblk1[211].bf  |buffer_slice_124      |    72|
+|166   |      \genblk1[212].bf  |buffer_slice_125      |    72|
+|167   |      \genblk1[213].bf  |buffer_slice_126      |    72|
+|168   |      \genblk1[398].bf  |buffer_slice_330      |    72|
+|169   |      \genblk1[399].bf  |buffer_slice_331      |    72|
+|170   |      \genblk1[400].bf  |buffer_slice_334      |    72|
+|171   |      \genblk1[401].bf  |buffer_slice_335      |    72|
+|172   |      \genblk1[402].bf  |buffer_slice_336      |    72|
+|173   |      \genblk1[403].bf  |buffer_slice_337      |    72|
+|174   |      \genblk1[404].bf  |buffer_slice_338      |    72|
+|175   |      \genblk1[405].bf  |buffer_slice_339      |    72|
+|176   |      \genblk1[406].bf  |buffer_slice_340      |    72|
+|177   |      \genblk1[407].bf  |buffer_slice_341      |    72|
+|178   |      \genblk1[408].bf  |buffer_slice_342      |    72|
+|179   |      \genblk1[409].bf  |buffer_slice_343      |    72|
+|180   |      \genblk1[410].bf  |buffer_slice_345      |    72|
+|181   |      \genblk1[411].bf  |buffer_slice_346      |    72|
+|182   |      \genblk1[412].bf  |buffer_slice_347      |    72|
+|183   |      \genblk1[413].bf  |buffer_slice_348      |    72|
+|184   |      \genblk1[414].bf  |buffer_slice_349      |    72|
+|185   |      \genblk1[415].bf  |buffer_slice_350      |    72|
+|186   |      \genblk1[416].bf  |buffer_slice_351      |    72|
+|187   |      \genblk1[417].bf  |buffer_slice_352      |    72|
+|188   |      \genblk1[418].bf  |buffer_slice_353      |    72|
+|189   |      \genblk1[419].bf  |buffer_slice_354      |    72|
+|190   |      \genblk1[420].bf  |buffer_slice_356      |    72|
+|191   |      \genblk1[421].bf  |buffer_slice_357      |    72|
+|192   |      \genblk1[422].bf  |buffer_slice_358      |    72|
+|193   |      \genblk1[423].bf  |buffer_slice_359      |    72|
+|194   |      \genblk1[424].bf  |buffer_slice_360      |    72|
+|195   |      \genblk1[425].bf  |buffer_slice_361      |    72|
+|196   |      \genblk1[426].bf  |buffer_slice_362      |    72|
+|197   |      \genblk1[427].bf  |buffer_slice_363      |    72|
+|198   |      \genblk1[428].bf  |buffer_slice_364      |    72|
+|199   |      \genblk1[429].bf  |buffer_slice_365      |    72|
+|200   |      \genblk1[430].bf  |buffer_slice_367      |    72|
+|201   |      \genblk1[431].bf  |buffer_slice_368      |    72|
+|202   |      \genblk1[432].bf  |buffer_slice_369      |    72|
+|203   |      \genblk1[433].bf  |buffer_slice_370      |    72|
+|204   |      \genblk1[434].bf  |buffer_slice_371      |    72|
+|205   |      \genblk1[435].bf  |buffer_slice_372      |    72|
+|206   |      \genblk1[436].bf  |buffer_slice_373      |    72|
+|207   |      \genblk1[437].bf  |buffer_slice_374      |    72|
+|208   |      \genblk1[438].bf  |buffer_slice_375      |    72|
+|209   |      \genblk1[439].bf  |buffer_slice_376      |    72|
+|210   |      \genblk1[440].bf  |buffer_slice_378      |    72|
+|211   |      \genblk1[441].bf  |buffer_slice_379      |    72|
+|212   |      \genblk1[442].bf  |buffer_slice_380      |    72|
+|213   |      \genblk1[443].bf  |buffer_slice_381      |    72|
+|214   |      \genblk1[444].bf  |buffer_slice_382      |    72|
+|215   |      \genblk1[445].bf  |buffer_slice_383      |    72|
+|216   |      \genblk1[446].bf  |buffer_slice_384      |    72|
+|217   |      \genblk1[447].bf  |buffer_slice_385      |    72|
+|218   |      \genblk1[448].bf  |buffer_slice_386      |    72|
+|219   |      \genblk1[449].bf  |buffer_slice_387      |    72|
+|220   |      \genblk1[450].bf  |buffer_slice_389      |    72|
+|221   |      \genblk1[451].bf  |buffer_slice_390      |    72|
+|222   |      \genblk1[452].bf  |buffer_slice_391      |    72|
+|223   |      \genblk1[453].bf  |buffer_slice_392      |    72|
+|224   |      \genblk1[454].bf  |buffer_slice_393      |    72|
+|225   |      \genblk1[455].bf  |buffer_slice_394      |    72|
+|226   |      \genblk1[456].bf  |buffer_slice_395      |    72|
+|227   |      \genblk1[457].bf  |buffer_slice_396      |    72|
+|228   |      \genblk1[458].bf  |buffer_slice_397      |    72|
+|229   |      \genblk1[459].bf  |buffer_slice_398      |    72|
+|230   |      \genblk1[460].bf  |buffer_slice_400      |    72|
+|231   |      \genblk1[461].bf  |buffer_slice_401      |    72|
+|232   |      \genblk1[462].bf  |buffer_slice_402      |    72|
+|233   |      \genblk1[463].bf  |buffer_slice_403      |    72|
+|234   |      \genblk1[464].bf  |buffer_slice_404      |    72|
+|235   |      \genblk1[465].bf  |buffer_slice_405      |    72|
+|236   |      \genblk1[466].bf  |buffer_slice_406      |    72|
+|237   |      \genblk1[468].bf  |buffer_slice_408      |    72|
+|238   |      \genblk1[469].bf  |buffer_slice_409      |    72|
+|239   |      \genblk1[470].bf  |buffer_slice_411      |    72|
+|240   |      \genblk1[471].bf  |buffer_slice_412      |    72|
+|241   |      \genblk1[472].bf  |buffer_slice_413      |    72|
+|242   |      \genblk1[473].bf  |buffer_slice_414      |    72|
+|243   |      \genblk1[474].bf  |buffer_slice_415      |    72|
+|244   |      \genblk1[475].bf  |buffer_slice_416      |    72|
+|245   |      \genblk1[476].bf  |buffer_slice_417      |    72|
+|246   |      \genblk1[477].bf  |buffer_slice_418      |    72|
+|247   |      \genblk1[478].bf  |buffer_slice_419      |    72|
+|248   |      \genblk1[479].bf  |buffer_slice_420      |    72|
+|249   |      \genblk1[480].bf  |buffer_slice_422      |    72|
+|250   |      \genblk1[481].bf  |buffer_slice_423      |    72|
+|251   |      \genblk1[482].bf  |buffer_slice_424      |    72|
+|252   |      \genblk1[483].bf  |buffer_slice_425      |    72|
+|253   |      \genblk1[484].bf  |buffer_slice_426      |    72|
+|254   |      \genblk1[485].bf  |buffer_slice_427      |    72|
+|255   |      \genblk1[486].bf  |buffer_slice_428      |    72|
+|256   |      \genblk1[487].bf  |buffer_slice_429      |    72|
+|257   |      \genblk1[488].bf  |buffer_slice_430      |    72|
+|258   |      \genblk1[489].bf  |buffer_slice_431      |    72|
+|259   |      \genblk1[490].bf  |buffer_slice_433      |    72|
+|260   |      \genblk1[491].bf  |buffer_slice_434      |    72|
+|261   |      \genblk1[492].bf  |buffer_slice_435      |    72|
+|262   |      \genblk1[493].bf  |buffer_slice_436      |    72|
+|263   |      \genblk1[494].bf  |buffer_slice_437      |    72|
+|264   |      \genblk1[495].bf  |buffer_slice_438      |    72|
+|265   |      \genblk1[496].bf  |buffer_slice_439      |    72|
+|266   |      \genblk1[497].bf  |buffer_slice_440      |    72|
+|267   |      \genblk1[498].bf  |buffer_slice_441      |    72|
+|268   |      \genblk1[499].bf  |buffer_slice_442      |    72|
+|269   |      \genblk1[500].bf  |buffer_slice_445      |    72|
+|270   |      \genblk1[501].bf  |buffer_slice_446      |    72|
+|271   |      \genblk1[502].bf  |buffer_slice_447      |    72|
+|272   |      \genblk1[503].bf  |buffer_slice_448      |    72|
+|273   |      \genblk1[504].bf  |buffer_slice_449      |    72|
+|274   |      \genblk1[505].bf  |buffer_slice_450      |    72|
+|275   |      \genblk1[506].bf  |buffer_slice_451      |    72|
+|276   |      \genblk1[507].bf  |buffer_slice_452      |    72|
+|277   |      \genblk1[508].bf  |buffer_slice_453      |    72|
+|278   |      \genblk1[509].bf  |buffer_slice_454      |    72|
+|279   |      \genblk1[510].bf  |buffer_slice_456      |    72|
+|280   |      \genblk1[511].bf  |buffer_slice_457      |    72|
+|281   |      \genblk1[512].bf  |buffer_slice_458      |    72|
+|282   |      \genblk1[513].bf  |buffer_slice_459      |    72|
+|283   |      \genblk1[514].bf  |buffer_slice_460      |    72|
+|284   |      \genblk1[515].bf  |buffer_slice_461      |    72|
+|285   |      \genblk1[516].bf  |buffer_slice_462      |    72|
+|286   |      \genblk1[517].bf  |buffer_slice_463      |    72|
+|287   |      \genblk1[518].bf  |buffer_slice_464      |    72|
+|288   |      \genblk1[519].bf  |buffer_slice_465      |    72|
+|289   |      \genblk1[520].bf  |buffer_slice_467      |    72|
+|290   |      \genblk1[521].bf  |buffer_slice_468      |    72|
+|291   |      \genblk1[522].bf  |buffer_slice_469      |    72|
+|292   |      \genblk1[523].bf  |buffer_slice_470      |    72|
+|293   |      \genblk1[524].bf  |buffer_slice_471      |    72|
+|294   |      \genblk1[525].bf  |buffer_slice_472      |    72|
+|295   |      \genblk1[526].bf  |buffer_slice_473      |    72|
+|296   |      \genblk1[527].bf  |buffer_slice_474      |    72|
+|297   |      \genblk1[528].bf  |buffer_slice_475      |    72|
+|298   |      \genblk1[529].bf  |buffer_slice_476      |    72|
+|299   |      \genblk1[530].bf  |buffer_slice_478      |    72|
+|300   |      \genblk1[531].bf  |buffer_slice_479      |    72|
+|301   |      \genblk1[532].bf  |buffer_slice_480      |    72|
+|302   |      \genblk1[533].bf  |buffer_slice_481      |    72|
+|303   |      \genblk1[534].bf  |buffer_slice_482      |    72|
+|304   |      \genblk1[535].bf  |buffer_slice_483      |    72|
+|305   |      \genblk1[536].bf  |buffer_slice_484      |    72|
+|306   |      \genblk1[537].bf  |buffer_slice_485      |    72|
+|307   |      \genblk1[538].bf  |buffer_slice_486      |    72|
+|308   |      \genblk1[539].bf  |buffer_slice_487      |    72|
+|309   |      \genblk1[540].bf  |buffer_slice_489      |    72|
+|310   |      \genblk1[541].bf  |buffer_slice_490      |    72|
+|311   |      \genblk1[542].bf  |buffer_slice_491      |    72|
+|312   |      \genblk1[543].bf  |buffer_slice_492      |    72|
+|313   |      \genblk1[544].bf  |buffer_slice_493      |    72|
+|314   |      \genblk1[545].bf  |buffer_slice_494      |    72|
+|315   |      \genblk1[546].bf  |buffer_slice_495      |    72|
+|316   |      \genblk1[547].bf  |buffer_slice_496      |    72|
+|317   |      \genblk1[548].bf  |buffer_slice_497      |    72|
+|318   |      \genblk1[549].bf  |buffer_slice_498      |    72|
+|319   |      \genblk1[550].bf  |buffer_slice_500      |    72|
+|320   |      \genblk1[551].bf  |buffer_slice_501      |    72|
+|321   |      \genblk1[552].bf  |buffer_slice_502      |    72|
+|322   |      \genblk1[553].bf  |buffer_slice_503      |    72|
+|323   |      \genblk1[554].bf  |buffer_slice_504      |    72|
+|324   |      \genblk1[555].bf  |buffer_slice_505      |    72|
+|325   |      \genblk1[556].bf  |buffer_slice_506      |    72|
+|326   |      \genblk1[557].bf  |buffer_slice_507      |    72|
+|327   |      \genblk1[558].bf  |buffer_slice_508      |    72|
+|328   |      \genblk1[559].bf  |buffer_slice_509      |    72|
+|329   |      \genblk1[560].bf  |buffer_slice_511      |    72|
+|330   |      \genblk1[561].bf  |buffer_slice_512      |    72|
+|331   |      \genblk1[562].bf  |buffer_slice_513      |    72|
+|332   |      \genblk1[563].bf  |buffer_slice_514      |    72|
+|333   |      \genblk1[564].bf  |buffer_slice_515      |    72|
+|334   |      \genblk1[565].bf  |buffer_slice_516      |    72|
+|335   |      \genblk1[566].bf  |buffer_slice_517      |    72|
+|336   |      \genblk1[567].bf  |buffer_slice_518      |    72|
+|337   |      \genblk1[568].bf  |buffer_slice_519      |    72|
+|338   |      \genblk1[569].bf  |buffer_slice_520      |    72|
+|339   |      \genblk1[570].bf  |buffer_slice_522      |    72|
+|340   |      \genblk1[571].bf  |buffer_slice_523      |    72|
+|341   |      \genblk1[572].bf  |buffer_slice_524      |    72|
+|342   |      \genblk1[573].bf  |buffer_slice_525      |    72|
+|343   |      \genblk1[574].bf  |buffer_slice_526      |    72|
+|344   |      \genblk1[575].bf  |buffer_slice_527      |    72|
+|345   |      \genblk1[576].bf  |buffer_slice_528      |    72|
+|346   |      \genblk1[577].bf  |buffer_slice_529      |    72|
+|347   |      \genblk1[578].bf  |buffer_slice_530      |    72|
+|348   |      \genblk1[579].bf  |buffer_slice_531      |    72|
+|349   |      \genblk1[580].bf  |buffer_slice_533      |    72|
+|350   |      \genblk1[581].bf  |buffer_slice_534      |    72|
+|351   |      \genblk1[582].bf  |buffer_slice_535      |    72|
+|352   |      \genblk1[583].bf  |buffer_slice_536      |    72|
+|353   |      \genblk1[584].bf  |buffer_slice_537      |    72|
+|354   |      \genblk1[585].bf  |buffer_slice_538      |    72|
+|355   |      \genblk1[586].bf  |buffer_slice_539      |    72|
+|356   |      \genblk1[587].bf  |buffer_slice_540      |    72|
+|357   |      \genblk1[588].bf  |buffer_slice_541      |    72|
+|358   |      \genblk1[589].bf  |buffer_slice_542      |    72|
+|359   |      \genblk1[590].bf  |buffer_slice_544      |    72|
+|360   |      \genblk1[591].bf  |buffer_slice_545      |    72|
+|361   |      \genblk1[592].bf  |buffer_slice_546      |    72|
+|362   |      \genblk1[593].bf  |buffer_slice_547      |    72|
+|363   |      \genblk1[594].bf  |buffer_slice_548      |    72|
+|364   |      \genblk1[595].bf  |buffer_slice_549      |    72|
+|365   |      \genblk1[596].bf  |buffer_slice_550      |    72|
+|366   |      \genblk1[597].bf  |buffer_slice_551      |    72|
+|367   |      \genblk1[598].bf  |buffer_slice_552      |    72|
+|368   |      \genblk1[599].bf  |buffer_slice_553      |    72|
+|369   |      \genblk1[600].bf  |buffer_slice_556      |    72|
+|370   |      \genblk1[601].bf  |buffer_slice_557      |    72|
+|371   |      \genblk1[602].bf  |buffer_slice_558      |    72|
+|372   |      \genblk1[603].bf  |buffer_slice_559      |    72|
+|373   |      \genblk1[604].bf  |buffer_slice_560      |    72|
+|374   |      \genblk1[605].bf  |buffer_slice_561      |    72|
+|375   |      \genblk1[606].bf  |buffer_slice_562      |    72|
+|376   |      \genblk1[607].bf  |buffer_slice_563      |    72|
+|377   |      \genblk1[608].bf  |buffer_slice_564      |    72|
+|378   |      \genblk1[609].bf  |buffer_slice_565      |    72|
+|379   |      \genblk1[610].bf  |buffer_slice_567      |    72|
+|380   |      \genblk1[611].bf  |buffer_slice_568      |    72|
+|381   |      \genblk1[612].bf  |buffer_slice_569      |    72|
+|382   |      \genblk1[613].bf  |buffer_slice_570      |    72|
+|383   |      \genblk1[614].bf  |buffer_slice_571      |    72|
+|384   |      \genblk1[615].bf  |buffer_slice_572      |    72|
+|385   |      \genblk1[616].bf  |buffer_slice_573      |    72|
+|386   |      \genblk1[617].bf  |buffer_slice_574      |    72|
+|387   |      \genblk1[618].bf  |buffer_slice_575      |    72|
+|388   |      \genblk1[619].bf  |buffer_slice_576      |    72|
+|389   |      \genblk1[620].bf  |buffer_slice_578      |    72|
+|390   |      \genblk1[621].bf  |buffer_slice_579      |    72|
+|391   |      \genblk1[622].bf  |buffer_slice_580      |    72|
+|392   |      \genblk1[623].bf  |buffer_slice_581      |    72|
+|393   |      \genblk1[624].bf  |buffer_slice_582      |    72|
+|394   |      \genblk1[625].bf  |buffer_slice_583      |    72|
+|395   |      \genblk1[626].bf  |buffer_slice_584      |    72|
+|396   |      \genblk1[627].bf  |buffer_slice_585      |    72|
+|397   |      \genblk1[628].bf  |buffer_slice_586      |    72|
+|398   |      \genblk1[629].bf  |buffer_slice_587      |    72|
+|399   |      \genblk1[630].bf  |buffer_slice_589      |    72|
+|400   |      \genblk1[214].bf  |buffer_slice_127      |    73|
+|401   |      \genblk1[215].bf  |buffer_slice_128      |    72|
+|402   |      \genblk1[216].bf  |buffer_slice_129      |    72|
+|403   |      \genblk1[217].bf  |buffer_slice_130      |    72|
+|404   |      \genblk1[218].bf  |buffer_slice_131      |    72|
+|405   |      \genblk1[219].bf  |buffer_slice_132      |    72|
+|406   |      \genblk1[21].bf   |buffer_slice_133      |    72|
+|407   |      \genblk1[220].bf  |buffer_slice_134      |    72|
+|408   |      \genblk1[221].bf  |buffer_slice_135      |    72|
+|409   |      \genblk1[222].bf  |buffer_slice_136      |    72|
+|410   |      \genblk1[223].bf  |buffer_slice_137      |    72|
+|411   |      \genblk1[224].bf  |buffer_slice_138      |    72|
+|412   |      \genblk1[225].bf  |buffer_slice_139      |    72|
+|413   |      \genblk1[226].bf  |buffer_slice_140      |    72|
+|414   |      \genblk1[227].bf  |buffer_slice_141      |    72|
+|415   |      \genblk1[228].bf  |buffer_slice_142      |    72|
+|416   |      \genblk1[229].bf  |buffer_slice_143      |    72|
+|417   |      \genblk1[22].bf   |buffer_slice_144      |    72|
+|418   |      \genblk1[230].bf  |buffer_slice_145      |    72|
+|419   |      \genblk1[231].bf  |buffer_slice_146      |    72|
+|420   |      \genblk1[232].bf  |buffer_slice_147      |    72|
+|421   |      \genblk1[233].bf  |buffer_slice_148      |    72|
+|422   |      \genblk1[234].bf  |buffer_slice_149      |    72|
+|423   |      \genblk1[235].bf  |buffer_slice_150      |    72|
+|424   |      \genblk1[236].bf  |buffer_slice_151      |    72|
+|425   |      \genblk1[237].bf  |buffer_slice_152      |    72|
+|426   |      \genblk1[238].bf  |buffer_slice_153      |    73|
+|427   |      \genblk1[239].bf  |buffer_slice_154      |    72|
+|428   |      \genblk1[23].bf   |buffer_slice_155      |    72|
+|429   |      \genblk1[240].bf  |buffer_slice_156      |    72|
+|430   |      \genblk1[241].bf  |buffer_slice_157      |    72|
+|431   |      \genblk1[242].bf  |buffer_slice_158      |    72|
+|432   |      \genblk1[243].bf  |buffer_slice_159      |    72|
+|433   |      \genblk1[244].bf  |buffer_slice_160      |    73|
+|434   |      \genblk1[245].bf  |buffer_slice_161      |    74|
+|435   |      \genblk1[246].bf  |buffer_slice_162      |    72|
+|436   |      \genblk1[247].bf  |buffer_slice_163      |    72|
+|437   |      \genblk1[248].bf  |buffer_slice_164      |    72|
+|438   |      \genblk1[249].bf  |buffer_slice_165      |    72|
+|439   |      \genblk1[24].bf   |buffer_slice_166      |    72|
+|440   |      \genblk1[250].bf  |buffer_slice_167      |    72|
+|441   |      \genblk1[251].bf  |buffer_slice_168      |    72|
+|442   |      \genblk1[252].bf  |buffer_slice_169      |    72|
+|443   |      \genblk1[253].bf  |buffer_slice_170      |    72|
+|444   |      \genblk1[254].bf  |buffer_slice_171      |    73|
+|445   |      \genblk1[255].bf  |buffer_slice_172      |    72|
+|446   |      \genblk1[256].bf  |buffer_slice_173      |    72|
+|447   |      \genblk1[257].bf  |buffer_slice_174      |    72|
+|448   |      \genblk1[258].bf  |buffer_slice_175      |    72|
+|449   |      \genblk1[259].bf  |buffer_slice_176      |    72|
+|450   |      \genblk1[25].bf   |buffer_slice_177      |    72|
+|451   |      \genblk1[260].bf  |buffer_slice_178      |    72|
+|452   |      \genblk1[261].bf  |buffer_slice_179      |    72|
+|453   |      \genblk1[262].bf  |buffer_slice_180      |    72|
+|454   |      \genblk1[263].bf  |buffer_slice_181      |    72|
+|455   |      \genblk1[264].bf  |buffer_slice_182      |    72|
+|456   |      \genblk1[265].bf  |buffer_slice_183      |    72|
+|457   |      \genblk1[266].bf  |buffer_slice_184      |    72|
+|458   |      \genblk1[267].bf  |buffer_slice_185      |    72|
+|459   |      \genblk1[268].bf  |buffer_slice_186      |    72|
+|460   |      \genblk1[269].bf  |buffer_slice_187      |    72|
+|461   |      \genblk1[26].bf   |buffer_slice_188      |    72|
+|462   |      \genblk1[270].bf  |buffer_slice_189      |    72|
+|463   |      \genblk1[271].bf  |buffer_slice_190      |    72|
+|464   |      \genblk1[272].bf  |buffer_slice_191      |    72|
+|465   |      \genblk1[273].bf  |buffer_slice_192      |    72|
+|466   |      \genblk1[274].bf  |buffer_slice_193      |    72|
+|467   |      \genblk1[275].bf  |buffer_slice_194      |    72|
+|468   |      \genblk1[276].bf  |buffer_slice_195      |    72|
+|469   |      \genblk1[277].bf  |buffer_slice_196      |    72|
+|470   |      \genblk1[278].bf  |buffer_slice_197      |    72|
+|471   |      \genblk1[279].bf  |buffer_slice_198      |    72|
+|472   |      \genblk1[27].bf   |buffer_slice_199      |    72|
+|473   |      \genblk1[280].bf  |buffer_slice_200      |    72|
+|474   |      \genblk1[281].bf  |buffer_slice_201      |    72|
+|475   |      \genblk1[282].bf  |buffer_slice_202      |    72|
+|476   |      \genblk1[283].bf  |buffer_slice_203      |    72|
+|477   |      \genblk1[284].bf  |buffer_slice_204      |    72|
+|478   |      \genblk1[285].bf  |buffer_slice_205      |    72|
+|479   |      \genblk1[286].bf  |buffer_slice_206      |    72|
+|480   |      \genblk1[287].bf  |buffer_slice_207      |    72|
+|481   |      \genblk1[288].bf  |buffer_slice_208      |    73|
+|482   |      \genblk1[289].bf  |buffer_slice_209      |    72|
+|483   |      \genblk1[28].bf   |buffer_slice_210      |    72|
+|484   |      \genblk1[290].bf  |buffer_slice_211      |    72|
+|485   |      \genblk1[291].bf  |buffer_slice_212      |    72|
+|486   |      \genblk1[292].bf  |buffer_slice_213      |    72|
+|487   |      \genblk1[293].bf  |buffer_slice_214      |    72|
+|488   |      \genblk1[294].bf  |buffer_slice_215      |    72|
+|489   |      \genblk1[295].bf  |buffer_slice_216      |    72|
+|490   |      \genblk1[296].bf  |buffer_slice_217      |    72|
+|491   |      \genblk1[297].bf  |buffer_slice_218      |    72|
+|492   |      \genblk1[298].bf  |buffer_slice_219      |    72|
+|493   |      \genblk1[299].bf  |buffer_slice_220      |    72|
+|494   |      \genblk1[29].bf   |buffer_slice_221      |    72|
+|495   |      \genblk1[2].bf    |buffer_slice_222      |    72|
+|496   |      \genblk1[300].bf  |buffer_slice_223      |    72|
+|497   |      \genblk1[301].bf  |buffer_slice_224      |    72|
+|498   |      \genblk1[302].bf  |buffer_slice_225      |    72|
+|499   |      \genblk1[303].bf  |buffer_slice_226      |    72|
+|500   |      \genblk1[304].bf  |buffer_slice_227      |    72|
+|501   |      \genblk1[305].bf  |buffer_slice_228      |    72|
+|502   |      \genblk1[306].bf  |buffer_slice_229      |    72|
+|503   |      \genblk1[307].bf  |buffer_slice_230      |    72|
+|504   |      \genblk1[308].bf  |buffer_slice_231      |    72|
+|505   |      \genblk1[309].bf  |buffer_slice_232      |    72|
+|506   |      \genblk1[30].bf   |buffer_slice_233      |    72|
+|507   |      \genblk1[310].bf  |buffer_slice_234      |    72|
+|508   |      \genblk1[311].bf  |buffer_slice_235      |    72|
+|509   |      \genblk1[312].bf  |buffer_slice_236      |    72|
+|510   |      \genblk1[313].bf  |buffer_slice_237      |    72|
+|511   |      \genblk1[314].bf  |buffer_slice_238      |    72|
+|512   |      \genblk1[315].bf  |buffer_slice_239      |    72|
+|513   |      \genblk1[316].bf  |buffer_slice_240      |    72|
+|514   |      \genblk1[317].bf  |buffer_slice_241      |    72|
+|515   |      \genblk1[318].bf  |buffer_slice_242      |    72|
+|516   |      \genblk1[319].bf  |buffer_slice_243      |    72|
+|517   |      \genblk1[31].bf   |buffer_slice_244      |    72|
+|518   |      \genblk1[320].bf  |buffer_slice_245      |    72|
+|519   |      \genblk1[321].bf  |buffer_slice_246      |    72|
+|520   |      \genblk1[322].bf  |buffer_slice_247      |    72|
+|521   |      \genblk1[323].bf  |buffer_slice_248      |    72|
+|522   |      \genblk1[324].bf  |buffer_slice_249      |    72|
+|523   |      \genblk1[325].bf  |buffer_slice_250      |    72|
+|524   |      \genblk1[326].bf  |buffer_slice_251      |    72|
+|525   |      \genblk1[327].bf  |buffer_slice_252      |    72|
+|526   |      \genblk1[328].bf  |buffer_slice_253      |    72|
+|527   |      \genblk1[329].bf  |buffer_slice_254      |    72|
+|528   |      \genblk1[32].bf   |buffer_slice_255      |    72|
+|529   |      \genblk1[330].bf  |buffer_slice_256      |    72|
+|530   |      \genblk1[331].bf  |buffer_slice_257      |    72|
+|531   |      \genblk1[332].bf  |buffer_slice_258      |    72|
+|532   |      \genblk1[333].bf  |buffer_slice_259      |    72|
+|533   |      \genblk1[334].bf  |buffer_slice_260      |    72|
+|534   |      \genblk1[335].bf  |buffer_slice_261      |    72|
+|535   |      \genblk1[336].bf  |buffer_slice_262      |    72|
+|536   |      \genblk1[337].bf  |buffer_slice_263      |    72|
+|537   |      \genblk1[338].bf  |buffer_slice_264      |    72|
+|538   |      \genblk1[339].bf  |buffer_slice_265      |    72|
+|539   |      \genblk1[33].bf   |buffer_slice_266      |    72|
+|540   |      \genblk1[340].bf  |buffer_slice_267      |    72|
+|541   |      \genblk1[341].bf  |buffer_slice_268      |    72|
+|542   |      \genblk1[342].bf  |buffer_slice_269      |    72|
+|543   |      \genblk1[343].bf  |buffer_slice_270      |    72|
+|544   |      \genblk1[344].bf  |buffer_slice_271      |    72|
+|545   |      \genblk1[345].bf  |buffer_slice_272      |    72|
+|546   |      \genblk1[346].bf  |buffer_slice_273      |    72|
+|547   |      \genblk1[347].bf  |buffer_slice_274      |    72|
+|548   |      \genblk1[348].bf  |buffer_slice_275      |    72|
+|549   |      \genblk1[349].bf  |buffer_slice_276      |    72|
+|550   |      \genblk1[34].bf   |buffer_slice_277      |    72|
+|551   |      \genblk1[350].bf  |buffer_slice_278      |    72|
+|552   |      \genblk1[351].bf  |buffer_slice_279      |    72|
+|553   |      \genblk1[352].bf  |buffer_slice_280      |    72|
+|554   |      \genblk1[353].bf  |buffer_slice_281      |    72|
+|555   |      \genblk1[354].bf  |buffer_slice_282      |    72|
+|556   |      \genblk1[355].bf  |buffer_slice_283      |    72|
+|557   |      \genblk1[356].bf  |buffer_slice_284      |    72|
+|558   |      \genblk1[357].bf  |buffer_slice_285      |    72|
+|559   |      \genblk1[358].bf  |buffer_slice_286      |    74|
+|560   |      \genblk1[359].bf  |buffer_slice_287      |    72|
+|561   |      \genblk1[35].bf   |buffer_slice_288      |    72|
+|562   |      \genblk1[360].bf  |buffer_slice_289      |    73|
+|563   |      \genblk1[361].bf  |buffer_slice_290      |    72|
+|564   |      \genblk1[362].bf  |buffer_slice_291      |    72|
+|565   |      \genblk1[363].bf  |buffer_slice_292      |    72|
+|566   |      \genblk1[364].bf  |buffer_slice_293      |    73|
+|567   |      \genblk1[365].bf  |buffer_slice_294      |    72|
+|568   |      \genblk1[366].bf  |buffer_slice_295      |    72|
+|569   |      \genblk1[367].bf  |buffer_slice_296      |    72|
+|570   |      \genblk1[368].bf  |buffer_slice_297      |    73|
+|571   |      \genblk1[369].bf  |buffer_slice_298      |    72|
+|572   |      \genblk1[36].bf   |buffer_slice_299      |    72|
+|573   |      \genblk1[370].bf  |buffer_slice_300      |    72|
+|574   |      \genblk1[371].bf  |buffer_slice_301      |    72|
+|575   |      \genblk1[372].bf  |buffer_slice_302      |    72|
+|576   |      \genblk1[373].bf  |buffer_slice_303      |    73|
+|577   |      \genblk1[374].bf  |buffer_slice_304      |    72|
+|578   |      \genblk1[375].bf  |buffer_slice_305      |    72|
+|579   |      \genblk1[376].bf  |buffer_slice_306      |    72|
+|580   |      \genblk1[377].bf  |buffer_slice_307      |    72|
+|581   |      \genblk1[378].bf  |buffer_slice_308      |    72|
+|582   |      \genblk1[379].bf  |buffer_slice_309      |    72|
+|583   |      \genblk1[37].bf   |buffer_slice_310      |    72|
+|584   |      \genblk1[380].bf  |buffer_slice_311      |    72|
+|585   |      \genblk1[381].bf  |buffer_slice_312      |    72|
+|586   |      \genblk1[382].bf  |buffer_slice_313      |    72|
+|587   |      \genblk1[383].bf  |buffer_slice_314      |    72|
+|588   |      \genblk1[384].bf  |buffer_slice_315      |    74|
+|589   |      \genblk1[385].bf  |buffer_slice_316      |    73|
+|590   |      \genblk1[386].bf  |buffer_slice_317      |    73|
+|591   |      \genblk1[387].bf  |buffer_slice_318      |    73|
+|592   |      \genblk1[388].bf  |buffer_slice_319      |    72|
+|593   |      \genblk1[389].bf  |buffer_slice_320      |    72|
+|594   |      \genblk1[38].bf   |buffer_slice_321      |    72|
+|595   |      \genblk1[390].bf  |buffer_slice_322      |    72|
+|596   |      \genblk1[391].bf  |buffer_slice_323      |    72|
+|597   |      \genblk1[392].bf  |buffer_slice_324      |    72|
+|598   |      \genblk1[393].bf  |buffer_slice_325      |    72|
+|599   |      \genblk1[394].bf  |buffer_slice_326      |    72|
+|600   |      \genblk1[395].bf  |buffer_slice_327      |    72|
+|601   |      \genblk1[396].bf  |buffer_slice_328      |    72|
+|602   |      \genblk1[397].bf  |buffer_slice_329      |    72|
+|603   |      \genblk1[39].bf   |buffer_slice_332      |    72|
+|604   |      \genblk1[3].bf    |buffer_slice_333      |    72|
+|605   |      \genblk1[40].bf   |buffer_slice_344      |    72|
+|606   |      \genblk1[41].bf   |buffer_slice_355      |    72|
+|607   |      \genblk1[42].bf   |buffer_slice_366      |    72|
+|608   |      \genblk1[43].bf   |buffer_slice_377      |    72|
+|609   |      \genblk1[44].bf   |buffer_slice_388      |    72|
+|610   |      \genblk1[45].bf   |buffer_slice_399      |    72|
+|611   |      \genblk1[467].bf  |buffer_slice_407      |    73|
+|612   |      \genblk1[46].bf   |buffer_slice_410      |    72|
+|613   |      \genblk1[47].bf   |buffer_slice_421      |    72|
+|614   |      \genblk1[48].bf   |buffer_slice_432      |    72|
+|615   |      \genblk1[49].bf   |buffer_slice_443      |    72|
+|616   |      \genblk1[4].bf    |buffer_slice_444      |    72|
+|617   |      \genblk1[50].bf   |buffer_slice_455      |    72|
+|618   |      \genblk1[51].bf   |buffer_slice_466      |    72|
+|619   |      \genblk1[52].bf   |buffer_slice_477      |    72|
+|620   |      \genblk1[53].bf   |buffer_slice_488      |    72|
+|621   |      \genblk1[54].bf   |buffer_slice_499      |    72|
+|622   |      \genblk1[55].bf   |buffer_slice_510      |    72|
+|623   |      \genblk1[56].bf   |buffer_slice_521      |    72|
+|624   |      \genblk1[57].bf   |buffer_slice_532      |    72|
+|625   |      \genblk1[58].bf   |buffer_slice_543      |    72|
+|626   |      \genblk1[59].bf   |buffer_slice_554      |    72|
+|627   |      \genblk1[5].bf    |buffer_slice_555      |    72|
+|628   |      \genblk1[60].bf   |buffer_slice_566      |    72|
+|629   |      \genblk1[61].bf   |buffer_slice_577      |    72|
+|630   |      \genblk1[62].bf   |buffer_slice_588      |    72|
+|631   |      \genblk1[631].bf  |buffer_slice_590      |    73|
+|632   |      \genblk1[632].bf  |buffer_slice_591      |    72|
+|633   |      \genblk1[633].bf  |buffer_slice_592      |    72|
+|634   |      \genblk1[634].bf  |buffer_slice_593      |    72|
+|635   |      \genblk1[635].bf  |buffer_slice_594      |    72|
+|636   |      \genblk1[636].bf  |buffer_slice_595      |    72|
+|637   |      \genblk1[637].bf  |buffer_slice_596      |    72|
+|638   |      \genblk1[638].bf  |buffer_slice_597      |    72|
+|639   |      \genblk1[639].bf  |buffer_slice_598      |    72|
+|640   |      \genblk1[63].bf   |buffer_slice_599      |    72|
+|641   |      \genblk1[64].bf   |buffer_slice_600      |    72|
+|642   |      \genblk1[65].bf   |buffer_slice_601      |    72|
+|643   |      \genblk1[66].bf   |buffer_slice_602      |    72|
+|644   |      \genblk1[67].bf   |buffer_slice_603      |    72|
+|645   |      \genblk1[68].bf   |buffer_slice_604      |    72|
+|646   |      \genblk1[69].bf   |buffer_slice_605      |    72|
+|647   |      \genblk1[6].bf    |buffer_slice_606      |    72|
+|648   |      \genblk1[70].bf   |buffer_slice_607      |    72|
+|649   |      \genblk1[71].bf   |buffer_slice_608      |    72|
+|650   |      \genblk1[72].bf   |buffer_slice_609      |    72|
+|651   |      \genblk1[7].bf    |buffer_slice_617      |    72|
+|652   |      \genblk1[8].bf    |buffer_slice_628      |    72|
+|653   |      \genblk1[9].bf    |buffer_slice_639      |    72|
+|654   |    pg0                 |pulse_gen             |    12|
+|655   |    pg1                 |pulse_gen_0           |  1309|
+|656   |  mmcm0                 |mmcm_24MHz            |     4|
+|657   |  vga0                  |vga                   |   120|
+|658   |    vga_controller      |vga_controller_640_60 |   100|
++------+------------------------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 518 ; free virtual = 7557
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:08 ; elapsed = 00:06:39 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 42 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:56 ; elapsed = 00:02:18 . Memory (MB): peak = 2675.734 ; gain = 286.477 ; free physical = 570 ; free virtual = 7610
-Synthesis Optimization Complete : Time (s): cpu = 00:02:21 ; elapsed = 00:02:50 . Memory (MB): peak = 2675.734 ; gain = 942.109 ; free physical = 585 ; free virtual = 7624
+Synthesis finished with 0 errors, 0 critical warnings and 39 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:27 ; elapsed = 00:06:07 . Memory (MB): peak = 1752.684 ; gain = 306.434
+Synthesis Optimization Complete : Time (s): cpu = 00:05:08 ; elapsed = 00:06:40 . Memory (MB): peak = 1752.684 ; gain = 1110.516
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 77 Unisim elements for replacement
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line87/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
-WARNING: [Netlist 29-365] DCM_ADV instance 'nolabel_line87/m1/dcm_sp_inst' has been transformed into an MMCM. Please check the output clock waveforms for correctness. If the output clocks are incorrect, modify your design to use the MMCME<#>_ADV native to the target architecture.
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-17] Analyzing 7909 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2675.734 ; gain = 0.000 ; free physical = 533 ; free virtual = 7573
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1752.684 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 25 instances were transformed.
-  DCM_SP => MMCME2_ADV (inverted pins: PSINCDEC): 1 instances
+  A total of 31 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 1 instances
-  LD => LDCE: 23 instances
+  LD => LDCE: 30 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-80 Infos, 78 Warnings, 0 Critical Warnings and 0 Errors encountered.
+54 Infos, 66 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:28 ; elapsed = 00:03:01 . Memory (MB): peak = 2675.734 ; gain = 1159.469 ; free physical = 634 ; free virtual = 7670
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2675.734 ; gain = 0.000 ; free physical = 634 ; free virtual = 7670
+synth_design: Time (s): cpu = 00:05:35 ; elapsed = 00:07:11 . Memory (MB): peak = 1752.684 ; gain = 1366.559
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1752.684 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'X:/Documents/EC551/EC551_Project/final_project/final_project.runs/synth_1/top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:20 ; elapsed = 00:00:48 . Memory (MB): peak = 1752.684 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 23 10:53:17 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  5 18:43:27 2022...

@@ -22,7 +22,8 @@ wire vga_blank;
 
 // Calculate read address, advanced by on clock
 reg [11:0] RGB;
-assign raddr_vga = {2'b0,vga_vcnt,8'b0} + {4'b0,vga_vcnt,6'b0} + {10'b0,(vga_hcnt-1)}; // 640(1010000000) * row_cnt + col_cnt = (2^9+2^7) * row_cnt + col_cnt, avoids 18 bit multiplication
+// assign raddr_vga = {2'b0,vga_vcnt,8'b0} + {4'b0,vga_vcnt,6'b0} + {10'b0,(vga_hcnt-1)}; // 640(1010000000) * row_cnt + col_cnt = (2^9+2^7) * row_cnt + col_cnt, avoids 18 bit multiplication
+assign raddr_vga =  {1'b0,vga_vcnt,9'b0} + {3'b0,vga_vcnt,7'b0} + {10'b0,vga_hcnt}; // 640(1010000000) * row_cnt + col_cnt = (2^9+2^7) * row_cnt + col_cnt, avoids 18 bit multiplication
 always @(posedge pixel_clk)
     RGB <= rdata_vga;
 

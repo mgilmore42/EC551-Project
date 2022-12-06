@@ -3,286 +3,113 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="test_mem_controller_behav.wdb" id="1">
+      <db_ref path="test_image_path_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="test_mem_controller" />
+            <top_module name="test_image_path" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="478000000001fs"></ZoomEndTime>
-      <Cursor1Time time="435737000000fs"></Cursor1Time>
+      <ZoomEndTime time="257901901142fs"></ZoomEndTime>
+      <Cursor1Time time="51517000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="169"></NameColumnWidth>
-      <ValueColumnWidth column_width="133"></ValueColumnWidth>
+      <ValueColumnWidth column_width="129"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="2" />
-   <wvobject type="group" fp_name="group212">
-      <obj_property name="label">tb</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="logic" fp_name="/test_mem_controller/sys_clk">
-         <obj_property name="ElementShortName">sys_clk</obj_property>
-         <obj_property name="ObjectShortName">sys_clk</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/rst">
-         <obj_property name="ElementShortName">rst</obj_property>
-         <obj_property name="ObjectShortName">rst</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/pclk">
-         <obj_property name="ElementShortName">pclk</obj_property>
-         <obj_property name="ObjectShortName">pclk</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/vsync_cam">
-         <obj_property name="ElementShortName">vsync_cam</obj_property>
-         <obj_property name="ObjectShortName">vsync_cam</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/href_cam">
-         <obj_property name="ElementShortName">href_cam</obj_property>
-         <obj_property name="ObjectShortName">href_cam</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/wdata_cam">
-         <obj_property name="ElementShortName">wdata_cam[7:0]</obj_property>
-         <obj_property name="ObjectShortName">wdata_cam[7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/raddr_vga">
-         <obj_property name="ElementShortName">raddr_vga[18:0]</obj_property>
-         <obj_property name="ObjectShortName">raddr_vga[18:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/rdata_vga">
-         <obj_property name="ElementShortName">rdata_vga[11:0]</obj_property>
-         <obj_property name="ObjectShortName">rdata_vga[11:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/waddr_alu">
-         <obj_property name="ElementShortName">waddr_alu[18:0]</obj_property>
-         <obj_property name="ObjectShortName">waddr_alu[18:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/wdata_alu">
-         <obj_property name="ElementShortName">wdata_alu[11:0]</obj_property>
-         <obj_property name="ObjectShortName">wdata_alu[11:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/wen_alu">
-         <obj_property name="ElementShortName">wen_alu</obj_property>
-         <obj_property name="ObjectShortName">wen_alu</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/raddr_alu">
-         <obj_property name="ElementShortName">raddr_alu[18:0]</obj_property>
-         <obj_property name="ObjectShortName">raddr_alu[18:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/rdata_alu">
-         <obj_property name="ElementShortName">rdata_alu[299:0]</obj_property>
-         <obj_property name="ObjectShortName">rdata_alu[299:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/i">
-         <obj_property name="ElementShortName">i[31:0]</obj_property>
-         <obj_property name="ObjectShortName">i[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/k">
-         <obj_property name="ElementShortName">k[31:0]</obj_property>
-         <obj_property name="ObjectShortName">k[31:0]</obj_property>
-      </wvobject>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/test_image_path/CLK100MHZ" type="logic">
+      <obj_property name="ElementShortName">CLK100MHZ</obj_property>
+      <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
    </wvobject>
-   <wvobject type="group" fp_name="group262">
-      <obj_property name="label">controller</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/sys_clk">
-         <obj_property name="ElementShortName">sys_clk</obj_property>
-         <obj_property name="ObjectShortName">sys_clk</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/rst">
-         <obj_property name="ElementShortName">rst</obj_property>
-         <obj_property name="ObjectShortName">rst</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/pclk">
-         <obj_property name="ElementShortName">pclk</obj_property>
-         <obj_property name="ObjectShortName">pclk</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/vsync_cam">
-         <obj_property name="ElementShortName">vsync_cam</obj_property>
-         <obj_property name="ObjectShortName">vsync_cam</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/href_cam">
-         <obj_property name="ElementShortName">href_cam</obj_property>
-         <obj_property name="ObjectShortName">href_cam</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/wdata_cam">
-         <obj_property name="ElementShortName">wdata_cam[7:0]</obj_property>
-         <obj_property name="ObjectShortName">wdata_cam[7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/raddr_vga">
-         <obj_property name="ElementShortName">raddr_vga[18:0]</obj_property>
-         <obj_property name="ObjectShortName">raddr_vga[18:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/rdata_vga">
-         <obj_property name="ElementShortName">rdata_vga[11:0]</obj_property>
-         <obj_property name="ObjectShortName">rdata_vga[11:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/waddr_alu">
-         <obj_property name="ElementShortName">waddr_alu[18:0]</obj_property>
-         <obj_property name="ObjectShortName">waddr_alu[18:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/wdata_alu">
-         <obj_property name="ElementShortName">wdata_alu[11:0]</obj_property>
-         <obj_property name="ObjectShortName">wdata_alu[11:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/wen_alu">
-         <obj_property name="ElementShortName">wen_alu</obj_property>
-         <obj_property name="ObjectShortName">wen_alu</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/raddr_alu">
-         <obj_property name="ElementShortName">raddr_alu[18:0]</obj_property>
-         <obj_property name="ObjectShortName">raddr_alu[18:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/rdata_alu">
-         <obj_property name="ElementShortName">rdata_alu[299:0]</obj_property>
-         <obj_property name="ObjectShortName">rdata_alu[299:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/passthrough_mode">
-         <obj_property name="ElementShortName">passthrough_mode</obj_property>
-         <obj_property name="ObjectShortName">passthrough_mode</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/waddr_cam">
-         <obj_property name="ElementShortName">waddr_cam[18:0]</obj_property>
-         <obj_property name="ObjectShortName">waddr_cam[18:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/wdata_cam_full">
-         <obj_property name="ElementShortName">wdata_cam_full[11:0]</obj_property>
-         <obj_property name="ObjectShortName">wdata_cam_full[11:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/wen_cam">
-         <obj_property name="ElementShortName">wen_cam</obj_property>
-         <obj_property name="ObjectShortName">wen_cam</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/wen_cbuff">
-         <obj_property name="ElementShortName">wen_cbuff</obj_property>
-         <obj_property name="ObjectShortName">wen_cbuff</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/wen_cbuff_p">
-         <obj_property name="ElementShortName">wen_cbuff_p</obj_property>
-         <obj_property name="ObjectShortName">wen_cbuff_p</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/wen_cam_p">
-         <obj_property name="ElementShortName">wen_cam_p</obj_property>
-         <obj_property name="ObjectShortName">wen_cam_p</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/hcnt_c">
-         <obj_property name="ElementShortName">hcnt_c[9:0]</obj_property>
-         <obj_property name="ObjectShortName">hcnt_c[9:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/hcnt_n">
-         <obj_property name="ElementShortName">hcnt_n[9:0]</obj_property>
-         <obj_property name="ObjectShortName">hcnt_n[9:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/vcnt_c">
-         <obj_property name="ElementShortName">vcnt_c[8:0]</obj_property>
-         <obj_property name="ObjectShortName">vcnt_c[8:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/vcnt_n">
-         <obj_property name="ElementShortName">vcnt_n[8:0]</obj_property>
-         <obj_property name="ObjectShortName">vcnt_n[8:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/vcnt_r">
-         <obj_property name="ElementShortName">vcnt_r[8:0]</obj_property>
-         <obj_property name="ObjectShortName">vcnt_r[8:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/ws_c">
-         <obj_property name="ElementShortName">ws_c[1:0]</obj_property>
-         <obj_property name="ObjectShortName">ws_c[1:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/ws_n">
-         <obj_property name="ElementShortName">ws_n[1:0]</obj_property>
-         <obj_property name="ObjectShortName">ws_n[1:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/rs_c">
-         <obj_property name="ElementShortName">rs_c[1:0]</obj_property>
-         <obj_property name="ObjectShortName">rs_c[1:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/rs_n">
-         <obj_property name="ElementShortName">rs_n[1:0]</obj_property>
-         <obj_property name="ObjectShortName">rs_n[1:0]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/wen_n">
-         <obj_property name="ElementShortName">wen_n</obj_property>
-         <obj_property name="ObjectShortName">wen_n</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/pop_pbuff">
-         <obj_property name="ElementShortName">pop_pbuff</obj_property>
-         <obj_property name="ObjectShortName">pop_pbuff</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/pop_pbuff_n">
-         <obj_property name="ElementShortName">pop_pbuff_n</obj_property>
-         <obj_property name="ObjectShortName">pop_pbuff_n</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/pop_cbuff">
-         <obj_property name="ElementShortName">pop_cbuff</obj_property>
-         <obj_property name="ObjectShortName">pop_cbuff</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/pop_cbuff_n">
-         <obj_property name="ElementShortName">pop_cbuff_n</obj_property>
-         <obj_property name="ObjectShortName">pop_cbuff_n</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/pop_pbuff_p">
-         <obj_property name="ElementShortName">pop_pbuff_p</obj_property>
-         <obj_property name="ObjectShortName">pop_pbuff_p</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/test_mem_controller/mc0/pop_cbuff_p">
-         <obj_property name="ElementShortName">pop_cbuff_p</obj_property>
-         <obj_property name="ObjectShortName">pop_cbuff_p</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/dlast">
-         <obj_property name="ElementShortName">dlast[3:0]</obj_property>
-         <obj_property name="ObjectShortName">dlast[3:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/rdata_pbuff">
-         <obj_property name="ElementShortName">rdata_pbuff[59:0]</obj_property>
-         <obj_property name="ObjectShortName">rdata_pbuff[59:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/rdata_cbuff">
-         <obj_property name="ElementShortName">rdata_cbuff[59:0]</obj_property>
-         <obj_property name="ObjectShortName">rdata_cbuff[59:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/douta">
-         <obj_property name="ElementShortName">douta[11:0]</obj_property>
-         <obj_property name="ObjectShortName">douta[11:0]</obj_property>
-      </wvobject>
-      <wvobject type="other" fp_name="/test_mem_controller/mc0/pad">
-         <obj_property name="ElementShortName">pad</obj_property>
-         <obj_property name="ObjectShortName">pad</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/IDLE">
-         <obj_property name="ElementShortName">IDLE[2:0]</obj_property>
-         <obj_property name="ObjectShortName">IDLE[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/HREF">
-         <obj_property name="ElementShortName">HREF[2:0]</obj_property>
-         <obj_property name="ObjectShortName">HREF[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/B0">
-         <obj_property name="ElementShortName">B0[2:0]</obj_property>
-         <obj_property name="ObjectShortName">B0[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/B1">
-         <obj_property name="ElementShortName">B1[2:0]</obj_property>
-         <obj_property name="ObjectShortName">B1[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/POP">
-         <obj_property name="ElementShortName">POP[2:0]</obj_property>
-         <obj_property name="ObjectShortName">POP[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/VPAD">
-         <obj_property name="ElementShortName">VPAD[2:0]</obj_property>
-         <obj_property name="ObjectShortName">VPAD[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/HPAD">
-         <obj_property name="ElementShortName">HPAD[2:0]</obj_property>
-         <obj_property name="ObjectShortName">HPAD[2:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/test_mem_controller/mc0/READ">
-         <obj_property name="ElementShortName">READ[2:0]</obj_property>
-         <obj_property name="ObjectShortName">READ[2:0]</obj_property>
-      </wvobject>
+   <wvobject fp_name="/test_image_path/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/SW" type="array">
+      <obj_property name="ElementShortName">SW[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SW[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/wdata_cam" type="array">
+      <obj_property name="ElementShortName">wdata_cam[7:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata_cam[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/vsync_cam" type="logic">
+      <obj_property name="ElementShortName">vsync_cam</obj_property>
+      <obj_property name="ObjectShortName">vsync_cam</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/href_cam" type="logic">
+      <obj_property name="ElementShortName">href_cam</obj_property>
+      <obj_property name="ObjectShortName">href_cam</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/pclk_cam" type="logic">
+      <obj_property name="ElementShortName">pclk_cam</obj_property>
+      <obj_property name="ObjectShortName">pclk_cam</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/BTNS" type="array">
+      <obj_property name="ElementShortName">BTNS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">BTNS[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/VGA_R" type="array">
+      <obj_property name="ElementShortName">VGA_R[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_R[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/VGA_G" type="array">
+      <obj_property name="ElementShortName">VGA_G[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_G[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/VGA_B" type="array">
+      <obj_property name="ElementShortName">VGA_B[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_B[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/VGA_HS" type="logic">
+      <obj_property name="ElementShortName">VGA_HS</obj_property>
+      <obj_property name="ObjectShortName">VGA_HS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/VGA_VS" type="logic">
+      <obj_property name="ElementShortName">VGA_VS</obj_property>
+      <obj_property name="ObjectShortName">VGA_VS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/raddr_vga" type="array">
+      <obj_property name="ElementShortName">raddr_vga[18:0]</obj_property>
+      <obj_property name="ObjectShortName">raddr_vga[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/rdata_vga" type="array">
+      <obj_property name="ElementShortName">rdata_vga[11:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_vga[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/raddr_alu" type="array">
+      <obj_property name="ElementShortName">raddr_alu[9:0]</obj_property>
+      <obj_property name="ObjectShortName">raddr_alu[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/waddr_alu" type="array">
+      <obj_property name="ElementShortName">waddr_alu[18:0]</obj_property>
+      <obj_property name="ObjectShortName">waddr_alu[18:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/wdata_alu" type="array">
+      <obj_property name="ElementShortName">wdata_alu[11:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata_alu[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/wen_alu" type="logic">
+      <obj_property name="ElementShortName">wen_alu</obj_property>
+      <obj_property name="ObjectShortName">wen_alu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/rdata_alu" type="array">
+      <obj_property name="ElementShortName">rdata_alu[299:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_alu[299:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/kernel_alu" type="array">
+      <obj_property name="ElementShortName">kernel_alu[199:0]</obj_property>
+      <obj_property name="ObjectShortName">kernel_alu[199:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/div_alu" type="array">
+      <obj_property name="ElementShortName">div_alu[3:0]</obj_property>
+      <obj_property name="ObjectShortName">div_alu[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_image_path/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
    </wvobject>
 </wave_config>

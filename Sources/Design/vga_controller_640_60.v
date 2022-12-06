@@ -14,11 +14,11 @@ module vga_controller_640_60(rst, pixel_clk,HS,VS,hcounter,vcounter,blank);
 	parameter HMAX = 800; // maximum value for the horizontal pixel counter, orig: 800
 	parameter VMAX = 525; // maximum value for the vertical pixel counter, orig: 525
 	parameter HLINES = 640; // total number of visible columns, orig: 640
-	parameter HFP = 648; // value for the horizontal counter where front porch ends, orig: 648
-	parameter HSP = 744; // value for the horizontal counter where the synch pulse ends, orig: 744
+	parameter HFP = 675; // value for the horizontal counter where front porch ends, orig: 648
+	parameter HSP = 770; // value for the horizontal counter where the synch pulse ends, orig: 744
 	parameter VLINES = 480; // total number of visible lines, orig: 480
-	parameter VFP = 482; // value for the vertical counter where the front porch ends, orig: 482
-	parameter VSP = 484; // value for the vertical counter where the synch pulse ends, orig: 484
+	parameter VFP = 494; // value for the vertical counter where the front porch ends, orig: 482
+	parameter VSP = 496; // value for the vertical counter where the synch pulse ends, orig: 484
 	parameter SPP = 0;
 
 	wire video_enable;

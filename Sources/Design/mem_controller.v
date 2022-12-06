@@ -23,12 +23,12 @@ module mem_controller(
     input wire [`awidth_fbuff-1:0] waddr_alu,
     input wire [`dwidth_dat-1:0]   wdata_alu,
     input wire                     wen_alu,
-    output wire [`awidth_fbuff-1:0] raddr_alu,
-    output wire [(`dwss*`dwidth_dat)-1:0]  rdata_alu
-    
+    output reg  [`awidth_fbuff-1:0] raddr_alu,
+    output wire [(`dwss*`dwidth_dat)-1:0]  rdata_alu,
+    output wire                    ren_alu,
+    output wire [5:0] state_debug
     );
 
-//    localparam pad = ($floor(`dwidth_slice/2));
     localparam pad = 2;    
     // mux between passthrough mode and process mode
     
@@ -46,11 +46,13 @@ module mem_controller(
     reg  [3:0]  dlast; // previous data
 
     wire [(`dwidth_dat*`dwidth_slice)-1:0] rdata_pbuff;
-    wire [(`dwidth_dat*`dwidth_slice)-1:0] rdata_cbuff;
+    wire [(`dwss*`dwidth_dat)-1:0] rdata_cbuff;
 
     localparam [2:0] IDLE = 'd0, HREF = 'd1, B0   = 'd2, B1   = 'd3, POP = 'd4;
-    localparam [2:0]              VPAD = 2'd1, HPAD = 2'd2, READ = 2'd3;
-    
+    localparam [2:0]             VPAD = 'd1, HPAD = 'd2, READ = 'd3;
+
+    // debugging
+    assign state_debug = {rs_c, ws_c};
 
     partial_buffer pbuff (
         .clk(sys_clk),
@@ -150,15 +152,18 @@ module mem_controller(
 
     // data reading FSM
     assign vcnt_r = vcnt_c-pad-1; // read vertical count lags behind the write vcnt by half the kernel size
-    assign raddr_alu = {1'b0,vcnt_r,9'b0} + {3'b0,vcnt_r,7'b0} + {10'b0,hcnt_c};
-
+    wire [`awidth_fbuff-1:0] raddr_alu_n; // temp var for timing purposes
+    assign raddr_alu_n = {1'b0,vcnt_r,9'b0} + {3'b0,vcnt_r,7'b0} + {10'b0,hcnt_c};
+    assign rdata_alu = (rs_c==READ) ? rdata_cbuff : 'b0; // data going to the ALU will be 0's when buffer is not full/ready
+    assign ren_alu = (rs_c==READ) ? 'b1 : 'b0; 
+    always @(negedge wen_cam_p)
+        raddr_alu <= raddr_alu_n;
     always @(posedge sys_clk) begin // clock to be determined
         if (rst)
             rs_c <= 0;
         else
             rs_c <= rs_n;
     end
-    assign rdata_alu = (rs_c==READ) ? rdata_cbuff : 'b0; // data going to the ALU will be 0's when buffer is not full/ready
     always @(*) begin // Mealy machine
         case(rs_c)
             IDLE : begin // the clocks before the write address is valid
@@ -167,7 +172,7 @@ module mem_controller(
             VPAD : begin // The first floor(N/2) rows which will just be black
                 rs_n = (vcnt_c < `dwidth_slice) ? VPAD : HPAD;
             end
-            HPAD : begin // active, waiting for href
+            HPAD : begin 
                 if (hcnt_c < pad-1) begin // front padding
                     rs_n = HPAD;
                 end else if (hcnt_c >= `hwidth-pad-1) begin // end padding
@@ -179,7 +184,7 @@ module mem_controller(
                     rs_n = READ;
                 end
             end
-            READ: begin // active, captured first half of data
+            READ: begin 
                 rs_n = (hcnt_c < (`hwidth-pad-1)) ? READ : HPAD;
             end
         endcase

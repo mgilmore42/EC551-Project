@@ -48,6 +48,9 @@ module test_ALU();
         raddr_alu = 3;
         kernel_select = 2;
         #10;
+        raddr_alu = 4;
+        kernel_select = 3;
+        #10;
 
         $finish;        
     end

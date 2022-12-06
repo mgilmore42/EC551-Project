@@ -8,6 +8,7 @@ module top(
     input wire CLK100MHZ,
     input wire rst_n,
     input wire [15:0] SW,
+    output wire [15:0] LED,
     
     // Camera I/O
 
@@ -34,11 +35,12 @@ module top(
     wire [`dwidth_dat-1:0]              rdata_vga;
     
     // Processing access
-    wire [`awidth_pbuff-1:0]             raddr_alu;
-    reg  [`awidth_fbuff-1:0]             waddr_alu;
+    wire [`awidth_fbuff-1:0]             waddr_alu;
     wire [`dwidth_dat-1:0]               wdata_alu;
-    reg                                  wen_alu;
+    wire                                 wen_alu;
     wire [(`dwss*`dwidth_dat)-1:0]       rdata_alu;
+    wire [`awidth_fbuff-1:0]             raddr_alu;
+    wire                                 ren_alu;
     wire [(`dwss*`dwidth_kernel)-1:0]    kernel_alu;
     wire [`dwidth_div-1:0]               div_alu;
     
@@ -56,14 +58,21 @@ module top(
         .wdata_alu(wdata_alu),
         .wen_alu  (wen_alu  ),
         .raddr_alu(raddr_alu),
-        .rdata_alu(rdata_alu)
+        .rdata_alu(rdata_alu),
+        .ren_alu  (ren_alu  ),
+        .state_debug(LED[5:0])
     );
 
     ALU alu(
+        .clk(CLK100MHZ),
         .din(rdata_alu),
         .kernel(kernel_alu),
         .div(div_alu),
-        .dout(wdata_alu)
+        .raddr_alu(raddr_alu),
+        .ren_alu(ren_alu),
+        .dout(wdata_alu),
+        .waddr_alu(waddr_alu),
+        .wen_alu(wen_alu)        
     );
 
     kernel_ROM kr(
@@ -84,24 +93,16 @@ module top(
         .raddr_vga(raddr_vga)
     );
     
+    mmcm_24MHz mmcm0 (
+		.clk_100MHz ( CLK100MHZ ),
+		.clk_25MHz  ( mclk_cam  )
+	);
+	
     camera_interface ca(
-        .clk_100(CLK100MHZ),
+        .clk_100MHz(CLK100MHZ),
         .rst_n(rst_n),
-        .key(BTNS),
-        // not needed, will be removed at a later date.
-        .rd_en(1'b0),
-        // output wire[9:0] data_count_r,
-        // output wire[15:0] dout,
-        
-        //camera pinouts
-        .cmos_pclk(pclk_cam),
-        .cmos_href(href_cam),
-        .cmos_vsync(vsync_cam),
-        .cmos_db(wdata_cam),          // to be removed
         .cmos_sda(i2c_sda),         //inout!!
         .cmos_scl(i2c_scl),         //i2c comm wires
-        // cmos_rst_n(),
-        // cmos_pwdn(),
-        .cmos_xclk(mclk_cam)
+        .status(LED[7:6])
     );
 endmodule
