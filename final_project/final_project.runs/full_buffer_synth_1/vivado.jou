@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
 # Vivado v2019.1 (64-bit)
-# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Nov 15 14:25:09 2022
-# Process ID: 4759
-# Current directory: /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/full_buffer_synth_1
-# Command line: vivado -log full_buffer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source full_buffer.tcl
-# Log file: /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/full_buffer_synth_1/full_buffer.vds
-# Journal file: /ad/eng/users/w/k/wkrska/Documents/EC551/EC551_Project/final_project/final_project.runs/full_buffer_synth_1/vivado.jou
+# Start of session at: Tue Dec  6 03:30:24 2022
+# Process ID: 1644
+# Current directory: C:/Users/wkrska/Downloads/Local Labs/EC551_Project/final_project/final_project.runs/full_buffer_synth_1
+# Command line: vivado.exe -log full_buffer.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source full_buffer.tcl
+# Log file: C:/Users/wkrska/Downloads/Local Labs/EC551_Project/final_project/final_project.runs/full_buffer_synth_1/full_buffer.vds
+# Journal file: C:/Users/wkrska/Downloads/Local Labs/EC551_Project/final_project/final_project.runs/full_buffer_synth_1\vivado.jou
 #-----------------------------------------------------------
 source full_buffer.tcl -notrace

@@ -19,7 +19,7 @@ module camera_interface (
 	localparam delay         = 3'd5;
 	localparam done          = 3'd6;
 
-	localparam MSG_INDEX = 3; //number of the last index to be digested by SCCB
+	localparam MSG_INDEX = 'h37; //number of the last index to be digested by SCCB
 
 	reg        stop;
 	reg        start;
@@ -44,10 +44,68 @@ module camera_interface (
 
 
 	initial begin //collection of all adddresses and values to be written in the camera {address,data}
-		message[0] <= 16'h12_80;  //reset all register to default values
-		message[1] <= 16'h12_04;  //set output format to RGB
-		message[2] <= 16'h15_20;  //pclk will not toggle during horizontal blank
-		message[3] <= 16'h8C_02;  //RGB444 in XR GB format
+//		message[0] <= 16'h12_80;  //reset all register to default values
+//		message[1] <= 16'h12_04;  //set output format to RGB
+//		message[2] <= 16'h15_20;  //pclk will not toggle during horizontal blank
+//		message[3] <= 16'h8C_02;  //RGB444 in XR GB format
+		
+		
+		message[8'h00] <= 16'h1280; // COM7   Reset
+        message[8'h01] <= 16'h12_80; // COM7   Reset
+        message[8'h02] <= 16'h12_04; // COM7   Size & RGB output
+        message[8'h03] <= 16'h11_00; // CLKRC  Prescaler - Fin/(1+1)
+        message[8'h04] <= 16'h0C_00; // COM3   Lots of stuff, enable scaling, all others off
+        message[8'h05] <= 16'h3E_00; // COM14  PCLK scaling off
+        message[8'h06] <= 16'h8C_02; // RGB444 Set RGB format
+        message[8'h07] <= 16'h04_00; // COM1   no CCIR601
+        message[8'h08] <= 16'h40_10; // COM15  Full 0-255 output, RGB 565
+        message[8'h09] <= 16'h3a_04; // TSLB   Set UV ordering,  do not auto-reset window
+        message[8'h0A] <= 16'h14_38; // COM9  - AGC Celling
+        message[8'h0B] <= 16'h4f_b3; // MTX1  - colour conversion matrix
+        message[8'h0C] <= 16'h50_b3; // MTX2  - colour conversion matrix
+        message[8'h0D] <= 16'h51_00; // MTX3  - colour conversion matrix
+        message[8'h0E] <= 16'h52_3d; // MTX4  - colour conversion matrix
+        message[8'h0F] <= 16'h53_a7; // MTX5  - colour conversion matrix
+        message[8'h10] <= 16'h54_e4; // MTX6  - colour conversion matrix
+        message[8'h11] <= 16'h58_9e; // MTXS  - Matrix sign and auto contrast
+        message[8'h12] <= 16'h3d_c0; // COM13 - Turn on GAMMA and UV Auto adjust
+        message[8'h13] <= 16'h11_00; // CLKRC  Prescaler - Fin/(1+1)
+        message[8'h14] <= 16'h17_11; // HSTART HREF start (high 8 bits)
+        message[8'h15] <= 16'h18_61; // HSTOP  HREF stop (high 8 bits)
+        message[8'h16] <= 16'h32_A4; // HREF   Edge offset and low 3 bits of HSTART and HSTOP
+        message[8'h17] <= 16'h19_03; // VSTART VSYNC start (high 8 bits)
+        message[8'h18] <= 16'h1A_7b; // VSTOP  VSYNC stop (high 8 bits) 
+        message[8'h19] <= 16'h03_0a; // VREF   VSYNC low two bits
+        message[8'h1A] <= 16'h0e_61; // COM5(0x0E) 0x61
+        message[8'h1B] <= 16'h0f_4b; // COM6(0x0F) 0x4B 
+        message[8'h1C] <= 16'h16_02;
+        message[8'h1D] <= 16'h1e_27; // MVFP (0x1E) 0x07  -- FLIP AND MIRROR IMAGE 0x3x
+        message[8'h1E] <= 16'h21_02;
+        message[8'h1F] <= 16'h22_91;
+        message[8'h20] <= 16'h29_07;
+        message[8'h21] <= 16'h33_0b;                   
+        message[8'h22] <= 16'h35_0b;
+        message[8'h23] <= 16'h37_1d;                    
+        message[8'h24] <= 16'h38_71;
+        message[8'h25] <= 16'h39_2a;              
+        message[8'h26] <= 16'h3c_78; // COM12 (0x3C) 0x78
+        message[8'h27] <= 16'h4d_40; 
+        message[8'h28] <= 16'h4e_20;
+        message[8'h29] <= 16'h69_00; // GFIX (0x69) 0x00                    
+        message[8'h2A] <= 16'h6b_4a;
+        message[8'h2B] <= 16'h74_10;             
+        message[8'h2C] <= 16'h8d_4f;
+        message[8'h2D] <= 16'h8e_00;           
+        message[8'h2E] <= 16'h8f_00;
+        message[8'h2F] <= 16'h90_00;            
+        message[8'h30] <= 16'h91_00;
+        message[8'h31] <= 16'h96_00;
+        message[8'h32] <= 16'h9a_00;
+        message[8'h33] <= 16'hb0_84;
+        message[8'h34] <= 16'hb1_0c;
+        message[8'h35] <= 16'hb2_0e;
+        message[8'h36] <= 16'hb3_82;
+        message[8'h37] <= 16'hb8_0a;
 
 		// initializes stateful registers
 		state_q         <= idle;

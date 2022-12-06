@@ -24,9 +24,11 @@ module mem_controller(
     input wire [`dwidth_dat-1:0]   wdata_alu,
     input wire                     wen_alu,
     output reg  [`awidth_fbuff-1:0] raddr_alu,
+    output wire [`awidth_fbuff-1:0] raddr_alu_n, // REMOVE
     output wire [(`dwss*`dwidth_dat)-1:0]  rdata_alu,
     output wire                    ren_alu,
-    output wire [5:0] state_debug
+    output wire [5:0]              state_debug,
+    output reg [31:0]             count_debug
     );
 
     localparam pad = 2;    
@@ -44,6 +46,7 @@ module mem_controller(
     reg  pop_pbuff, pop_pbuff_n, pop_cbuff, pop_cbuff_n;
     wire pop_pbuff_p, pop_cbuff_p;
     reg  [3:0]  dlast; // previous data
+//    reg  [6:0]  dlast; // previous data // for the screwed up image
 
     wire [(`dwidth_dat*`dwidth_slice)-1:0] rdata_pbuff;
     wire [(`dwss*`dwidth_dat)-1:0] rdata_cbuff;
@@ -105,8 +108,10 @@ module mem_controller(
             vcnt_c <= vcnt_n;
             wen_cam <= wen_n;
             dlast <= wdata_cam[3:0];
+//            dlast <= {wdata_cam[7:4],wdata_cam[2:0]}; // for the screwed up image
             pop_pbuff <= pop_pbuff_n;
             wdata_cam_full <= {dlast,wdata_cam};
+//            wdata_cam_full <= {dlast,wdata_cam[7],wdata_cam[4:1]}; // for the screwed up image
         end        
     end
     
@@ -152,11 +157,12 @@ module mem_controller(
 
     // data reading FSM
     assign vcnt_r = vcnt_c-pad-1; // read vertical count lags behind the write vcnt by half the kernel size
-    wire [`awidth_fbuff-1:0] raddr_alu_n; // temp var for timing purposes
-    assign raddr_alu_n = {1'b0,vcnt_r,9'b0} + {3'b0,vcnt_r,7'b0} + {10'b0,hcnt_c};
+//    wire [`awidth_fbuff-1:0] raddr_alu_n; // temp var for timing purposes
+//    assign raddr_alu_n = {1'b0,vcnt_r,9'b0} + {3'b0,vcnt_r,7'b0} + {10'b0,hcnt_c};
+    assign raddr_alu_n = {1'b0,vcnt_c,9'b0} + {3'b0,vcnt_c,7'b0} + {10'b0,hcnt_c};
     assign rdata_alu = (rs_c==READ) ? rdata_cbuff : 'b0; // data going to the ALU will be 0's when buffer is not full/ready
     assign ren_alu = (rs_c==READ) ? 'b1 : 'b0; 
-    always @(negedge wen_cam_p)
+    always @(posedge wen_cam_p)
         raddr_alu <= raddr_alu_n;
     always @(posedge sys_clk) begin // clock to be determined
         if (rst)
@@ -167,7 +173,7 @@ module mem_controller(
     always @(*) begin // Mealy machine
         case(rs_c)
             IDLE : begin // the clocks before the write address is valid
-                rs_n = ((vcnt_c-pad-1) == 0) ? VPAD : IDLE;
+                rs_n = (vcnt_c >= pad+1) ? VPAD : IDLE;
             end
             VPAD : begin // The first floor(N/2) rows which will just be black
                 rs_n = (vcnt_c < `dwidth_slice) ? VPAD : HPAD;
@@ -176,7 +182,7 @@ module mem_controller(
                 if (hcnt_c < pad-1) begin // front padding
                     rs_n = HPAD;
                 end else if (hcnt_c >= `hwidth-pad-1) begin // end padding
-                    if (hcnt_c == `hwidth-1 && vcnt_c == `vwidth-1) // last value
+                    if (hcnt_c >= `hwidth-1 && vcnt_c >= `vwidth-1) // last value
                         rs_n = IDLE;
                     else
                         rs_n = HPAD;
@@ -204,4 +210,6 @@ module mem_controller(
         .pulse(wen_cam_p)
     );    
     
+    always @(posedge wen_cam_p)
+        count_debug <= (rst) ? 0 : count_debug+1;
 endmodule

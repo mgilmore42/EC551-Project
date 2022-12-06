@@ -26,33 +26,35 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir X:/Documents/EC551/EC551_Project/final_project/final_project.cache/wt [current_project]
-set_property parent.project_path X:/Documents/EC551/EC551_Project/final_project/final_project.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/final_project/final_project.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/final_project/final_project.xpr} [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo x:/Documents/EC551/EC551_Project/final_project/final_project.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files X:/Documents/EC551/EC551_Project/Sources/Design/test_image.coe
-read_verilog X:/Documents/EC551/EC551_Project/Sources/Design/my_header.vh
-read_mem X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.mem
+add_files {{C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/test_image.coe}}
+read_verilog {{C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/my_header.vh}}
+set_property file_type "Verilog Header" [get_files {{C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/my_header.vh}}]
+read_mem {{C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/camera_interface.mem}}
 read_verilog -library xil_defaultlib {
-  X:/Documents/EC551/EC551_Project/Sources/Design/ALU.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/buffer_slice.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/camera_interface.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/conv_buffer.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/i2c_top.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/kernel_ROM.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/mem_controller.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/mmcm_24MHz.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/partial_buffer.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/pulse_gen.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/vga.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/vga_controller_640_60.v
-  X:/Documents/EC551/EC551_Project/Sources/Design/top.v
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/ALU.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/buffer_slice.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/camera_interface.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/conv_buffer.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/i2c_top.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/kernel_ROM.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/mem_controller.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/mmcm_24MHz.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/partial_buffer.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/pulse_gen.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/sev_seg_driver.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/vga.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/vga_controller_640_60.v}
+  {C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Design/top.v}
 }
-read_ip -quiet X:/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer.xci
-set_property used_in_implementation false [get_files -all x:/Documents/EC551/EC551_Project/Sources/IP/full_buffer/full_buffer_ooc.xdc]
+read_ip -quiet {{C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/IP/full_buffer/full_buffer.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/IP/full_buffer/full_buffer_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -62,8 +64,8 @@ set_property used_in_implementation false [get_files -all x:/Documents/EC551/EC5
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc X:/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc
-set_property used_in_implementation false [get_files X:/Documents/EC551/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc]
+read_xdc {{C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/wkrska/Downloads/Local Labs/EC551_Project/Sources/Constraints/Nexys-4-DDR-Master.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

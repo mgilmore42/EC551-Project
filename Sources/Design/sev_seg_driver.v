@@ -19,7 +19,7 @@ module sev_seg_driver(
     always @(posedge CLK100MHZ or posedge rst)
         refresh_counter <= (rst==1) ? 'b0 : refresh_counter + 1;
 
-    assign LED_activating_counter = refresh_counter[20:18];
+    assign LED_activating_counter = refresh_counter[19:17];
     
     always @(*)
     begin
