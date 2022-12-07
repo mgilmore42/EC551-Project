@@ -26,9 +26,6 @@ module ALU(
             // mult each RGB Component with sign-extended slice
             // NOTE: for signed multiplication, multiplicands must be bit-extended to length of each added (4+`dwidth_kernel in this case)
             //                din: 4bit, guarenteed to be positive, ext w/ 0's        kernel: signed `dwidth_kernel-bit, bit extend with k[4]
-            // assign product[i][2] = {`dwidth_kernel'b0,din[`dwidth_dat*(i+1)-1:`dwidth_dat*i+4*2]} * {{4{kernel[`dwidth_kernel*(i+1)-1]}},kernel[`dwidth_kernel*(i+1)-1:`dwidth_kernel*i]};  // R
-            // assign product[i][1] = {`dwidth_kernel'b0,din[`dwidth_dat*(i+1)-1-4:`dwidth_dat*i+4]} * {{4{kernel[`dwidth_kernel*(i+1)-1]}},kernel[`dwidth_kernel*(i+1)-1:`dwidth_kernel*i]};  // G
-            // assign product[i][0] = {`dwidth_kernel'b0,din[`dwidth_dat*(i+1)-1-4*2:`dwidth_dat*i]} * {{4{kernel[`dwidth_kernel*(i+1)-1]}},kernel[`dwidth_kernel*(i+1)-1:`dwidth_kernel*i]};  // B
             assign product[i][2] = {{(prod_bw-4){1'b0}},din[`dwidth_dat*(i+1)-1:`dwidth_dat*i+4*2]} * {{(prod_bw-`dwidth_kernel){kernel[`dwidth_kernel*(i+1)-1]}},kernel[`dwidth_kernel*(i+1)-1:`dwidth_kernel*i]};  // R
             assign product[i][1] = {{(prod_bw-4){1'b0}},din[`dwidth_dat*(i+1)-1-4:`dwidth_dat*i+4]} * {{(prod_bw-`dwidth_kernel){kernel[`dwidth_kernel*(i+1)-1]}},kernel[`dwidth_kernel*(i+1)-1:`dwidth_kernel*i]};  // G
             assign product[i][0] = {{(prod_bw-4){1'b0}},din[`dwidth_dat*(i+1)-1-4*2:`dwidth_dat*i]} * {{(prod_bw-`dwidth_kernel){kernel[`dwidth_kernel*(i+1)-1]}},kernel[`dwidth_kernel*(i+1)-1:`dwidth_kernel*i]};  // B

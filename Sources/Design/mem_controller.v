@@ -108,10 +108,8 @@ module mem_controller(
             vcnt_c <= vcnt_n;
             wen_cam <= wen_n;
             dlast <= wdata_cam[3:0];
-//            dlast <= {wdata_cam[7:4],wdata_cam[2:0]}; // for the screwed up image
             pop_pbuff <= pop_pbuff_n;
             wdata_cam_full <= {dlast,wdata_cam};
-//            wdata_cam_full <= {dlast,wdata_cam[7],wdata_cam[4:1]}; // for the screwed up image
         end        
     end
     
