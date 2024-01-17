@@ -1,4 +1,4 @@
-# EC551_Project
+# EC551 Project
 This project is an implementation of a realtime image processor using an FPGA. The system described in Verilog is able to capture the video feed from a OV7670, applying kernel based filter to the image and then displaying it.
 
 ## Materals
@@ -32,9 +32,7 @@ After wiring the camera, you can simply power on the board. Then open the [final
 
 ## Video
 
-```
-Will be made available once uploaded to class youtube.
-```
+[![Video Link](https://img.youtube.com/vi/g5GMFYvGNuQ/0.jpg)](https://youtu.be/g5GMFYvGNuQ)
 
 ## Systems Parameters
 
